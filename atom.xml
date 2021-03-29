@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Justin&#39;s Blog</title>
+  
+  
+  <link href="https://justinchangtw.github.io/blog/atom.xml" rel="self"/>
+  
+  <link href="https://justinchangtw.github.io/blog/"/>
+  <updated>2021-03-29T07:11:43.302Z</updated>
+  <id>https://justinchangtw.github.io/blog/</id>
+  
+  <author>
+    <name>Justin Chang Blog</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>親子簡易手作餅乾</title>
+    <link href="https://justinchangtw.github.io/blog/2021/03/29/%E8%A6%AA%E5%AD%90%E7%B0%A1%E6%98%93%E6%89%8B%E4%BD%9C%E9%A4%85%E4%B9%BE/"/>
+    <id>https://justinchangtw.github.io/blog/2021/03/29/%E8%A6%AA%E5%AD%90%E7%B0%A1%E6%98%93%E6%89%8B%E4%BD%9C%E9%A4%85%E4%B9%BE/</id>
+    <published>2021-03-29T01:37:18.000Z</published>
+    <updated>2021-03-29T07:11:43.302Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;最近燃起烘培魂，以前一直覺得會烘培的對我來說是一種遙不可及的事，受到&lt;a href=&quot;https://www.books.com.tw/products/0010776629&quot;&gt;微精通&lt;/a&gt;啟發，凡事作就對了，要前進的第一步就是Google，而第一篇就是 &lt;a href=&quot;https://mamibuy.com.tw/talk/article/158490&quot;&gt;初學者必學～超簡易手工烤餅乾&lt;/a&gt;，覺得困難度不高，就開始動手Go Go&lt;/p&gt;
+&lt;h2 id=&quot;準備材料&quot;&gt;&lt;a href=&quot;#準備材料&quot; class=&quot;headerlink&quot; title=&quot;準備材料&quot;&gt;&lt;/a&gt;準備材料&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;奶油  100g&lt;/li&gt;
+&lt;li&gt;砂糖 40g&lt;br&gt; 可以自行調整甜度或使用巧克力醬取代&lt;/li&gt;
+&lt;li&gt;蛋黃 1 顆&lt;br&gt; 可以依口味作調整&lt;/li&gt;
+&lt;li&gt;低筋麵粉 260g&lt;br&gt; 與奶油比例為(3:8)&lt;/li&gt;
+&lt;li&gt;鮮奶 少許&lt;br&gt; 如果麵團太乾時可以加上一些&lt;/li&gt;
+&lt;/ol&gt;</summary>
+    
+    
+    
+    <category term="烘培" scheme="https://justinchangtw.github.io/blog/categories/%E7%83%98%E5%9F%B9/"/>
+    
+    
+    <category term="親子" scheme="https://justinchangtw.github.io/blog/tags/%E8%A6%AA%E5%AD%90/"/>
+    
+    <category term="烘培" scheme="https://justinchangtw.github.io/blog/tags/%E7%83%98%E5%9F%B9/"/>
+    
+    <category term="手作餅乾" scheme="https://justinchangtw.github.io/blog/tags/%E6%89%8B%E4%BD%9C%E9%A4%85%E4%B9%BE/"/>
+    
+    <category term="微精通" scheme="https://justinchangtw.github.io/blog/tags/%E5%BE%AE%E7%B2%BE%E9%80%9A/"/>
+    
+    <category term="人生清單" scheme="https://justinchangtw.github.io/blog/tags/%E4%BA%BA%E7%94%9F%E6%B8%85%E5%96%AE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>開發/線上小工具</title>
+    <link href="https://justinchangtw.github.io/blog/2021/03/25/%E9%96%8B%E7%99%BC_%E7%B7%9A%E4%B8%8A%E5%B0%8F%E5%B7%A5%E5%85%B7/"/>
+    <id>https://justinchangtw.github.io/blog/2021/03/25/%E9%96%8B%E7%99%BC_%E7%B7%9A%E4%B8%8A%E5%B0%8F%E5%B7%A5%E5%85%B7/</id>
+    <published>2021-03-25T06:20:31.608Z</published>
+    <updated>2021-03-26T01:44:42.445Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;開發-線上小工具&quot;&gt;&lt;a href=&quot;#開發-線上小工具&quot; class=&quot;headerlink&quot; title=&quot;開發/線上小工具&quot;&gt;&lt;/a&gt;開發/線上小工具&lt;/h1&gt;&lt;h2 id=&quot;產生Html表格&quot;&gt;&lt;a href=&quot;#產生Html表格&quot; class=&quot;headerlink&quot; title=&quot;產生Html表格&quot;&gt;&lt;/a&gt;產生Html表格&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.tablesgenerator.com/html_tables&quot;&gt;https://www.tablesgenerator.com/html_tables&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://divtable.com/table-styler/&quot;&gt;https://divtable.com/table-styler/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;cron-表達&quot;&gt;&lt;a href=&quot;#cron-表達&quot; class=&quot;headerlink&quot; title=&quot;cron 表達&quot;&gt;&lt;/a&gt;cron 表達&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://crontab.guru/&quot;&gt;https://crontab.guru/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;UML產生語&quot;&gt;&lt;a href=&quot;#UML產生語&quot; class=&quot;headerlink&quot; title=&quot;UML產生語&quot;&gt;&lt;/a&gt;UML產生語&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://plantuml.com/zh/sequence-diagram&quot;&gt;https://plantuml.com/zh/sequence-diagram&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="工具" scheme="https://justinchangtw.github.io/blog/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="開發" scheme="https://justinchangtw.github.io/blog/tags/%E9%96%8B%E7%99%BC/"/>
+    
+    <category term="線上" scheme="https://justinchangtw.github.io/blog/tags/%E7%B7%9A%E4%B8%8A/"/>
+    
+    <category term="小工具" scheme="https://justinchangtw.github.io/blog/tags/%E5%B0%8F%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用Session實作Login</title>
+    <link href="https://justinchangtw.github.io/blog/2021/03/25/%E4%BD%BF%E7%94%A8Session%E5%AF%A6%E4%BD%9CLogin/"/>
+    <id>https://justinchangtw.github.io/blog/2021/03/25/%E4%BD%BF%E7%94%A8Session%E5%AF%A6%E4%BD%9CLogin/</id>
+    <published>2021-03-25T06:17:04.162Z</published>
+    <updated>2021-03-29T07:18:48.869Z</updated>
+    
+    
+    <summary type="html">不使用Identity實作Login系統</summary>
+    
+    
+    
+    <category term="ASP.NET Core;" scheme="https://justinchangtw.github.io/blog/categories/ASP-NET-Core/"/>
+    
+    
+    <category term="Login" scheme="https://justinchangtw.github.io/blog/tags/Login/"/>
+    
+    <category term="Session" scheme="https://justinchangtw.github.io/blog/tags/Session/"/>
+    
+    <category term="ASP.NETCore" scheme="https://justinchangtw.github.io/blog/tags/ASP-NETCore/"/>
+    
+    <category term="WithoutIdentityLogin" scheme="https://justinchangtw.github.io/blog/tags/WithoutIdentityLogin/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>自學英文-聽力</title>
+    <link href="https://justinchangtw.github.io/blog/2021/03/25/%E8%87%AA%E5%AD%B8%E8%8B%B1%E6%96%87-%E8%81%BD%E5%8A%9B/"/>
+    <id>https://justinchangtw.github.io/blog/2021/03/25/%E8%87%AA%E5%AD%B8%E8%8B%B1%E6%96%87-%E8%81%BD%E5%8A%9B/</id>
+    <published>2021-03-25T01:28:27.000Z</published>
+    <updated>2021-03-25T09:08:21.615Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;我自已認為我的聽力能力應該是0，所以從頭開始學習，並記錄一些在學習的過程中的一些領悟，好萬事起頭難，我在VoiceTube選擇A1程度的影片，通過聽寫並打出(或寫出)所聽到的英文，剛開始一句句開始，每一句先看字幕，並重覆聽多次，試圖聽出每一個字。&lt;/p&gt;
+&lt;h2 id=&quot;English-in-a-Minute-Burn-the-Candle-at-Both-Ends&quot;&gt;&lt;a href=&quot;#English-in-a-Minute-Burn-the-Candle-at-Both-Ends&quot; class=&quot;headerlink&quot; title=&quot;English in a Minute: Burn the Candle at Both Ends&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://tw.voicetube.com/v3/videos/157374&quot;&gt;English in a Minute: Burn the Candle at Both Ends&lt;/a&gt;&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;in a 的連音，可以直接聽成弱弱的「依內」&lt;/li&gt;
+&lt;li&gt;the 如果在句子中間可以聽成「的」，在句中前面聽成「立」&lt;/li&gt;
+&lt;li&gt;at 可聽成「了」&lt;/li&gt;
+&lt;li&gt;both ends 的連音可以聽成bothends但重音在ends,&lt;ul&gt;
+&lt;li&gt;both ends :兩端，重音在ends&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Burn the candle at both ends</summary>
+    
+    
+    
+    <category term="英文學習" scheme="https://justinchangtw.github.io/blog/categories/%E8%8B%B1%E6%96%87%E5%AD%B8%E7%BF%92/"/>
+    
+    
+    <category term="English Study" scheme="https://justinchangtw.github.io/blog/tags/English-Study/"/>
+    
+    <category term="英文" scheme="https://justinchangtw.github.io/blog/tags/%E8%8B%B1%E6%96%87/"/>
+    
+    <category term="自學" scheme="https://justinchangtw.github.io/blog/tags/%E8%87%AA%E5%AD%B8/"/>
+    
+    <category term="聽力" scheme="https://justinchangtw.github.io/blog/tags/%E8%81%BD%E5%8A%9B/"/>
+    
+  </entry>
+  
+</feed>

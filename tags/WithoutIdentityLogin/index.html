@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  <title>Tag: WithoutIdentityLogin | Justin&#39;s Blog</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="shortcut icon" href="/blog/images/favicon.ico">
+  <link rel="alternate" href="/blog/atom.xml" title="Justin's Blog" type="application/atom+xml">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Justin&#39;s Blog">
+<meta property="og:url" content="https://justinchangtw.github.io/blog/tags/WithoutIdentityLogin/index.html">
+<meta property="og:site_name" content="Justin&#39;s Blog">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:author" content="Justin Chang Blog">
+<meta name="twitter:card" content="summary">
+    
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+  <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
+  
+<link rel="stylesheet" href="/blog/style.css">
+
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="loading-bar-wrapper">
+  <div id="loading-bar"></div>
+</div>
+
+
+  <script>setLoadingBarProgress(20)</script> 
+  <header class="l_header">
+	<div class='wrapper'>
+		<div class="nav-main container container--flex">
+			<a class="logo flat-box" href='/blog/' >
+				Justin's Blog
+			</a>
+			<div class='menu'>
+				<ul class='h-list'>
+					
+						<li>
+							<a class='flat-box nav-home' href='/blog/'>
+								Home
+							</a>
+						</li>
+					
+						<li>
+							<a class='flat-box nav-archives' href='/blog/archives'>
+								Archives
+							</a>
+						</li>
+					
+						<li>
+							<a class='flat-box nav-tags' href='/blog/tags'>
+								Tags
+							</a>
+						</li>
+					
+						<li>
+							<a class='flat-box nav-categories' href='/blog/categories'>
+								Categories
+							</a>
+						</li>
+					
+				</ul>
+				<div class='underline'></div>
+			</div>
+			
+				<div class="m_search">
+					<form name="searchform" class="form u-search-form">
+						<input type="text" class="input u-search-input" placeholder="Search" />
+						<span class="icon icon-search"></span>
+					</form>
+				</div>
+			
+			<ul class='switcher h-list'>
+				
+					<li class='s-search'><a href='javascript:void(0)'><span class="icon icon-search flat-box"></span></a></li>
+				
+				<li class='s-menu'><a href='javascript:void(0)'><span class="icon icon-menu flat-box"></span></a></li>
+			</ul>
+		</div>
+		
+		<div class='nav-sub container container--flex'>
+			<a class="logo" class="flat-box" href='javascript:void(0)'>
+				Word of Forks
+			</a>
+
+			<ul class='switcher h-list'>
+				<li class='s-comment'><a href='javascript:void(0)'><span class="icon icon-chat_bubble_outline flat-box"></span></a></li>
+				<li class='s-top'><a href='javascript:void(0)'><span class="icon icon-arrow_upward flat-box"></span></a></li>
+				<li class='s-toc'><a href='javascript:void(0)'><span class="icon icon-format_list_numbered flat-box"></span></a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+<aside class="menu-phone">
+	<nav>
+		
+			<a href="/blog/" class="nav-home nav">
+				Home
+			</a>
+		
+			<a href="/blog/archives" class="nav-archives nav">
+				Archives
+			</a>
+		
+			<a href="/blog/tags" class="nav-tags nav">
+				Tags
+			</a>
+		
+			<a href="/blog/categories" class="nav-categories nav">
+				Categories
+			</a>
+		
+	</nav>
+</aside>
+
+    <script>setLoadingBarProgress(40);</script>
+  <div class="l_body">
+    <div class='container clearfix'>
+      <div class='l_main'>
+        
+  <script>
+    window.subData= { title:'Tag : WithoutIdentityLogin'}
+  </script>
+
+<section class="post-list">
+	
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/blog/2021/03/25/%E4%BD%BF%E7%94%A8Session%E5%AF%A6%E4%BD%9CLogin/">
+        使用Session實作Login
+      </a>
+    </h2>
+    
+    <time>
+      3月 25, 2021
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/blog/categories/ASP-NET-Core/">ASP.NET Core;</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h1 id="使用Session實作Login"><a href="#使用Session實作Login" class="headerlink" title="使用Session實作Login"></a>使用Session實作Login</h1><h2 id="啟動session"><a href="#啟動session" class="headerlink" title="啟動session"></a>啟動session</h2><p>要在 ASP.NET Core 啟用 session 只需在 Startup.cs 兩個步驟：</p>
+<ol>
+<li>在ConfigureServices加上session服務</li>
+</ol>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">ConfigureServices</span>(<span class="params">IServiceCollection services</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ...</span><br><span class="line">    services.AddSession(); <span class="comment">//加上session服務</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+    
+	  <div class="readmore">
+      <a href="/blog/2021/03/25/%E4%BD%BF%E7%94%A8Session%E5%AF%A6%E4%BD%9CLogin/">Read More</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/blog/tags/Login/">Login</a>
+      
+        <a href="/blog/tags/Session/">Session</a>
+      
+        <a href="/blog/tags/ASP-NETCore/">ASP.NETCore</a>
+      
+        <a href="/blog/tags/WithoutIdentityLogin/">WithoutIdentityLogin</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+</section>
+
+
+      </div>
+      <aside class='l_side'>
+        
+  <section class='m_widget about'>
+
+<img class='avatar waves-image' src='/blog/images/avatar.jpg' />
+
+<div class='header'>Justin Chang Blog</div>
+<div class='content'>
+<div class='desc'>Tempora mutantur, nos et mutamur in illis ...</div>
+</div>
+</section>
+
+  <section class='m_widget categories'>
+<div class='header'>Categories</div>
+<div class='content'>
+    
+    <ul class="entry">
+    
+        <li><a class="flat-box" href="/blog/categories/ASP-NET-Core/"><div class='name'>ASP.NET Core;</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/blog/categories/%E5%B7%A5%E5%85%B7/"><div class='name'>工具</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/blog/categories/%E7%83%98%E5%9F%B9/"><div class='name'>烘培</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/blog/categories/%E8%8B%B1%E6%96%87%E5%AD%B8%E7%BF%92/"><div class='name'>英文學習</div><div class='badget'>1</div></a></li>
+    
+    </ul>
+    
+</div>
+</section>
+
+  
+<div class="m_widget tagcloud">
+    <div class="header">Tags</div>
+    <div class='content'>
+        <a href="/blog/tags/ASP-NETCore/" style="font-size: 14px; color: #808080">ASP.NETCore</a> <a href="/blog/tags/English-Study/" style="font-size: 14px; color: #808080">English Study</a> <a href="/blog/tags/Login/" style="font-size: 14px; color: #808080">Login</a> <a href="/blog/tags/Session/" style="font-size: 14px; color: #808080">Session</a> <a href="/blog/tags/WithoutIdentityLogin/" style="font-size: 14px; color: #808080">WithoutIdentityLogin</a> <a href="/blog/tags/%E4%BA%BA%E7%94%9F%E6%B8%85%E5%96%AE/" style="font-size: 14px; color: #808080">人生清單</a> <a href="/blog/tags/%E5%B0%8F%E5%B7%A5%E5%85%B7/" style="font-size: 14px; color: #808080">小工具</a> <a href="/blog/tags/%E5%BE%AE%E7%B2%BE%E9%80%9A/" style="font-size: 14px; color: #808080">微精通</a> <a href="/blog/tags/%E6%89%8B%E4%BD%9C%E9%A4%85%E4%B9%BE/" style="font-size: 14px; color: #808080">手作餅乾</a> <a href="/blog/tags/%E7%83%98%E5%9F%B9/" style="font-size: 14px; color: #808080">烘培</a> <a href="/blog/tags/%E7%B7%9A%E4%B8%8A/" style="font-size: 14px; color: #808080">線上</a> <a href="/blog/tags/%E8%81%BD%E5%8A%9B/" style="font-size: 14px; color: #808080">聽力</a> <a href="/blog/tags/%E8%87%AA%E5%AD%B8/" style="font-size: 14px; color: #808080">自學</a> <a href="/blog/tags/%E8%8B%B1%E6%96%87/" style="font-size: 14px; color: #808080">英文</a> <a href="/blog/tags/%E8%A6%AA%E5%AD%90/" style="font-size: 14px; color: #808080">親子</a> <a href="/blog/tags/%E9%96%8B%E7%99%BC/" style="font-size: 14px; color: #808080">開發</a>
+    </div>
+</div>
+
+
+
+      </aside>
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+  </div>
+  <footer id="footer" class="clearfix">
+
+	<div class="social-wrapper">
+  	
+      
+        <a href="https://github.com/JustinChangTW" class="social github"
+          target="_blank" rel="external">
+          <span class="icon icon-github"></span>
+        </a>
+      
+    
+  </div>
+  
+  <div>Theme <a href='https://github.com/stkevintan/hexo-theme-material-flow' class="codename">MaterialFlow</a> designed by <a href="http://keyin.me/" target="_blank">Kevin Tan</a>.</div>
+  
+</footer>
+
+
+  <script>setLoadingBarProgress(80);</script>
+  
+
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src='//cdn.bootcss.com/node-waves/0.7.5/waves.min.js'></script>
+<script src="//cdn.bootcss.com/scrollReveal.js/3.3.2/scrollreveal.min.js"></script>
+
+<script src="/blog/js/jquery.fitvids.js"></script>
+
+<script>
+	var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+	var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+	var ALGOLIA_API_KEY = "";
+	var ALGOLIA_APP_ID = "";
+	var ALGOLIA_INDEX_NAME = "";
+  var AZURE_SERVICE_NAME = "";
+  var AZURE_INDEX_NAME = "";
+  var AZURE_QUERY_KEY = "";
+  var BAIDU_API_ID = "";
+  var SEARCH_SERVICE = "hexo";
+  var ROOT = "/blog/"||"/";
+  if(!ROOT.endsWith('/'))ROOT += '/';
+</script>
+
+<script src="/blog/js/search.js"></script>
+
+
+<script src="/blog/js/app.js"></script>
+
+
+
+  <script src='https://unpkg.com/mermaid@8.9.2/dist/mermaid.min.js'></script>
+
+  <script>setLoadingBarProgress(100);</script>
+</body>
+</html>

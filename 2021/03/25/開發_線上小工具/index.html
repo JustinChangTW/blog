@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  <title>開發/線上小工具 | Justin&#39;s Blog</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="shortcut icon" href="/blog/images/favicon.ico">
+  <link rel="alternate" href="/blog/atom.xml" title="Justin's Blog" type="application/atom+xml">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="開發&#x2F;線上小工具產生Html表格 https:&#x2F;&#x2F;www.tablesgenerator.com&#x2F;html_tableshttps:&#x2F;&#x2F;divtable.com&#x2F;table-styler&#x2F;  cron 表達 https:&#x2F;&#x2F;crontab.guru&#x2F;  UML產生語 https:&#x2F;&#x2F;plantuml.com&#x2F;zh&#x2F;sequence-diagram">
+<meta property="og:type" content="article">
+<meta property="og:title" content="開發&#x2F;線上小工具">
+<meta property="og:url" content="https://justinchangtw.github.io/blog/2021/03/25/%E9%96%8B%E7%99%BC_%E7%B7%9A%E4%B8%8A%E5%B0%8F%E5%B7%A5%E5%85%B7/index.html">
+<meta property="og:site_name" content="Justin&#39;s Blog">
+<meta property="og:description" content="開發&#x2F;線上小工具產生Html表格 https:&#x2F;&#x2F;www.tablesgenerator.com&#x2F;html_tableshttps:&#x2F;&#x2F;divtable.com&#x2F;table-styler&#x2F;  cron 表達 https:&#x2F;&#x2F;crontab.guru&#x2F;  UML產生語 https:&#x2F;&#x2F;plantuml.com&#x2F;zh&#x2F;sequence-diagram">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://i.imgur.com/HoANE7Z.png">
+<meta property="og:image" content="https://i.imgur.com/LIiIrL3.png">
+<meta property="og:image" content="https://i.imgur.com/8sbX8V3.png">
+<meta property="og:image" content="https://i.imgur.com/HTKVBJK.png">
+<meta property="og:image" content="https://i.imgur.com/MvA0iJP.png">
+<meta property="article:published_time" content="2021-03-25T06:20:31.608Z">
+<meta property="article:modified_time" content="2021-03-26T01:44:42.445Z">
+<meta property="article:author" content="Justin Chang Blog">
+<meta property="article:tag" content="開發">
+<meta property="article:tag" content="線上">
+<meta property="article:tag" content="小工具">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.imgur.com/HoANE7Z.png">
+    
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+  <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
+  
+<link rel="stylesheet" href="/blog/style.css">
+
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="loading-bar-wrapper">
+  <div id="loading-bar"></div>
+</div>
+
+
+  <script>setLoadingBarProgress(20)</script> 
+  <header class="l_header">
+	<div class='wrapper'>
+		<div class="nav-main container container--flex">
+			<a class="logo flat-box" href='/blog/' >
+				Justin's Blog
+			</a>
+			<div class='menu'>
+				<ul class='h-list'>
+					
+						<li>
+							<a class='flat-box nav-home' href='/blog/'>
+								Home
+							</a>
+						</li>
+					
+						<li>
+							<a class='flat-box nav-archives' href='/blog/archives'>
+								Archives
+							</a>
+						</li>
+					
+						<li>
+							<a class='flat-box nav-tags' href='/blog/tags'>
+								Tags
+							</a>
+						</li>
+					
+						<li>
+							<a class='flat-box nav-categories' href='/blog/categories'>
+								Categories
+							</a>
+						</li>
+					
+				</ul>
+				<div class='underline'></div>
+			</div>
+			
+				<div class="m_search">
+					<form name="searchform" class="form u-search-form">
+						<input type="text" class="input u-search-input" placeholder="Search" />
+						<span class="icon icon-search"></span>
+					</form>
+				</div>
+			
+			<ul class='switcher h-list'>
+				
+					<li class='s-search'><a href='javascript:void(0)'><span class="icon icon-search flat-box"></span></a></li>
+				
+				<li class='s-menu'><a href='javascript:void(0)'><span class="icon icon-menu flat-box"></span></a></li>
+			</ul>
+		</div>
+		
+		<div class='nav-sub container container--flex'>
+			<a class="logo" class="flat-box" href='javascript:void(0)'>
+				Word of Forks
+			</a>
+
+			<ul class='switcher h-list'>
+				<li class='s-comment'><a href='javascript:void(0)'><span class="icon icon-chat_bubble_outline flat-box"></span></a></li>
+				<li class='s-top'><a href='javascript:void(0)'><span class="icon icon-arrow_upward flat-box"></span></a></li>
+				<li class='s-toc'><a href='javascript:void(0)'><span class="icon icon-format_list_numbered flat-box"></span></a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+<aside class="menu-phone">
+	<nav>
+		
+			<a href="/blog/" class="nav-home nav">
+				Home
+			</a>
+		
+			<a href="/blog/archives" class="nav-archives nav">
+				Archives
+			</a>
+		
+			<a href="/blog/tags" class="nav-tags nav">
+				Tags
+			</a>
+		
+			<a href="/blog/categories" class="nav-categories nav">
+				Categories
+			</a>
+		
+	</nav>
+</aside>
+
+    <script>setLoadingBarProgress(40);</script>
+  <div class="l_body">
+    <div class='container clearfix'>
+      <div class='l_main'>
+        <article id="post-開發_線上小工具"
+  class="post white-box article-type-post"
+  itemscope itemprop="blogPost">
+	<section class='meta'>
+	<h2 class="title">
+  	<a href="/blog/2021/03/25/%E9%96%8B%E7%99%BC_%E7%B7%9A%E4%B8%8A%E5%B0%8F%E5%B7%A5%E5%85%B7/">
+    	開發/線上小工具
+    </a>
+  </h2>
+	<time>
+	  3月 25, 2021
+	</time>
+	
+    
+    <div class='cats'>
+        <a href="/blog/categories/%E5%B7%A5%E5%85%B7/">工具</a>
+    </div>
+
+	</section>
+	
+		<section class="toc-wrapper"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%96%8B%E7%99%BC-%E7%B7%9A%E4%B8%8A%E5%B0%8F%E5%B7%A5%E5%85%B7"><span class="toc-number">1.</span> <span class="toc-text">開發&#x2F;線上小工具</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%A2%E7%94%9FHtml%E8%A1%A8%E6%A0%BC"><span class="toc-number">1.1.</span> <span class="toc-text">產生Html表格</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cron-%E8%A1%A8%E9%81%94"><span class="toc-number">1.2.</span> <span class="toc-text">cron 表達</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#UML%E7%94%A2%E7%94%9F%E8%AA%9E"><span class="toc-number">1.3.</span> <span class="toc-text">UML產生語</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Regex-%E6%AD%A3%E8%A6%8F%E6%B8%AC%E8%A9%A6"><span class="toc-number">1.4.</span> <span class="toc-text">Regex 正規測試</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JsonToClass"><span class="toc-number">1.5.</span> <span class="toc-text">JsonToClass</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E5%AD%97%E6%A8%A1%E6%9D%BF"><span class="toc-number">1.6.</span> <span class="toc-text">文字模板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E5%AD%97%E8%BD%89%E8%A8%88%E7%AE%97"><span class="toc-number">1.7.</span> <span class="toc-text">文字轉計算</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#suggest"><span class="toc-number">1.8.</span> <span class="toc-text">suggest</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#POSMAN"><span class="toc-number">1.9.</span> <span class="toc-text">POSMAN</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BE%9EChrome%E8%A4%87%E5%88%B6curl"><span class="toc-number">1.9.1.</span> <span class="toc-text">從Chrome複制curl</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%AE%E9%8C%84%E5%8C%AF%E5%87%BA%E6%AA%94%E6%A1%88"><span class="toc-number">1.10.</span> <span class="toc-text">目錄匯出檔案</span></a></li></ol></li></ol></section>
+	
+	<section class="article typo">
+  	<div class="article-entry" itemprop="articleBody">
+    	<h1 id="開發-線上小工具"><a href="#開發-線上小工具" class="headerlink" title="開發/線上小工具"></a>開發/線上小工具</h1><h2 id="產生Html表格"><a href="#產生Html表格" class="headerlink" title="產生Html表格"></a>產生Html表格</h2><blockquote>
+<p><a href="https://www.tablesgenerator.com/html_tables">https://www.tablesgenerator.com/html_tables</a><br><a href="https://divtable.com/table-styler/">https://divtable.com/table-styler/</a></p>
+</blockquote>
+<h2 id="cron-表達"><a href="#cron-表達" class="headerlink" title="cron 表達"></a>cron 表達</h2><blockquote>
+<p><a href="https://crontab.guru/">https://crontab.guru/</a></p>
+</blockquote>
+<h2 id="UML產生語"><a href="#UML產生語" class="headerlink" title="UML產生語"></a>UML產生語</h2><blockquote>
+<p><a href="https://plantuml.com/zh/sequence-diagram">https://plantuml.com/zh/sequence-diagram</a></p>
+</blockquote>
+<span id="more"></span>
+<h2 id="Regex-正規測試"><a href="#Regex-正規測試" class="headerlink" title="Regex 正規測試"></a>Regex 正規測試</h2><blockquote>
+<p><a href="https://regex101.com/">https://regex101.com/</a></p>
+</blockquote>
+<h2 id="JsonToClass"><a href="#JsonToClass" class="headerlink" title="JsonToClass"></a>JsonToClass</h2><blockquote>
+<p><a href="https://app.quicktype.io/?l=csharp">https://app.quicktype.io/?l=csharp</a></p>
+</blockquote>
+<h2 id="文字模板"><a href="#文字模板" class="headerlink" title="文字模板"></a>文字模板</h2><p>Scriban</p>
+<blockquote>
+<p><a href="https://github.com/lunet-io/scriban">https://github.com/lunet-io/scriban</a><br><a href="https://scribanonline.azurewebsites.net/">https://scribanonline.azurewebsites.net/</a></p>
+</blockquote>
+<h2 id="文字轉計算"><a href="#文字轉計算" class="headerlink" title="文字轉計算"></a>文字轉計算</h2><p>mXparser</p>
+<blockquote>
+<p><a href="http://mathparser.org/">http://mathparser.org/</a></p>
+</blockquote>
+<h2 id="suggest"><a href="#suggest" class="headerlink" title="suggest"></a>suggest</h2><blockquote>
+<p><a href="https://vuejsexamples.com/mention-popper-for-input-and-textarea-with-vue-js/">https://vuejsexamples.com/mention-popper-for-input-and-textarea-with-vue-js/</a><br><a href="https://github.com/pfrazee/suggest-box">https://github.com/pfrazee/suggest-box</a><br><a href="https://blog.csdn.net/kingwolfofsky/article/details/6586029">https://blog.csdn.net/kingwolfofsky/article/details/6586029</a></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;title&gt;InputPostion&lt;&#x2F;title&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;textarea id&#x3D;&quot;text&quot; onkeyup&#x3D;&quot;show(this) &quot; style&#x3D;&quot;width: 340px; height: 210px; &quot;&gt;&lt;&#x2F;textarea&gt;</span><br><span class="line">    &lt;br &#x2F;&gt;</span><br><span class="line">    &lt;input type&#x3D;&quot;text&quot; onkeyup&#x3D;&quot;show(this) &quot; style&#x3D;&quot;width: 340px; &quot; &#x2F;&gt;</span><br><span class="line">    &lt;div id&#x3D;&quot;show&quot; style&#x3D;&quot;width: 34px; height: 13px; background: #eee; position: absolute;border:1px solid grey;font-size:13px; display:none; &quot;&gt;Tips&lt;&#x2F;div&gt;</span><br><span class="line"></span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        var suggester &#x3D; &#123;</span><br><span class="line">            &#x2F;**</span><br><span class="line">             * 获取输入光标在页面中的坐标</span><br><span class="line">             * @param  &#123;HTMLElement&#125; 输入框元素        </span><br><span class="line">             * @return  &#123;Object&#125;  返回left和top,bottom</span><br><span class="line">             *&#x2F;</span><br><span class="line">            getInputPositon: function(elem) &#123;</span><br><span class="line">                if (document.selection) &#123; &#x2F;&#x2F;IE Support</span><br><span class="line">                    elem.focus();</span><br><span class="line">                    var Sel &#x3D; document.selection.createRange();</span><br><span class="line">                    return &#123;</span><br><span class="line">                        left: Sel.boundingLeft,</span><br><span class="line">                        top: Sel.boundingTop,</span><br><span class="line">                        bottom: Sel.boundingTop + Sel.boundingHeight</span><br><span class="line">                    &#125;;</span><br><span class="line">                &#125; else &#123;</span><br><span class="line">                    var that &#x3D; this;</span><br><span class="line">                    var cloneDiv &#x3D; &#39;&#123;$clone_div&#125;&#39;</span><br><span class="line">                    var cloneLeft &#x3D; &#39;&#123;$cloneLeft&#125;&#39;</span><br><span class="line">                    var cloneFocus &#x3D; &#39;&#123;$cloneFocus&#125;&#39;</span><br><span class="line">                    var cloneRight &#x3D; &#39;&#123;$cloneRight&#125;&#39;</span><br><span class="line">                    var none &#x3D; &#39;&lt;span style&#x3D;&quot;white-space:pre-wrap;&quot;&gt; &lt;&#x2F;span&gt;&#39;</span><br><span class="line">                    var div &#x3D; elem[cloneDiv] || document.createElement(&#39;div&#39;)</span><br><span class="line">                    var focus &#x3D; elem[cloneFocus] || document.createElement(&#39;span&#39;)</span><br><span class="line">                    var text &#x3D; elem[cloneLeft] || document.createElement(&#39;span&#39;)</span><br><span class="line">                    var offset &#x3D; that._offset(elem)</span><br><span class="line">                    var index &#x3D; this._getFocus(elem)</span><br><span class="line">                    var focusOffset &#x3D; &#123;</span><br><span class="line">                        left: 0,</span><br><span class="line">                        top: 0</span><br><span class="line">                    &#125;;</span><br><span class="line"></span><br><span class="line">                    if (!elem[cloneDiv]) &#123;</span><br><span class="line">                        elem[cloneDiv] &#x3D; div, elem[cloneFocus] &#x3D; focus;</span><br><span class="line">                        elem[cloneLeft] &#x3D; text;</span><br><span class="line">                        div.appendChild(text);</span><br><span class="line">                        div.appendChild(focus);</span><br><span class="line">                        document.body.appendChild(div);</span><br><span class="line">                        focus.innerHTML &#x3D; &#39;|&#39;;</span><br><span class="line">                        focus.style.cssText &#x3D; &#39;display:inline-block;width:0px;overflow:hidden;z-index:-100;word-wrap:break-word;word-break:break-all;&#39;;</span><br><span class="line">                        div.className &#x3D; this._cloneStyle(elem);</span><br><span class="line">                        div.style.cssText &#x3D; &#39;visibility:hidden;display:inline-block;position:absolute;z-index:-100;word-wrap:break-word;word-break:break-all;overflow:hidden;&#39;;</span><br><span class="line">                    &#125;;</span><br><span class="line">                    div.style.left &#x3D; this._offset(elem).left + &quot;px&quot;;</span><br><span class="line">                    div.style.top &#x3D; this._offset(elem).top + &quot;px&quot;;</span><br><span class="line">                    var strTmp &#x3D; elem.value.substring(0, index).replace(&#x2F;&lt;&#x2F;g, &#39;&lt;&#39;).replace(&#x2F;&gt;&#x2F;g, &#39;&gt;&#39;).replace(&#x2F;\n&#x2F;g, &#39;&lt;br&#x2F;&gt;&#39;).replace(&#x2F;\s&#x2F;g, none);</span><br><span class="line">                    text.innerHTML &#x3D; strTmp;</span><br><span class="line"></span><br><span class="line">                    focus.style.display &#x3D; &#39;inline-block&#39;;</span><br><span class="line">                    try &#123;</span><br><span class="line">                        focusOffset &#x3D; this._offset(focus);</span><br><span class="line">                    &#125; catch (e) &#123;&#125;;</span><br><span class="line">                    focus.style.display &#x3D; &#39;none&#39;;</span><br><span class="line">                    return &#123;</span><br><span class="line">                        left: focusOffset.left,</span><br><span class="line">                        top: focusOffset.top,</span><br><span class="line">                        bottom: focusOffset.bottom</span><br><span class="line">                    &#125;;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,</span><br><span class="line"></span><br><span class="line">            &#x2F;&#x2F; 克隆元素样式并返回类</span><br><span class="line">            _cloneStyle: function(elem, cache) &#123;</span><br><span class="line">                if (!cache &amp;&amp; elem[&#39;$&#123;cloneName&#125;&#39;]) return elem[&#39;$&#123;cloneName&#125;&#39;];</span><br><span class="line">                var className, name, rstyle &#x3D; &#x2F;^(number|string)$&#x2F;;</span><br><span class="line">                var rname &#x3D; &#x2F;^(content|outline|outlineWidth)$&#x2F;; &#x2F;&#x2F;Opera: content; IE8:outline &amp;&amp; outlineWidth</span><br><span class="line">                var cssText &#x3D; [],</span><br><span class="line">                    sStyle &#x3D; elem.style;</span><br><span class="line"></span><br><span class="line">                for (name in sStyle) &#123;</span><br><span class="line">                    if (!rname.test(name)) &#123;</span><br><span class="line">                        val &#x3D; this._getStyle(elem, name);</span><br><span class="line">                        if (val !&#x3D;&#x3D; &#39;&#39; &amp;&amp; rstyle.test(typeof val)) &#123; &#x2F;&#x2F; Firefox 4</span><br><span class="line">                            name &#x3D; name.replace(&#x2F;([A-Z])&#x2F;g, &quot;-$1&quot;).toLowerCase();</span><br><span class="line">                            cssText.push(name);</span><br><span class="line">                            cssText.push(&#39;:&#39;);</span><br><span class="line">                            cssText.push(val);</span><br><span class="line">                            cssText.push(&#39;;&#39;);</span><br><span class="line">                        &#125;;</span><br><span class="line">                    &#125;;</span><br><span class="line">                &#125;;</span><br><span class="line">                cssText &#x3D; cssText.join(&#39;&#39;);</span><br><span class="line">                elem[&#39;$&#123;cloneName&#125;&#39;] &#x3D; className &#x3D; &#39;clone&#39; + (new Date).getTime();</span><br><span class="line">                this._addHeadStyle(&#39;.&#39; + className + &#39;&#123;&#39; + cssText + &#39;&#125;&#39;);</span><br><span class="line">                return className;</span><br><span class="line">            &#125;,</span><br><span class="line"></span><br><span class="line">            &#x2F;&#x2F; 向页头插入样式</span><br><span class="line">            _addHeadStyle: function(content) &#123;</span><br><span class="line">                var style &#x3D; this._style[document];</span><br><span class="line">                if (!style) &#123;</span><br><span class="line">                    style &#x3D; this._style[document] &#x3D; document.createElement(&#39;style&#39;);</span><br><span class="line">                    document.getElementsByTagName(&#39;head&#39;)[0].appendChild(style);</span><br><span class="line">                &#125;;</span><br><span class="line">                style.styleSheet &amp;&amp; (style.styleSheet.cssText +&#x3D; content) || style.appendChild(document.createTextNode(content));</span><br><span class="line">            &#125;,</span><br><span class="line">            _style: &#123;&#125;,</span><br><span class="line"></span><br><span class="line">            &#x2F;&#x2F; 获取最终样式</span><br><span class="line">            _getStyle: &#39;getComputedStyle&#39; in window ? function(elem, name) &#123;</span><br><span class="line">                return getComputedStyle(elem, null)[name];</span><br><span class="line">            &#125; : function(elem, name) &#123;</span><br><span class="line">                return elem.currentStyle[name];</span><br><span class="line">            &#125;,</span><br><span class="line"></span><br><span class="line">            &#x2F;&#x2F; 获取光标在文本框的位置</span><br><span class="line">            _getFocus: function(elem) &#123;</span><br><span class="line">                var index &#x3D; 0;</span><br><span class="line">                if (document.selection) &#123; &#x2F;&#x2F; IE Support</span><br><span class="line">                    elem.focus();</span><br><span class="line">                    var Sel &#x3D; document.selection.createRange();</span><br><span class="line">                    if (elem.nodeName &#x3D;&#x3D;&#x3D; &#39;TEXTAREA&#39;) &#123; &#x2F;&#x2F;textarea</span><br><span class="line">                        var Sel2 &#x3D; Sel.duplicate();</span><br><span class="line">                        Sel2.moveToElementText(elem);</span><br><span class="line">                        var index &#x3D; -1;</span><br><span class="line">                        while (Sel2.inRange(Sel)) &#123;</span><br><span class="line">                            Sel2.moveStart(&#39;character&#39;);</span><br><span class="line">                            index++;</span><br><span class="line">                        &#125;;</span><br><span class="line">                    &#125; else if (elem.nodeName &#x3D;&#x3D;&#x3D; &#39;INPUT&#39;) &#123; &#x2F;&#x2F; input</span><br><span class="line">                        Sel.moveStart(&#39;character&#39;, -elem.value.length);</span><br><span class="line">                        index &#x3D; Sel.text.length;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125; else if (elem.selectionStart || elem.selectionStart &#x3D;&#x3D; &#39;0&#39;) &#123; &#x2F;&#x2F; Firefox support</span><br><span class="line">                    index &#x3D; elem.selectionStart;</span><br><span class="line">                &#125;</span><br><span class="line">                return (index);</span><br><span class="line">            &#125;,</span><br><span class="line"></span><br><span class="line">            &#x2F;&#x2F; 获取元素在页面中位置</span><br><span class="line">            _offset: function(elem) &#123;</span><br><span class="line">                var box &#x3D; elem.getBoundingClientRect(),</span><br><span class="line">                    doc &#x3D; elem.ownerDocument,</span><br><span class="line">                    body &#x3D; doc.body,</span><br><span class="line">                    docElem &#x3D; doc.documentElement;</span><br><span class="line">                var clientTop &#x3D; docElem.clientTop || body.clientTop || 0,</span><br><span class="line">                    clientLeft &#x3D; docElem.clientLeft || body.clientLeft || 0;</span><br><span class="line">                var top &#x3D; box.top + (self.pageYOffset || docElem.scrollTop) - clientTop,</span><br><span class="line">                    left &#x3D; box.left + (self.pageXOffset || docElem.scrollLeft) - clientLeft;</span><br><span class="line">                return &#123;</span><br><span class="line">                    left: left,</span><br><span class="line">                    top: top,</span><br><span class="line">                    right: left + box.width,</span><br><span class="line">                    bottom: top + box.height</span><br><span class="line">                &#125;;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line"></span><br><span class="line">        function getPosition(ctrl) &#123;</span><br><span class="line">            var p &#x3D; suggester.getInputPositon(ctrl);</span><br><span class="line">            document.getElementById(&#39;show&#39;).style.left &#x3D; p.left + &quot;px&quot;;</span><br><span class="line">            document.getElementById(&#39;show&#39;).style.top &#x3D; p.bottom + &quot;px&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">    &lt;script type&#x3D;&quot;text&#x2F;javascript &quot;&gt;</span><br><span class="line">        function show(elem) &#123;</span><br><span class="line">            var p &#x3D; suggester.getInputPositon(elem);</span><br><span class="line">            var s &#x3D; document.getElementById(&#39;show&#39;);</span><br><span class="line">            s.style.top &#x3D; p.bottom + &#39;px&#39;;</span><br><span class="line">            s.style.left &#x3D; p.left + &#39;px&#39;;</span><br><span class="line">            s.style.display &#x3D; &#39;inherit&#39;;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="POSMAN"><a href="#POSMAN" class="headerlink" title="POSMAN"></a>POSMAN</h2><h3 id="從Chrome複制curl"><a href="#從Chrome複制curl" class="headerlink" title="從Chrome複制curl"></a>從Chrome複制curl</h3><ol>
+<li>從chrome開發者工具選擇netword，選擇copy的request,滑鼠右鍵選擇copy/copy as cURL(bash)<br><img src="https://i.imgur.com/HoANE7Z.png"></li>
+<li>開啟postman，從上方import，後選擇Paste Raw Text<br><img src="https://i.imgur.com/LIiIrL3.png"></li>
+<li>上述完成後，執行import，會出現「error while importing curl typeerror invalid format for curl.」，這是因為postman不支援<code>--compressed</code>語法，刪除後再執行就解決了<br><img src="https://i.imgur.com/8sbX8V3.png"></li>
+</ol>
+<blockquote>
+<p><a href="https://github.com/postmanlabs/postman-app-support/issues/5735">https://github.com/postmanlabs/postman-app-support/issues/5735</a></p>
+</blockquote>
+<hr>
+<h2 id="目錄匯出檔案"><a href="#目錄匯出檔案" class="headerlink" title="目錄匯出檔案"></a>目錄匯出檔案</h2><ul>
+<li>透過簡單dos指令</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dir &#x2F;b &#x2F;s *.* &gt; file_list.xls</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><a href="https://steachs.com/archives/51787">將資料夾底下的全部檔案列表出來，並儲存成 Excel 檔案</a></p>
+</blockquote>
+<ul>
+<li>使用黑大C#程式</li>
+</ul>
+<blockquote>
+<p><a href="https://blog.darkthread.net/blog/export-file-struc-as-excel/">【潛盾機】將檔案結構匯成Excel文件</a></p>
+</blockquote>
+<ul>
+<li>使用「DirPrintOK 」</li>
+</ul>
+<blockquote>
+<p><a href="https://key.chtouch.com/ContentView.aspx?P=3075">DirPrintOK 匯出目錄下的資料夾、檔案名稱也可以很簡單</a></p>
+</blockquote>
+<ul>
+<li><p>如果是使用WIN10<br>先全選，再使用「複製路徑」<br><img src="https://i.imgur.com/HTKVBJK.png"></p>
+</li>
+<li><p>如果有使用Chrome<br>直接將資料匣拖洩到Chrome<br><img src="https://i.imgur.com/MvA0iJP.png"></p>
+</li>
+</ul>
+
+  	</div>
+	  
+	  <div class="article-tags tags">
+      
+        <a href="/blog/tags/%E9%96%8B%E7%99%BC/">開發</a>
+      
+        <a href="/blog/tags/%E7%B7%9A%E4%B8%8A/">線上</a>
+      
+        <a href="/blog/tags/%E5%B0%8F%E5%B7%A5%E5%85%B7/">小工具</a>
+      
+	  </div>
+    
+		
+	
+		<div class="art-item-footer">
+				
+					<span class="art-item-left"><i class="icon icon-chevron-thin-left"></i>prev：<a href="/blog/2021/03/29/%E8%A6%AA%E5%AD%90%E7%B0%A1%E6%98%93%E6%89%8B%E4%BD%9C%E9%A4%85%E4%B9%BE/" rel="prev"  title="親子簡易手作餅乾">
+						親子簡易手作餅乾 
+					</a></span>
+				
+				
+					<span class="art-item-right">next：<a href="/blog/2021/03/25/%E4%BD%BF%E7%94%A8Session%E5%AF%A6%E4%BD%9CLogin/" rel="next"  title="使用Session實作Login">
+						使用Session實作Login
+					</a><i class="icon icon-chevron-thin-right"></i></span>
+				
+		</div>
+	
+	</section>
+	
+</article>
+<script>
+	window.subData = {
+		title: '開發/線上小工具',
+		tools: true
+	}
+</script>
+
+      </div>
+      <aside class='l_side'>
+        
+  <section class='m_widget about'>
+
+<img class='avatar waves-image' src='/blog/images/avatar.jpg' />
+
+<div class='header'>Justin Chang Blog</div>
+<div class='content'>
+<div class='desc'>Tempora mutantur, nos et mutamur in illis ...</div>
+</div>
+</section>
+
+  <section class='m_widget categories'>
+<div class='header'>Categories</div>
+<div class='content'>
+    
+    <ul class="entry">
+    
+        <li><a class="flat-box" href="/blog/categories/ASP-NET-Core/"><div class='name'>ASP.NET Core;</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/blog/categories/%E5%B7%A5%E5%85%B7/"><div class='name'>工具</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/blog/categories/%E7%83%98%E5%9F%B9/"><div class='name'>烘培</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/blog/categories/%E8%8B%B1%E6%96%87%E5%AD%B8%E7%BF%92/"><div class='name'>英文學習</div><div class='badget'>1</div></a></li>
+    
+    </ul>
+    
+</div>
+</section>
+
+  
+<div class="m_widget tagcloud">
+    <div class="header">Tags</div>
+    <div class='content'>
+        <a href="/blog/tags/ASP-NETCore/" style="font-size: 14px; color: #808080">ASP.NETCore</a> <a href="/blog/tags/English-Study/" style="font-size: 14px; color: #808080">English Study</a> <a href="/blog/tags/Login/" style="font-size: 14px; color: #808080">Login</a> <a href="/blog/tags/Session/" style="font-size: 14px; color: #808080">Session</a> <a href="/blog/tags/WithoutIdentityLogin/" style="font-size: 14px; color: #808080">WithoutIdentityLogin</a> <a href="/blog/tags/%E4%BA%BA%E7%94%9F%E6%B8%85%E5%96%AE/" style="font-size: 14px; color: #808080">人生清單</a> <a href="/blog/tags/%E5%B0%8F%E5%B7%A5%E5%85%B7/" style="font-size: 14px; color: #808080">小工具</a> <a href="/blog/tags/%E5%BE%AE%E7%B2%BE%E9%80%9A/" style="font-size: 14px; color: #808080">微精通</a> <a href="/blog/tags/%E6%89%8B%E4%BD%9C%E9%A4%85%E4%B9%BE/" style="font-size: 14px; color: #808080">手作餅乾</a> <a href="/blog/tags/%E7%83%98%E5%9F%B9/" style="font-size: 14px; color: #808080">烘培</a> <a href="/blog/tags/%E7%B7%9A%E4%B8%8A/" style="font-size: 14px; color: #808080">線上</a> <a href="/blog/tags/%E8%81%BD%E5%8A%9B/" style="font-size: 14px; color: #808080">聽力</a> <a href="/blog/tags/%E8%87%AA%E5%AD%B8/" style="font-size: 14px; color: #808080">自學</a> <a href="/blog/tags/%E8%8B%B1%E6%96%87/" style="font-size: 14px; color: #808080">英文</a> <a href="/blog/tags/%E8%A6%AA%E5%AD%90/" style="font-size: 14px; color: #808080">親子</a> <a href="/blog/tags/%E9%96%8B%E7%99%BC/" style="font-size: 14px; color: #808080">開發</a>
+    </div>
+</div>
+
+
+
+      </aside>
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+  </div>
+  <footer id="footer" class="clearfix">
+
+	<div class="social-wrapper">
+  	
+      
+        <a href="https://github.com/JustinChangTW" class="social github"
+          target="_blank" rel="external">
+          <span class="icon icon-github"></span>
+        </a>
+      
+    
+  </div>
+  
+  <div>Theme <a href='https://github.com/stkevintan/hexo-theme-material-flow' class="codename">MaterialFlow</a> designed by <a href="http://keyin.me/" target="_blank">Kevin Tan</a>.</div>
+  
+</footer>
+
+
+  <script>setLoadingBarProgress(80);</script>
+  
+
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src='//cdn.bootcss.com/node-waves/0.7.5/waves.min.js'></script>
+<script src="//cdn.bootcss.com/scrollReveal.js/3.3.2/scrollreveal.min.js"></script>
+
+<script src="/blog/js/jquery.fitvids.js"></script>
+
+<script>
+	var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+	var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+	var ALGOLIA_API_KEY = "";
+	var ALGOLIA_APP_ID = "";
+	var ALGOLIA_INDEX_NAME = "";
+  var AZURE_SERVICE_NAME = "";
+  var AZURE_INDEX_NAME = "";
+  var AZURE_QUERY_KEY = "";
+  var BAIDU_API_ID = "";
+  var SEARCH_SERVICE = "hexo";
+  var ROOT = "/blog/"||"/";
+  if(!ROOT.endsWith('/'))ROOT += '/';
+</script>
+
+<script src="/blog/js/search.js"></script>
+
+
+<script src="/blog/js/app.js"></script>
+
+
+
+  <script src='https://unpkg.com/mermaid@8.9.2/dist/mermaid.min.js'></script>
+
+  <script>setLoadingBarProgress(100);</script>
+</body>
+</html>
