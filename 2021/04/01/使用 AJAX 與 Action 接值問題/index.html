@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
-  <title>使用 AJAX 與 Action 接值問題？ | Justin&#39;s Blog</title>
+  <title>使用 AJAX 與 Action 接值問題 | Justin&#39;s Blog</title>
   <meta name="description" content="" />
   <meta name="keywords" content="" />
   <meta name="HandheldFriendly" content="True" />
@@ -14,8 +14,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="使用 AJAX 與 Action 接值問題？在使用AJAX時，常常會發生後端接不到值等等問題，通常都是邊寫邊Try到通為止，但時間一久又忘記怎樣的組合才對的，於是來作一個比較表吧，首先把會影響的變數列一下：  前端： content-type的設定 資料是否要序例化為字串   後端： FromBody是否要使用 在不同域的情境     415:Unsupported Media Typecors">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用 AJAX 與 Action 接值問題？">
-<meta property="og:url" content="https://justinchangtw.github.io/blog/2021/04/01/%E4%BD%BF%E7%94%A8%20AJAX%20%E8%88%87%20Action%20%E6%8E%A5%E5%80%BC%E5%95%8F%E9%A1%8C%EF%BC%9F/index.html">
+<meta property="og:title" content="使用 AJAX 與 Action 接值問題">
+<meta property="og:url" content="https://justinchangtw.github.io/blog/2021/04/01/%E4%BD%BF%E7%94%A8%20AJAX%20%E8%88%87%20Action%20%E6%8E%A5%E5%80%BC%E5%95%8F%E9%A1%8C/index.html">
 <meta property="og:site_name" content="Justin&#39;s Blog">
 <meta property="og:description" content="使用 AJAX 與 Action 接值問題？在使用AJAX時，常常會發生後端接不到值等等問題，通常都是邊寫邊Try到通為止，但時間一久又忘記怎樣的組合才對的，於是來作一個比較表吧，首先把會影響的變數列一下：  前端： content-type的設定 資料是否要序例化為字串   後端： FromBody是否要使用 在不同域的情境     415:Unsupported Media Typecors">
 <meta property="og:locale" content="zh_TW">
@@ -23,7 +23,7 @@
 <meta property="og:image" content="https://i.imgur.com/0lNJKCG.png">
 <meta property="og:image" content="https://i.imgur.com/VRcjweh.png">
 <meta property="article:published_time" content="2021-04-01T04:03:54.000Z">
-<meta property="article:modified_time" content="2021-04-01T08:08:22.819Z">
+<meta property="article:modified_time" content="2021-04-01T08:52:02.173Z">
 <meta property="article:author" content="Justin Chang Blog">
 <meta property="article:tag" content="AJAX">
 <meta property="article:tag" content="ASP.NETCore">
@@ -141,13 +141,13 @@
   <div class="l_body">
     <div class='container clearfix'>
       <div class='l_main'>
-        <article id="post-使用 AJAX 與 Action 接值問題？"
+        <article id="post-使用 AJAX 與 Action 接值問題"
   class="post white-box article-type-post"
   itemscope itemprop="blogPost">
 	<section class='meta'>
 	<h2 class="title">
-  	<a href="/blog/2021/04/01/%E4%BD%BF%E7%94%A8%20AJAX%20%E8%88%87%20Action%20%E6%8E%A5%E5%80%BC%E5%95%8F%E9%A1%8C%EF%BC%9F/">
-    	使用 AJAX 與 Action 接值問題？
+  	<a href="/blog/2021/04/01/%E4%BD%BF%E7%94%A8%20AJAX%20%E8%88%87%20Action%20%E6%8E%A5%E5%80%BC%E5%95%8F%E9%A1%8C/">
+    	使用 AJAX 與 Action 接值問題
     </a>
   </h2>
 	<time>
@@ -161,7 +161,7 @@
 
 	</section>
 	
-		<section class="toc-wrapper"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-AJAX-%E8%88%87-Action-%E6%8E%A5%E5%80%BC%E5%95%8F%E9%A1%8C%EF%BC%9F"><span class="toc-number">1.</span> <span class="toc-text">使用 AJAX 與 Action 接值問題？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%83%E6%95%B8%E8%A8%AD%E5%AE%9A%E5%95%8F%E9%A1%8C"><span class="toc-number">1.1.</span> <span class="toc-text">參數設定問題</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CORS%E5%95%8F%E9%A1%8C"><span class="toc-number">1.2.</span> <span class="toc-text">CORS問題</span></a></li></ol></li></ol></section>
+		<section class="toc-wrapper"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-AJAX-%E8%88%87-Action-%E6%8E%A5%E5%80%BC%E5%95%8F%E9%A1%8C%EF%BC%9F"><span class="toc-number">1.</span> <span class="toc-text">使用 AJAX 與 Action 接值問題？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%83%E6%95%B8%E8%A8%AD%E5%AE%9A%E5%95%8F%E9%A1%8C"><span class="toc-number">1.1.</span> <span class="toc-text">參數設定問題</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CORS%E5%95%8F%E9%A1%8C"><span class="toc-number">1.2.</span> <span class="toc-text">CORS問題</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%8C%E6%95%B4%E7%9A%84%E8%85%A6%E5%9C%96"><span class="toc-number">2.</span> <span class="toc-text">完整的腦圖</span></a></li></ol></section>
 	
 	<section class="article typo">
   	<div class="article-entry" itemprop="articleBody">
@@ -428,6 +428,7 @@
 </ul>
 </li>
 </ul>
+<h2 id="完整的腦圖"><a href="#完整的腦圖" class="headerlink" title="完整的腦圖"></a>完整的腦圖</h2><p><a href="https://gitmind.com/app/doc/83eb669342c5b87f51a3a11abbc9a257">完整的腦圖</a></p>
 
   	</div>
 	  
@@ -455,7 +456,7 @@
 </article>
 <script>
 	window.subData = {
-		title: '使用 AJAX 與 Action 接值問題？',
+		title: '使用 AJAX 與 Action 接值問題',
 		tools: true
 	}
 </script>

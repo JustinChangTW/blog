@@ -6,7 +6,7 @@
   <link href="https://justinchangtw.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://justinchangtw.github.io/blog/"/>
-  <updated>2021-04-01T08:08:22.819Z</updated>
+  <updated>2021-04-01T08:52:02.173Z</updated>
   <id>https://justinchangtw.github.io/blog/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>使用 AJAX 與 Action 接值問題？</title>
-    <link href="https://justinchangtw.github.io/blog/2021/04/01/%E4%BD%BF%E7%94%A8%20AJAX%20%E8%88%87%20Action%20%E6%8E%A5%E5%80%BC%E5%95%8F%E9%A1%8C%EF%BC%9F/"/>
-    <id>https://justinchangtw.github.io/blog/2021/04/01/%E4%BD%BF%E7%94%A8%20AJAX%20%E8%88%87%20Action%20%E6%8E%A5%E5%80%BC%E5%95%8F%E9%A1%8C%EF%BC%9F/</id>
+    <title>使用 AJAX 與 Action 接值問題</title>
+    <link href="https://justinchangtw.github.io/blog/2021/04/01/%E4%BD%BF%E7%94%A8%20AJAX%20%E8%88%87%20Action%20%E6%8E%A5%E5%80%BC%E5%95%8F%E9%A1%8C/"/>
+    <id>https://justinchangtw.github.io/blog/2021/04/01/%E4%BD%BF%E7%94%A8%20AJAX%20%E8%88%87%20Action%20%E6%8E%A5%E5%80%BC%E5%95%8F%E9%A1%8C/</id>
     <published>2021-04-01T04:03:54.000Z</published>
-    <updated>2021-04-01T08:08:22.819Z</updated>
+    <updated>2021-04-01T08:52:02.173Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;使用-AJAX-與-Action-接值問題？&quot;&gt;&lt;a href=&quot;#使用-AJAX-與-Action-接值問題？&quot; class=&quot;headerlink&quot; title=&quot;使用 AJAX 與 Action 接值問題？&quot;&gt;&lt;/a&gt;使用 AJAX 與 Action 接值問題？&lt;/h2&gt;&lt;p&gt;在使用AJAX時，常常會發生後端接不到值等等問題，通常都是邊寫邊Try到通為止，但時間一久又忘記怎樣的組合才對的，於是來作一個比較表吧，首先把會影響的變數列一下：&lt;/p&gt;
