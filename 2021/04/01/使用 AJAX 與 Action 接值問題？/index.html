@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
-  <title>Tag: ASP.NETCore | Justin&#39;s Blog</title>
+  <title>使用 AJAX 與 Action 接值問題？ | Justin&#39;s Blog</title>
   <meta name="description" content="" />
   <meta name="keywords" content="" />
   <meta name="HandheldFriendly" content="True" />
@@ -12,13 +12,23 @@
   <link rel="shortcut icon" href="/blog/images/favicon.ico">
   <link rel="alternate" href="/blog/atom.xml" title="Justin's Blog" type="application/atom+xml">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Justin&#39;s Blog">
-<meta property="og:url" content="https://justinchangtw.github.io/blog/tags/ASP-NETCore/index.html">
+  <meta name="description" content="使用 AJAX 與 Action 接值問題？在使用AJAX時，常常會發生後端接不到值等等問題，通常都是邊寫邊Try到通為止，但時間一久又忘記怎樣的組合才對的，於是來作一個比較表吧，首先把會影響的變數列一下：  前端： content-type的設定 資料是否要序例化為字串   後端： FromBody是否要使用 在不同域的情境     415:Unsupported Media Typecors">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用 AJAX 與 Action 接值問題？">
+<meta property="og:url" content="https://justinchangtw.github.io/blog/2021/04/01/%E4%BD%BF%E7%94%A8%20AJAX%20%E8%88%87%20Action%20%E6%8E%A5%E5%80%BC%E5%95%8F%E9%A1%8C%EF%BC%9F/index.html">
 <meta property="og:site_name" content="Justin&#39;s Blog">
+<meta property="og:description" content="使用 AJAX 與 Action 接值問題？在使用AJAX時，常常會發生後端接不到值等等問題，通常都是邊寫邊Try到通為止，但時間一久又忘記怎樣的組合才對的，於是來作一個比較表吧，首先把會影響的變數列一下：  前端： content-type的設定 資料是否要序例化為字串   後端： FromBody是否要使用 在不同域的情境     415:Unsupported Media Typecors">
 <meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://i.imgur.com/qZ4dNtD.png">
+<meta property="og:image" content="https://i.imgur.com/0lNJKCG.png">
+<meta property="og:image" content="https://i.imgur.com/VRcjweh.png">
+<meta property="article:published_time" content="2021-04-01T04:03:54.000Z">
+<meta property="article:modified_time" content="2021-04-01T08:08:22.819Z">
 <meta property="article:author" content="Justin Chang Blog">
+<meta property="article:tag" content="AJAX">
+<meta property="article:tag" content="ASP.NETCore">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.imgur.com/qZ4dNtD.png">
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
@@ -131,35 +141,31 @@
   <div class="l_body">
     <div class='container clearfix'>
       <div class='l_main'>
-        
-  <script>
-    window.subData= { title:'Tag : ASP.NETCore'}
-  </script>
-
-<section class="post-list">
+        <article id="post-使用 AJAX 與 Action 接值問題？"
+  class="post white-box article-type-post"
+  itemscope itemprop="blogPost">
+	<section class='meta'>
+	<h2 class="title">
+  	<a href="/blog/2021/04/01/%E4%BD%BF%E7%94%A8%20AJAX%20%E8%88%87%20Action%20%E6%8E%A5%E5%80%BC%E5%95%8F%E9%A1%8C%EF%BC%9F/">
+    	使用 AJAX 與 Action 接值問題？
+    </a>
+  </h2>
+	<time>
+	  4月 1, 2021
+	</time>
 	
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/blog/2021/04/01/%E4%BD%BF%E7%94%A8%20AJAX%20%E8%88%87%20Action%20%E6%8E%A5%E5%80%BC%E5%95%8F%E9%A1%8C%EF%BC%9F/">
-        使用 AJAX 與 Action 接值問題？
-      </a>
-    </h2>
-    
-    <time>
-      4月 1, 2021
-    </time>
-		
     
     <div class='cats'>
         <a href="/blog/categories/AJAX/">AJAX</a>
     </div>
 
-  </section>
-  <section class="article typo">
-	  <h2 id="使用-AJAX-與-Action-接值問題？"><a href="#使用-AJAX-與-Action-接值問題？" class="headerlink" title="使用 AJAX 與 Action 接值問題？"></a>使用 AJAX 與 Action 接值問題？</h2><p>在使用AJAX時，常常會發生後端接不到值等等問題，通常都是邊寫邊Try到通為止，但時間一久又忘記怎樣的組合才對的，於是來作一個比較表吧，首先把會影響的變數列一下：</p>
+	</section>
+	
+		<section class="toc-wrapper"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-AJAX-%E8%88%87-Action-%E6%8E%A5%E5%80%BC%E5%95%8F%E9%A1%8C%EF%BC%9F"><span class="toc-number">1.</span> <span class="toc-text">使用 AJAX 與 Action 接值問題？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%83%E6%95%B8%E8%A8%AD%E5%AE%9A%E5%95%8F%E9%A1%8C"><span class="toc-number">1.1.</span> <span class="toc-text">參數設定問題</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CORS%E5%95%8F%E9%A1%8C"><span class="toc-number">1.2.</span> <span class="toc-text">CORS問題</span></a></li></ol></li></ol></section>
+	
+	<section class="article typo">
+  	<div class="article-entry" itemprop="articleBody">
+    	<h2 id="使用-AJAX-與-Action-接值問題？"><a href="#使用-AJAX-與-Action-接值問題？" class="headerlink" title="使用 AJAX 與 Action 接值問題？"></a>使用 AJAX 與 Action 接值問題？</h2><p>在使用AJAX時，常常會發生後端接不到值等等問題，通常都是邊寫邊Try到通為止，但時間一久又忘記怎樣的組合才對的，於是來作一個比較表吧，首先把會影響的變數列一下：</p>
 <ul>
 <li>前端：<ul>
 <li>content-type的設定</li>
@@ -175,15 +181,257 @@
 <blockquote>
 <p>415:Unsupported Media Type<br>cors error:Cross-Origin Resource Sharing (CORS) is a standard that allows a server to relax the same-origin policy.</p>
 </blockquote>
+<span id="more"></span>
+<h3 id="參數設定問題"><a href="#參數設定問題" class="headerlink" title="參數設定問題"></a>參數設定問題</h3><ul>
+<li><p>情境假設：</p>
+<ul>
+<li>使用JQuery的$.AJAX</li>
+<li>後端使用ASP.NET Core MVC</li>
+<li>沒有跨域問題</li>
+</ul>
+</li>
+<li><p>使用FromBody</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>contentType</th>
+<th>data</th>
+<th>request</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>application/json</td>
+<td>JSON.stringify</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>application/json</td>
+<td>Object</td>
+<td>null</td>
+</tr>
+<tr>
+<td>none</td>
+<td>JSON.stringify</td>
+<td>415</td>
+</tr>
+<tr>
+<td>none</td>
+<td>Object</td>
+<td>415</td>
+</tr>
+</tbody></table>
+<ul>
+<li>不使用FromBody</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>contentType</th>
+<th>data</th>
+<th>request</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>application/json</td>
+<td>JSON.stringify</td>
+<td>null</td>
+</tr>
+<tr>
+<td>application/json</td>
+<td>Object</td>
+<td>null</td>
+</tr>
+<tr>
+<td>none</td>
+<td>JSON.stringify</td>
+<td>null</td>
+</tr>
+<tr>
+<td>none</td>
+<td>object</td>
+<td>OK</td>
+</tr>
+</tbody></table>
+<p><img src="https://i.imgur.com/qZ4dNtD.png" alt="Image"></p>
+<h3 id="CORS問題"><a href="#CORS問題" class="headerlink" title="CORS問題"></a>CORS問題</h3><ul>
+<li><p>情境假設：</p>
+<ul>
+<li>使用JQuery的$.AJAX</li>
+<li>後端使用ASP.NET Core MVC</li>
+<li>有跨域問題<ul>
+<li>站台是否允許可跨站</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>allow cross site &amp;&amp; use FromBody</p>
+<table>
+<thead>
+<tr>
+<th>contentType</th>
+<th>data</th>
+<th>request</th>
+<th>response</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>application/json</td>
+<td>JSON.stringify</td>
+<td>OK</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>application/json</td>
+<td>Object</td>
+<td>null</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>none</td>
+<td>JSON.stringify</td>
+<td>415</td>
+<td></td>
+</tr>
+<tr>
+<td>none</td>
+<td>Object</td>
+<td>415</td>
+<td></td>
+</tr>
+</tbody></table>
+</li>
+<li><p>allow cross site &amp;&amp; not use FromBody</p>
+<table>
+<thead>
+<tr>
+<th>contentType</th>
+<th>data</th>
+<th>request</th>
+<th>response</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>application/json</td>
+<td>JSON.stringify</td>
+<td>null</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>application/json</td>
+<td>Object</td>
+<td>null</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>none</td>
+<td>JSON.stringify</td>
+<td>null</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>none</td>
+<td>Object</td>
+<td>OK</td>
+<td>OK</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<p><img src="https://i.imgur.com/0lNJKCG.png" alt="Image"></p>
+<ul>
+<li><p>not allow cross site &amp;&amp; use FromBody</p>
+<table>
+<thead>
+<tr>
+<th>contentType</th>
+<th>data</th>
+<th>request</th>
+<th>response</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>application/json</td>
+<td>JSON.stringify</td>
+<td>CORS error</td>
+<td></td>
+</tr>
+<tr>
+<td>application/json</td>
+<td>Object</td>
+<td>CORS error</td>
+<td></td>
+</tr>
+<tr>
+<td>none</td>
+<td>JSON.stringify</td>
+<td>CORS error</td>
+<td></td>
+</tr>
+<tr>
+<td>none</td>
+<td>Object</td>
+<td>CORS error</td>
+<td></td>
+</tr>
+</tbody></table>
+</li>
+<li><p>not allow cross site &amp;&amp; not use FromBody</p>
+<table>
+<thead>
+<tr>
+<th>contentType</th>
+<th>data</th>
+<th>request</th>
+<th>response</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>application/json</td>
+<td>JSON.stringify</td>
+<td>null</td>
+<td>CORS error</td>
+</tr>
+<tr>
+<td>application/json</td>
+<td>Object</td>
+<td>null</td>
+<td>CORS error</td>
+</tr>
+<tr>
+<td>none</td>
+<td>JSON.stringify</td>
+<td>null</td>
+<td>CORS error</td>
+</tr>
+<tr>
+<td>none</td>
+<td>Object</td>
+<td>OK</td>
+<td>CORS error</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<p><img src="https://i.imgur.com/VRcjweh.png" alt="Image"></p>
+<ul>
+<li>結論<ul>
+<li>使用ContentType為Json時，data一定要使用JSON.stringify</li>
+<li>沒有使用ContentType時，data可以使用轉入Object</li>
+<li>可以跨域與同站行為相同</li>
+<li>不可跨域時<ul>
+<li>有使用FromBody，會直接出Cors error，進不了Action</li>
+<li>沒使用FromBody，Response會出現Cors error, 且有機會把資料傳入Action</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 
-    
-	  <div class="readmore">
-      <a href="/blog/2021/04/01/%E4%BD%BF%E7%94%A8%20AJAX%20%E8%88%87%20Action%20%E6%8E%A5%E5%80%BC%E5%95%8F%E9%A1%8C%EF%BC%9F/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
+  	</div>
+	  
+	  <div class="article-tags tags">
       
         <a href="/blog/tags/AJAX/">AJAX</a>
       
@@ -191,62 +439,26 @@
       
 	  </div>
     
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/blog/2021/03/25/%E4%BD%BF%E7%94%A8Session%E5%AF%A6%E4%BD%9CLogin/">
-        使用Session實作Login
-      </a>
-    </h2>
-    
-    <time>
-      3月 25, 2021
-    </time>
 		
-    
-    <div class='cats'>
-        <a href="/blog/categories/ASP-NET-Core/">ASP.NET Core;</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <h1 id="使用Session實作Login"><a href="#使用Session實作Login" class="headerlink" title="使用Session實作Login"></a>使用Session實作Login</h1><h2 id="啟動session"><a href="#啟動session" class="headerlink" title="啟動session"></a>啟動session</h2><p>要在 ASP.NET Core 啟用 session 只需在 Startup.cs 兩個步驟：</p>
-<ol>
-<li>在ConfigureServices加上session服務</li>
-</ol>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">ConfigureServices</span>(<span class="params">IServiceCollection services</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ...</span><br><span class="line">    services.AddSession(); <span class="comment">//加上session服務</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-    
-	  <div class="readmore">
-      <a href="/blog/2021/03/25/%E4%BD%BF%E7%94%A8Session%E5%AF%A6%E4%BD%9CLogin/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/blog/tags/ASP-NETCore/">ASP.NETCore</a>
-      
-        <a href="/blog/tags/WithoutIdentityLogin/">WithoutIdentityLogin</a>
-      
-        <a href="/blog/tags/Login/">Login</a>
-      
-        <a href="/blog/tags/Session/">Session</a>
-      
-	  </div>
-    
-  </section>
+	
+		<div class="art-item-footer">
+				
+				
+					<span class="art-item-right">next：<a href="/blog/2021/03/29/%E8%A6%AA%E5%AD%90%E7%B0%A1%E6%98%93%E6%89%8B%E4%BD%9C%E9%A4%85%E4%B9%BE/" rel="next"  title="親子簡易手作餅乾">
+						親子簡易手作餅乾
+					</a><i class="icon icon-chevron-thin-right"></i></span>
+				
+		</div>
+	
+	</section>
+	
 </article>
-    </div>
-  
-</section>
-
+<script>
+	window.subData = {
+		title: '使用 AJAX 與 Action 接值問題？',
+		tools: true
+	}
+</script>
 
       </div>
       <aside class='l_side'>

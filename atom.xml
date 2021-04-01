@@ -6,7 +6,7 @@
   <link href="https://justinchangtw.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://justinchangtw.github.io/blog/"/>
-  <updated>2021-03-29T10:07:55.283Z</updated>
+  <updated>2021-04-01T08:08:22.819Z</updated>
   <id>https://justinchangtw.github.io/blog/</id>
   
   <author>
@@ -17,20 +17,60 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>使用 AJAX 與 Action 接值問題？</title>
+    <link href="https://justinchangtw.github.io/blog/2021/04/01/%E4%BD%BF%E7%94%A8%20AJAX%20%E8%88%87%20Action%20%E6%8E%A5%E5%80%BC%E5%95%8F%E9%A1%8C%EF%BC%9F/"/>
+    <id>https://justinchangtw.github.io/blog/2021/04/01/%E4%BD%BF%E7%94%A8%20AJAX%20%E8%88%87%20Action%20%E6%8E%A5%E5%80%BC%E5%95%8F%E9%A1%8C%EF%BC%9F/</id>
+    <published>2021-04-01T04:03:54.000Z</published>
+    <updated>2021-04-01T08:08:22.819Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;使用-AJAX-與-Action-接值問題？&quot;&gt;&lt;a href=&quot;#使用-AJAX-與-Action-接值問題？&quot; class=&quot;headerlink&quot; title=&quot;使用 AJAX 與 Action 接值問題？&quot;&gt;&lt;/a&gt;使用 AJAX 與 Action 接值問題？&lt;/h2&gt;&lt;p&gt;在使用AJAX時，常常會發生後端接不到值等等問題，通常都是邊寫邊Try到通為止，但時間一久又忘記怎樣的組合才對的，於是來作一個比較表吧，首先把會影響的變數列一下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;前端：&lt;ul&gt;
+&lt;li&gt;content-type的設定&lt;/li&gt;
+&lt;li&gt;資料是否要序例化為字串&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;後端：&lt;ul&gt;
+&lt;li&gt;FromBody是否要使用&lt;/li&gt;
+&lt;li&gt;在不同域的情境&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;415:Unsupported Media Type&lt;br&gt;cors error:Cross-Origin Resource Sharing (CORS) is a standard that allows a server to relax the same-origin policy.&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="AJAX" scheme="https://justinchangtw.github.io/blog/categories/AJAX/"/>
+    
+    
+    <category term="AJAX" scheme="https://justinchangtw.github.io/blog/tags/AJAX/"/>
+    
+    <category term="ASP.NETCore" scheme="https://justinchangtw.github.io/blog/tags/ASP-NETCore/"/>
+    
+  </entry>
+  
+  <entry>
     <title>親子簡易手作餅乾</title>
     <link href="https://justinchangtw.github.io/blog/2021/03/29/%E8%A6%AA%E5%AD%90%E7%B0%A1%E6%98%93%E6%89%8B%E4%BD%9C%E9%A4%85%E4%B9%BE/"/>
     <id>https://justinchangtw.github.io/blog/2021/03/29/%E8%A6%AA%E5%AD%90%E7%B0%A1%E6%98%93%E6%89%8B%E4%BD%9C%E9%A4%85%E4%B9%BE/</id>
     <published>2021-03-29T01:37:18.000Z</published>
-    <updated>2021-03-29T10:07:55.283Z</updated>
+    <updated>2021-04-01T08:05:55.032Z</updated>
     
     
     <summary type="html">&lt;p&gt;最近燃起烘培魂，以前一直覺得會烘培的對我來說是一種遙不可及的事，受到&lt;a href=&quot;https://www.books.com.tw/products/0010776629&quot;&gt;微精通&lt;/a&gt;啟發，凡事作就對了，要前進的第一步就是Google，而第一篇就是 &lt;a href=&quot;https://mamibuy.com.tw/talk/article/158490&quot;&gt;初學者必學～超簡易手工烤餅乾&lt;/a&gt;，覺得困難度不高，就開始動手Go Go&lt;/p&gt;
 &lt;h2 id=&quot;準備材料&quot;&gt;&lt;a href=&quot;#準備材料&quot; class=&quot;headerlink&quot; title=&quot;準備材料&quot;&gt;&lt;/a&gt;準備材料&lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;奶油  100g&lt;/li&gt;
-&lt;li&gt;砂糖 40g&lt;br&gt; 可以自行調整甜度或使用巧克力醬取代&lt;/li&gt;
+&lt;li&gt;砂糖 40g&lt;br&gt; 可以自行調整甜度&lt;/li&gt;
 &lt;li&gt;蛋黃 1 顆&lt;br&gt; 可以依口味作調整&lt;/li&gt;
-&lt;li&gt;低筋麵粉 260g&lt;br&gt; 與奶油比例為(3:8)&lt;/li&gt;
+&lt;li&gt;低筋麵粉 200g&lt;br&gt; 與奶油比例為(1:2)右左&lt;/li&gt;
 &lt;li&gt;鮮奶 少許&lt;br&gt; 如果麵團太乾時可以加上一些&lt;/li&gt;
+&lt;li&gt;最後可以加一些風味的醬料&lt;ol&gt;
+&lt;li&gt;巧克力醬(最好是巧克力粉)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
 &lt;/ol&gt;</summary>
     
     
@@ -96,13 +136,13 @@
     <category term="ASP.NET Core;" scheme="https://justinchangtw.github.io/blog/categories/ASP-NET-Core/"/>
     
     
-    <category term="Login" scheme="https://justinchangtw.github.io/blog/tags/Login/"/>
-    
-    <category term="Session" scheme="https://justinchangtw.github.io/blog/tags/Session/"/>
-    
     <category term="ASP.NETCore" scheme="https://justinchangtw.github.io/blog/tags/ASP-NETCore/"/>
     
     <category term="WithoutIdentityLogin" scheme="https://justinchangtw.github.io/blog/tags/WithoutIdentityLogin/"/>
+    
+    <category term="Login" scheme="https://justinchangtw.github.io/blog/tags/Login/"/>
+    
+    <category term="Session" scheme="https://justinchangtw.github.io/blog/tags/Session/"/>
     
   </entry>
   

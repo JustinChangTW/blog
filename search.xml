@@ -4,11 +4,38 @@
   
     
     <entry>
+      <title>使用 AJAX 與 Action 接值問題？</title>
+      <link href="/blog/2021/04/01/%E4%BD%BF%E7%94%A8%20AJAX%20%E8%88%87%20Action%20%E6%8E%A5%E5%80%BC%E5%95%8F%E9%A1%8C%EF%BC%9F/"/>
+      <url>/blog/2021/04/01/%E4%BD%BF%E7%94%A8%20AJAX%20%E8%88%87%20Action%20%E6%8E%A5%E5%80%BC%E5%95%8F%E9%A1%8C%EF%BC%9F/</url>
+      
+        <content type="html"><![CDATA[<h2 id="使用-AJAX-與-Action-接值問題？"><a href="#使用-AJAX-與-Action-接值問題？" class="headerlink" title="使用 AJAX 與 Action 接值問題？"></a>使用 AJAX 與 Action 接值問題？</h2><p>在使用AJAX時，常常會發生後端接不到值等等問題，通常都是邊寫邊Try到通為止，但時間一久又忘記怎樣的組合才對的，於是來作一個比較表吧，首先把會影響的變數列一下：</p><ul><li>前端：<ul><li>content-type的設定</li><li>資料是否要序例化為字串</li></ul></li><li>後端：<ul><li>FromBody是否要使用</li><li>在不同域的情境</li></ul></li></ul><blockquote><p>415:Unsupported Media Type<br>cors error:Cross-Origin Resource Sharing (CORS) is a standard that allows a server to relax the same-origin policy.</p></blockquote><span id="more"></span><h3 id="參數設定問題"><a href="#參數設定問題" class="headerlink" title="參數設定問題"></a>參數設定問題</h3><ul><li><p>情境假設：</p><ul><li>使用JQuery的$.AJAX</li><li>後端使用ASP.NET Core MVC</li><li>沒有跨域問題</li></ul></li><li><p>使用FromBody</p></li></ul><table><thead><tr><th>contentType</th><th>data</th><th>request</th></tr></thead><tbody><tr><td>application/json</td><td>JSON.stringify</td><td>OK</td></tr><tr><td>application/json</td><td>Object</td><td>null</td></tr><tr><td>none</td><td>JSON.stringify</td><td>415</td></tr><tr><td>none</td><td>Object</td><td>415</td></tr></tbody></table><ul><li>不使用FromBody</li></ul><table><thead><tr><th>contentType</th><th>data</th><th>request</th></tr></thead><tbody><tr><td>application/json</td><td>JSON.stringify</td><td>null</td></tr><tr><td>application/json</td><td>Object</td><td>null</td></tr><tr><td>none</td><td>JSON.stringify</td><td>null</td></tr><tr><td>none</td><td>object</td><td>OK</td></tr></tbody></table><p><img src="https://i.imgur.com/qZ4dNtD.png" alt="Image"></p><h3 id="CORS問題"><a href="#CORS問題" class="headerlink" title="CORS問題"></a>CORS問題</h3><ul><li><p>情境假設：</p><ul><li>使用JQuery的$.AJAX</li><li>後端使用ASP.NET Core MVC</li><li>有跨域問題<ul><li>站台是否允許可跨站</li></ul></li></ul></li><li><p>allow cross site &amp;&amp; use FromBody</p><table><thead><tr><th>contentType</th><th>data</th><th>request</th><th>response</th></tr></thead><tbody><tr><td>application/json</td><td>JSON.stringify</td><td>OK</td><td>OK</td></tr><tr><td>application/json</td><td>Object</td><td>null</td><td>OK</td></tr><tr><td>none</td><td>JSON.stringify</td><td>415</td><td></td></tr><tr><td>none</td><td>Object</td><td>415</td><td></td></tr></tbody></table></li><li><p>allow cross site &amp;&amp; not use FromBody</p><table><thead><tr><th>contentType</th><th>data</th><th>request</th><th>response</th></tr></thead><tbody><tr><td>application/json</td><td>JSON.stringify</td><td>null</td><td>OK</td></tr><tr><td>application/json</td><td>Object</td><td>null</td><td>OK</td></tr><tr><td>none</td><td>JSON.stringify</td><td>null</td><td>OK</td></tr><tr><td>none</td><td>Object</td><td>OK</td><td>OK</td></tr></tbody></table></li></ul><p><img src="https://i.imgur.com/0lNJKCG.png" alt="Image"></p><ul><li><p>not allow cross site &amp;&amp; use FromBody</p><table><thead><tr><th>contentType</th><th>data</th><th>request</th><th>response</th></tr></thead><tbody><tr><td>application/json</td><td>JSON.stringify</td><td>CORS error</td><td></td></tr><tr><td>application/json</td><td>Object</td><td>CORS error</td><td></td></tr><tr><td>none</td><td>JSON.stringify</td><td>CORS error</td><td></td></tr><tr><td>none</td><td>Object</td><td>CORS error</td><td></td></tr></tbody></table></li><li><p>not allow cross site &amp;&amp; not use FromBody</p><table><thead><tr><th>contentType</th><th>data</th><th>request</th><th>response</th></tr></thead><tbody><tr><td>application/json</td><td>JSON.stringify</td><td>null</td><td>CORS error</td></tr><tr><td>application/json</td><td>Object</td><td>null</td><td>CORS error</td></tr><tr><td>none</td><td>JSON.stringify</td><td>null</td><td>CORS error</td></tr><tr><td>none</td><td>Object</td><td>OK</td><td>CORS error</td></tr></tbody></table></li></ul><p><img src="https://i.imgur.com/VRcjweh.png" alt="Image"></p><ul><li>結論<ul><li>使用ContentType為Json時，data一定要使用JSON.stringify</li><li>沒有使用ContentType時，data可以使用轉入Object</li><li>可以跨域與同站行為相同</li><li>不可跨域時<ul><li>有使用FromBody，會直接出Cors error，進不了Action</li><li>沒使用FromBody，Response會出現Cors error, 且有機會把資料傳入Action</li></ul></li></ul></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> AJAX </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> AJAX </tag>
+            
+            <tag> ASP.NETCore </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>親子簡易手作餅乾</title>
       <link href="/blog/2021/03/29/%E8%A6%AA%E5%AD%90%E7%B0%A1%E6%98%93%E6%89%8B%E4%BD%9C%E9%A4%85%E4%B9%BE/"/>
       <url>/blog/2021/03/29/%E8%A6%AA%E5%AD%90%E7%B0%A1%E6%98%93%E6%89%8B%E4%BD%9C%E9%A4%85%E4%B9%BE/</url>
       
-        <content type="html"><![CDATA[<p>最近燃起烘培魂，以前一直覺得會烘培的對我來說是一種遙不可及的事，受到<a href="https://www.books.com.tw/products/0010776629">微精通</a>啟發，凡事作就對了，要前進的第一步就是Google，而第一篇就是 <a href="https://mamibuy.com.tw/talk/article/158490">初學者必學～超簡易手工烤餅乾</a>，覺得困難度不高，就開始動手Go Go</p><h2 id="準備材料"><a href="#準備材料" class="headerlink" title="準備材料"></a>準備材料</h2><ol><li>奶油  100g</li><li>砂糖 40g<br> 可以自行調整甜度或使用巧克力醬取代</li><li>蛋黃 1 顆<br> 可以依口味作調整</li><li>低筋麵粉 260g<br> 與奶油比例為(3:8)</li><li>鮮奶 少許<br> 如果麵團太乾時可以加上一些</li></ol><span id="more"></span><h2 id="比例計算"><a href="#比例計算" class="headerlink" title="比例計算"></a>比例計算</h2><iframe src="https://codepen.io/JustinChangTW/full/PoWzVEL" width="500px" height="300px" frameborder="0" scrolling="no"> </iframe><h2 id="步驟"><a href="#步驟" class="headerlink" title="步驟"></a>步驟</h2><ol><li>先將奶油打散或是融化成液狀後打發</li><li>將砂糖加入，與奶油充分混合</li><li>將蛋黃加入，再次充分混合</li><li>將麵份加入，充分混合至看不見白色麵粉</li><li>將完成好的麵團桿平<br> 也可以利用夾鏈袋，可以桿出漂亮的麵皮</li><li>將麵皮冷藏10分鐘，這樣麵皮比較不會散掉，方便壓模</li><li>透過壓模將麵皮，製作出不一樣的圖案</li><li>要烤之前先將烤箱預熱，大約烤7~8分鐘<br> 每一台烤箱的溫度都不一樣，這就要自行調控</li></ol>]]></content>
+        <content type="html"><![CDATA[<p>最近燃起烘培魂，以前一直覺得會烘培的對我來說是一種遙不可及的事，受到<a href="https://www.books.com.tw/products/0010776629">微精通</a>啟發，凡事作就對了，要前進的第一步就是Google，而第一篇就是 <a href="https://mamibuy.com.tw/talk/article/158490">初學者必學～超簡易手工烤餅乾</a>，覺得困難度不高，就開始動手Go Go</p><h2 id="準備材料"><a href="#準備材料" class="headerlink" title="準備材料"></a>準備材料</h2><ol><li>奶油  100g</li><li>砂糖 40g<br> 可以自行調整甜度</li><li>蛋黃 1 顆<br> 可以依口味作調整</li><li>低筋麵粉 200g<br> 與奶油比例為(1:2)右左</li><li>鮮奶 少許<br> 如果麵團太乾時可以加上一些</li><li>最後可以加一些風味的醬料<ol><li>巧克力醬(最好是巧克力粉)</li></ol></li></ol><span id="more"></span><h2 id="比例計算"><a href="#比例計算" class="headerlink" title="比例計算"></a>比例計算</h2><iframe src="https://codepen.io/JustinChangTW/full/PoWzVEL" width="500px" height="300px" frameborder="0" scrolling="no"> </iframe><h2 id="步驟"><a href="#步驟" class="headerlink" title="步驟"></a>步驟</h2><ol><li><p>先將奶油打散或是融化成液狀後打發</p></li><li><p>將砂糖加入，與奶油充分混合<br><img src="https://i.imgur.com/KSSWxVy.png" alt="Image"></p></li><li><p>將蛋黃加入，再次充分混合<br><img src="https://i.imgur.com/o7S3NNb.png" alt="Image"></p></li><li><p>將麵份加入，充分混合至看不見白色麵粉<br><img src="https://i.imgur.com/Vvsl699.png" alt="Image"></p></li><li><p>將完成好的麵團桿平<br> 也可以利用夾鏈袋，可以桿出漂亮的麵皮<br><img src="https://i.imgur.com/Bd1j7Nd.png" alt="Image"></p></li><li><p>將麵皮冷藏10分鐘，這樣麵皮比較不會散掉，方便壓模</p></li><li><p>透過壓模將麵皮，製作出不一樣的圖案<br><img src="https://i.imgur.com/E5ekHnW.png" alt="Image"></p></li><li><p>要烤之前先將烤箱預熱，大約烤7~8分鐘<br> 每一台烤箱的溫度都不一樣，這就要自行調控<br><img src="https://i.imgur.com/6BojGca.png" alt="Image"><br><img src="https://i.imgur.com/G2JdK61.png" alt="Image"><br><img src="https://i.imgur.com/c9gZB3Q.png" alt="Image"></p></li></ol>]]></content>
       
       
       <categories>
@@ -82,13 +109,13 @@
       
         <tags>
             
-            <tag> Login </tag>
-            
-            <tag> Session </tag>
-            
             <tag> ASP.NETCore </tag>
             
             <tag> WithoutIdentityLogin </tag>
+            
+            <tag> Login </tag>
+            
+            <tag> Session </tag>
             
         </tags>
       
