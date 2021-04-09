@@ -20,7 +20,7 @@
 <meta property="og:description" content="不使用Identity實作Login系統">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2021-04-09T03:01:06.000Z">
-<meta property="article:modified_time" content="2021-04-09T04:02:20.057Z">
+<meta property="article:modified_time" content="2021-04-09T05:44:06.085Z">
 <meta property="article:author" content="Justin Chang Blog">
 <meta property="article:tag" content="Without Identity, Login,ASP.NETCore,Cookie">
 <meta name="twitter:card" content="summary">
@@ -156,19 +156,15 @@
 
 	</section>
 	
-		<section class="toc-wrapper"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Startup-cs-%E4%B8%AD%E7%9A%84%E8%A8%AD%E5%AE%9A"><span class="toc-number">1.</span> <span class="toc-text">Startup.cs 中的設定</span></a></li></ol></section>
+		<section class="toc-wrapper"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Startup-cs-%E4%B8%AD%E7%9A%84%E8%A8%AD%E5%AE%9A"><span class="toc-number">1.</span> <span class="toc-text">Startup.cs 中的設定</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Service%E7%9A%84%E8%A8%AD%E5%AE%9A"><span class="toc-number">1.1.</span> <span class="toc-text">Service的設定</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Middleware%E7%9A%84%E8%A8%AD%E5%AE%9A"><span class="toc-number">1.2.</span> <span class="toc-text">Middleware的設定</span></a></li></ol></li></ol></section>
 	
 	<section class="article typo">
   	<div class="article-entry" itemprop="articleBody">
     	<p>雖然可以完全可以自行完成Login的功能，但在Asp.net Core中有提供Authentication的Service與Middleware，可以更完整及快速開發。</p>
 <span id="more"></span>
-<h2 id="Startup-cs-中的設定"><a href="#Startup-cs-中的設定" class="headerlink" title="Startup.cs 中的設定"></a>Startup.cs 中的設定</h2><ol>
-<li><p>Service的設定    </p>
- <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">ConfigureServices</span>(<span class="params">IServiceCollection services</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    services.AddControllersWithViews();</span><br><span class="line"></span><br><span class="line">    services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme); <span class="comment">//使用預設的Scheme</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p>Middleware的設定</p>
-</li>
-</ol>
+<h2 id="Startup-cs-中的設定"><a href="#Startup-cs-中的設定" class="headerlink" title="Startup.cs 中的設定"></a>Startup.cs 中的設定</h2><h3 id="Service的設定"><a href="#Service的設定" class="headerlink" title="Service的設定"></a>Service的設定</h3><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">ConfigureServices</span>(<span class="params">IServiceCollection services</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    services.AddControllersWithViews();</span><br><span class="line"></span><br><span class="line">    services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme); <span class="comment">//使用預設的Scheme</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<h3 id="Middleware的設定"><a href="#Middleware的設定" class="headerlink" title="Middleware的設定"></a>Middleware的設定</h3>
   	</div>
 	  
 	  <div class="article-tags tags">
