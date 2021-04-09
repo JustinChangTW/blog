@@ -6,7 +6,7 @@
   <link href="https://justinchang.ddns.net/atom.xml" rel="self"/>
   
   <link href="https://justinchang.ddns.net/"/>
-  <updated>2021-04-09T02:25:42.673Z</updated>
+  <updated>2021-04-09T03:46:47.127Z</updated>
   <id>https://justinchang.ddns.net/</id>
   
   <author>
@@ -17,11 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>使用Cookie實作Login-使用Authentication</title>
+    <link href="https://justinchang.ddns.net/2021/04/09/%E4%BD%BF%E7%94%A8Cookie%E5%AF%A6%E4%BD%9CLogin-%E4%BD%BF%E7%94%A8Authentication/"/>
+    <id>https://justinchang.ddns.net/2021/04/09/%E4%BD%BF%E7%94%A8Cookie%E5%AF%A6%E4%BD%9CLogin-%E4%BD%BF%E7%94%A8Authentication/</id>
+    <published>2021-04-09T03:01:06.000Z</published>
+    <updated>2021-04-09T03:46:47.127Z</updated>
+    
+    
+    <summary type="html">不使用Identity實作Login系統</summary>
+    
+    
+    
+    <category term="ASP.NET Core" scheme="https://justinchang.ddns.net/categories/ASP-NET-Core/"/>
+    
+    
+    <category term="Without Identity, Login,ASP.NETCore,Cookie" scheme="https://justinchang.ddns.net/tags/Without-Identity-Login-ASP-NETCore-Cookie/"/>
+    
+  </entry>
+  
+  <entry>
     <title>使用Cookie實作Login-簡易登入</title>
     <link href="https://justinchang.ddns.net/2021/04/06/%E4%BD%BF%E7%94%A8Cookie%E5%AF%A6%E4%BD%9CLogin-%E7%B0%A1%E6%98%93%E7%99%BB%E5%85%A5/"/>
     <id>https://justinchang.ddns.net/2021/04/06/%E4%BD%BF%E7%94%A8Cookie%E5%AF%A6%E4%BD%9CLogin-%E7%B0%A1%E6%98%93%E7%99%BB%E5%85%A5/</id>
     <published>2021-04-06T07:15:33.000Z</published>
-    <updated>2021-04-09T02:25:42.673Z</updated>
+    <updated>2021-04-09T02:51:45.201Z</updated>
     
     
     <summary type="html">不使用Identity實作Login系統</summary>
@@ -40,7 +59,7 @@
     <link href="https://justinchang.ddns.net/2021/04/06/%E4%BD%BF%E7%94%A8Cookie%E5%AF%A6%E4%BD%9CLogind%20-%20Cookie%20%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
     <id>https://justinchang.ddns.net/2021/04/06/%E4%BD%BF%E7%94%A8Cookie%E5%AF%A6%E4%BD%9CLogind%20-%20Cookie%20%E7%9A%84%E4%BD%BF%E7%94%A8/</id>
     <published>2021-04-06T07:05:06.252Z</published>
-    <updated>2021-04-06T07:11:05.627Z</updated>
+    <updated>2021-04-09T02:58:41.111Z</updated>
     
     
     <summary type="html">不使用Identity實作Login系統</summary>

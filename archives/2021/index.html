@@ -144,6 +144,49 @@
   <section class="meta">
     
     <h2 class="title">
+      <a href="/2021/04/09/%E4%BD%BF%E7%94%A8Cookie%E5%AF%A6%E4%BD%9CLogin-%E4%BD%BF%E7%94%A8Authentication/">
+        使用Cookie實作Login-使用Authentication
+      </a>
+    </h2>
+    
+    <time>
+      4月 9, 2021
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/ASP-NET-Core/">ASP.NET Core</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <p>雖然可以完全可以自行完成Login的功能，但在Asp.net Core中有提供Authentication的Service與Middleware，可以更完整及快速開發。</p>
+<h2 id="Startup-cs-中的設定"><a href="#Startup-cs-中的設定" class="headerlink" title="Startup.cs 中的設定"></a>Startup.cs 中的設定</h2><ol>
+<li><p>Service的設定    </p>
+ <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">ConfigureServices</span>(<span class="params">IServiceCollection services</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    services.AddControllersWithViews();</span><br><span class="line"></span><br><span class="line">    services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme); <span class="comment">//使用預設的Scheme</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>Middleware的設定</p>
+</li>
+</ol>
+
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Without-Identity-Login-ASP-NETCore-Cookie/">Without Identity, Login,ASP.NETCore,Cookie</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/2021/04/06/%E4%BD%BF%E7%94%A8Cookie%E5%AF%A6%E4%BD%9CLogin-%E7%B0%A1%E6%98%93%E7%99%BB%E5%85%A5/">
         使用Cookie實作Login-簡易登入
       </a>
@@ -518,7 +561,7 @@
     
         <li><a class="flat-box" href="/categories/AJAX/"><div class='name'>AJAX</div><div class='badget'>1</div></a></li>
     
-        <li><a class="flat-box" href="/categories/ASP-NET-Core/"><div class='name'>ASP.NET Core</div><div class='badget'>3</div></a></li>
+        <li><a class="flat-box" href="/categories/ASP-NET-Core/"><div class='name'>ASP.NET Core</div><div class='badget'>4</div></a></li>
     
         <li><a class="flat-box" href="/categories/%E5%B7%A5%E5%85%B7/"><div class='name'>工具</div><div class='badget'>1</div></a></li>
     
@@ -535,7 +578,7 @@
 <div class="m_widget tagcloud">
     <div class="header">Tags</div>
     <div class='content'>
-        <a href="/tags/AJAX/" style="font-size: 14px; color: #808080">AJAX</a> <a href="/tags/ASP-NETCore/" style="font-size: 20px; color: #000">ASP.NETCore</a> <a href="/tags/English-Study/" style="font-size: 14px; color: #808080">English Study</a> <a href="/tags/Login/" style="font-size: 14px; color: #808080">Login</a> <a href="/tags/Session/" style="font-size: 14px; color: #808080">Session</a> <a href="/tags/Without-Identity-Login-ASP-NETCore-Cookie/" style="font-size: 20px; color: #000">Without Identity, Login,ASP.NETCore,Cookie</a> <a href="/tags/WithoutIdentityLogin/" style="font-size: 14px; color: #808080">WithoutIdentityLogin</a> <a href="/tags/%E4%BA%BA%E7%94%9F%E6%B8%85%E5%96%AE/" style="font-size: 14px; color: #808080">人生清單</a> <a href="/tags/%E5%B0%8F%E5%B7%A5%E5%85%B7/" style="font-size: 14px; color: #808080">小工具</a> <a href="/tags/%E5%BE%AE%E7%B2%BE%E9%80%9A/" style="font-size: 14px; color: #808080">微精通</a> <a href="/tags/%E6%89%8B%E4%BD%9C%E9%A4%85%E4%B9%BE/" style="font-size: 14px; color: #808080">手作餅乾</a> <a href="/tags/%E7%83%98%E5%9F%B9/" style="font-size: 14px; color: #808080">烘培</a> <a href="/tags/%E7%B7%9A%E4%B8%8A/" style="font-size: 14px; color: #808080">線上</a> <a href="/tags/%E8%81%BD%E5%8A%9B/" style="font-size: 14px; color: #808080">聽力</a> <a href="/tags/%E8%87%AA%E5%AD%B8/" style="font-size: 14px; color: #808080">自學</a> <a href="/tags/%E8%8B%B1%E6%96%87/" style="font-size: 14px; color: #808080">英文</a> <a href="/tags/%E8%A6%AA%E5%AD%90/" style="font-size: 14px; color: #808080">親子</a> <a href="/tags/%E9%96%8B%E7%99%BC/" style="font-size: 14px; color: #808080">開發</a>
+        <a href="/tags/AJAX/" style="font-size: 14px; color: #808080">AJAX</a> <a href="/tags/ASP-NETCore/" style="font-size: 17px; color: #404040">ASP.NETCore</a> <a href="/tags/English-Study/" style="font-size: 14px; color: #808080">English Study</a> <a href="/tags/Login/" style="font-size: 14px; color: #808080">Login</a> <a href="/tags/Session/" style="font-size: 14px; color: #808080">Session</a> <a href="/tags/Without-Identity-Login-ASP-NETCore-Cookie/" style="font-size: 20px; color: #000">Without Identity, Login,ASP.NETCore,Cookie</a> <a href="/tags/WithoutIdentityLogin/" style="font-size: 14px; color: #808080">WithoutIdentityLogin</a> <a href="/tags/%E4%BA%BA%E7%94%9F%E6%B8%85%E5%96%AE/" style="font-size: 14px; color: #808080">人生清單</a> <a href="/tags/%E5%B0%8F%E5%B7%A5%E5%85%B7/" style="font-size: 14px; color: #808080">小工具</a> <a href="/tags/%E5%BE%AE%E7%B2%BE%E9%80%9A/" style="font-size: 14px; color: #808080">微精通</a> <a href="/tags/%E6%89%8B%E4%BD%9C%E9%A4%85%E4%B9%BE/" style="font-size: 14px; color: #808080">手作餅乾</a> <a href="/tags/%E7%83%98%E5%9F%B9/" style="font-size: 14px; color: #808080">烘培</a> <a href="/tags/%E7%B7%9A%E4%B8%8A/" style="font-size: 14px; color: #808080">線上</a> <a href="/tags/%E8%81%BD%E5%8A%9B/" style="font-size: 14px; color: #808080">聽力</a> <a href="/tags/%E8%87%AA%E5%AD%B8/" style="font-size: 14px; color: #808080">自學</a> <a href="/tags/%E8%8B%B1%E6%96%87/" style="font-size: 14px; color: #808080">英文</a> <a href="/tags/%E8%A6%AA%E5%AD%90/" style="font-size: 14px; color: #808080">親子</a> <a href="/tags/%E9%96%8B%E7%99%BC/" style="font-size: 14px; color: #808080">開發</a>
     </div>
 </div>
 
