@@ -6,7 +6,7 @@
   <link href="https://justinchang.ddns.net/atom.xml" rel="self"/>
   
   <link href="https://justinchang.ddns.net/"/>
-  <updated>2021-04-09T05:44:06.085Z</updated>
+  <updated>2021-04-13T03:29:59.845Z</updated>
   <id>https://justinchang.ddns.net/</id>
   
   <author>
@@ -15,6 +15,22 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用Cordova開發App-開發環境</title>
+    <link href="https://justinchang.ddns.net/2021/04/12/%E4%BD%BF%E7%94%A8Cordova%E9%96%8B%E7%99%BCApp-%E9%96%8B%E7%99%BC%E7%92%B0%E5%A2%83/"/>
+    <id>https://justinchang.ddns.net/2021/04/12/%E4%BD%BF%E7%94%A8Cordova%E9%96%8B%E7%99%BCApp-%E9%96%8B%E7%99%BC%E7%92%B0%E5%A2%83/</id>
+    <published>2021-04-12T03:02:18.000Z</published>
+    <updated>2021-04-13T03:29:59.845Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;開發環境建置&quot;&gt;&lt;a href=&quot;#開發環境建置&quot; class=&quot;headerlink&quot; title=&quot;開發環境建置&quot;&gt;&lt;/a&gt;開發環境建置&lt;/h2&gt;&lt;h3 id=&quot;Node&quot;&gt;&lt;a href=&quot;#Node&quot; class=&quot;headerlink&quot; title=&quot;Node&quot;&gt;&lt;/a&gt;Node&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://nodejs.org/en/download/&quot;&gt;Node Download &amp;amp;&amp;amp; Install&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;JDK-1-8-XX&quot;&gt;&lt;a href=&quot;#JDK-1-8-XX&quot; class=&quot;headerlink&quot; title=&quot;JDK 1.8.XX&quot;&gt;&lt;/a&gt;JDK 1.8.XX&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://www.oracle.com/tw/java/technologies/javase/javase-jdk8-downloads.html&quot;&gt;JDK Downlo&lt;br&gt;ad &amp;amp;&amp;amp; Install&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>使用Cookie實作Login-使用Authentication</title>
