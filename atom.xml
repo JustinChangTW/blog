@@ -6,7 +6,7 @@
   <link href="https://justinchang.ddns.net/atom.xml" rel="self"/>
   
   <link href="https://justinchang.ddns.net/"/>
-  <updated>2021-04-15T09:34:56.427Z</updated>
+  <updated>2021-04-15T09:37:31.434Z</updated>
   <id>https://justinchang.ddns.net/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>VSCode開發JAVA-環境建置</title>
+    <link href="https://justinchang.ddns.net/2021/04/15/VSCode%E9%96%8B%E7%99%BCJAVA-%E7%92%B0%E5%A2%83%E5%BB%BA%E7%BD%AE/"/>
+    <id>https://justinchang.ddns.net/2021/04/15/VSCode%E9%96%8B%E7%99%BCJAVA-%E7%92%B0%E5%A2%83%E5%BB%BA%E7%BD%AE/</id>
+    <published>2021-04-15T02:11:24.000Z</published>
+    <updated>2021-04-15T09:37:31.434Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;前陣子試過用Eclipse來建置JAVA開發環境，現在來試試地表上最強的開發工具VSCode&lt;/p&gt;
+&lt;h2 id=&quot;Maven&quot;&gt;&lt;a href=&quot;#Maven&quot; class=&quot;headerlink&quot; title=&quot;Maven&quot;&gt;&lt;/a&gt;Maven&lt;/h2&gt;&lt;p&gt;Maven類似NuGet，作套件管理，下載&lt;a href=&quot;https://maven.apache.org/download.cgi?Preferred=https://downloads.apache.org/&quot;&gt;Maven Download&lt;/a&gt;，之後解完壓縮後，在「環境變數」PATH設定此路徑。&lt;/p&gt;
+&lt;h2 id=&quot;JDK&quot;&gt;&lt;a href=&quot;#JDK&quot; class=&quot;headerlink&quot; title=&quot;JDK&quot;&gt;&lt;/a&gt;JDK&lt;/h2&gt;&lt;p&gt;Java Development Kit（JDK）是昇陽電腦針對Java開發人員發布的免費軟體開發套件（SDK，Software development kit）。自從Java推出以來，JDK已經成為使用最廣泛的Java SDK。由於JDK的一部分特性採用商業許可證，而非開源[1]。因此，2006年昇陽電腦宣布將發布基於GPL的開源JDK，使JDK成為自由軟體。在去掉了少量閉源特性之後，昇陽電腦最終促成了GPL的OpenJDK的發布。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.oracle.com/tw/java/technologies/javase/javase-jdk8-downloads.html&quot;&gt;JDK 8&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://www.oracle.com/tw/java/technologies/javase-jdk11-downloads.html&quot;&gt;JDK 11&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;參考維基百科 &lt;a href=&quot;https://zh.wikipedia.org/wiki/JDK&quot;&gt;JDK&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="JAVA" scheme="https://justinchang.ddns.net/categories/JAVA/"/>
+    
+    
+    <category term="VSCode" scheme="https://justinchang.ddns.net/tags/VSCode/"/>
+    
+    <category term="JAVA" scheme="https://justinchang.ddns.net/tags/JAVA/"/>
+    
+    <category term="Spring" scheme="https://justinchang.ddns.net/tags/Spring/"/>
+    
+    <category term="Web" scheme="https://justinchang.ddns.net/tags/Web/"/>
+    
+  </entry>
   
   <entry>
     <title>Eclipse開發JAVA-環境建置</title>
@@ -46,36 +77,6 @@
     <category term="Web" scheme="https://justinchang.ddns.net/tags/Web/"/>
     
     <category term="Eclipse" scheme="https://justinchang.ddns.net/tags/Eclipse/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>VSCode開發JAVA-環境建置</title>
-    <link href="https://justinchang.ddns.net/2021/04/14/VSCode%E9%96%8B%E7%99%BCJAVA-%E7%92%B0%E5%A2%83%E5%BB%BA%E7%BD%AE/"/>
-    <id>https://justinchang.ddns.net/2021/04/14/VSCode%E9%96%8B%E7%99%BCJAVA-%E7%92%B0%E5%A2%83%E5%BB%BA%E7%BD%AE/</id>
-    <published>2021-04-14T02:11:24.000Z</published>
-    <updated>2021-04-15T09:35:03.223Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;Maven&quot;&gt;&lt;a href=&quot;#Maven&quot; class=&quot;headerlink&quot; title=&quot;Maven&quot;&gt;&lt;/a&gt;Maven&lt;/h2&gt;&lt;p&gt;Maven類似NuGet，作套件管理，下載&lt;a href=&quot;https://maven.apache.org/download.cgi?Preferred=https://downloads.apache.org/&quot;&gt;Maven Download&lt;/a&gt;，之後解完壓縮後，在「環境變數」PATH設定此路徑。&lt;/p&gt;
-&lt;h2 id=&quot;JDK&quot;&gt;&lt;a href=&quot;#JDK&quot; class=&quot;headerlink&quot; title=&quot;JDK&quot;&gt;&lt;/a&gt;JDK&lt;/h2&gt;&lt;p&gt;Java Development Kit（JDK）是昇陽電腦針對Java開發人員發布的免費軟體開發套件（SDK，Software development kit）。自從Java推出以來，JDK已經成為使用最廣泛的Java SDK。由於JDK的一部分特性採用商業許可證，而非開源[1]。因此，2006年昇陽電腦宣布將發布基於GPL的開源JDK，使JDK成為自由軟體。在去掉了少量閉源特性之後，昇陽電腦最終促成了GPL的OpenJDK的發布。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.oracle.com/tw/java/technologies/javase/javase-jdk8-downloads.html&quot;&gt;JDK 8&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://www.oracle.com/tw/java/technologies/javase-jdk11-downloads.html&quot;&gt;JDK 11&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;參考維基百科 &lt;a href=&quot;https://zh.wikipedia.org/wiki/JDK&quot;&gt;JDK&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="JAVA" scheme="https://justinchang.ddns.net/categories/JAVA/"/>
-    
-    
-    <category term="VSCode" scheme="https://justinchang.ddns.net/tags/VSCode/"/>
-    
-    <category term="JAVA" scheme="https://justinchang.ddns.net/tags/JAVA/"/>
-    
-    <category term="Spring" scheme="https://justinchang.ddns.net/tags/Spring/"/>
-    
-    <category term="Web" scheme="https://justinchang.ddns.net/tags/Web/"/>
     
   </entry>
   
