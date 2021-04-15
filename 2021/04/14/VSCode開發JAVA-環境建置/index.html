@@ -12,19 +12,19 @@
   <link rel="shortcut icon" href="/images/favicon.ico">
   <link rel="alternate" href="/atom.xml" title="Justin's Blog" type="application/atom+xml">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="MavenMaven類似NuGet，作套件管理，下載Maven Download，之後解完壓縮後，在「環境變數」PATH設定此路徑。 VSCode因為己經使用VSCode安裝版，也裝了不少套件，為了本次的案子，想要使用VSCode來開發，所以使用免安裝的方式，來建置JAVA開發環境。 VSCode 套件Java Extension Pack這是Microsoft所包裝的Pack，進面包含：  Vi">
+  <meta name="description" content="MavenMaven類似NuGet，作套件管理，下載Maven Download，之後解完壓縮後，在「環境變數」PATH設定此路徑。 JDKJava Development Kit（JDK）是昇陽電腦針對Java開發人員發布的免費軟體開發套件（SDK，Software development kit）。自從Java推出以來，JDK已經成為使用最廣泛的Java SDK。由於JDK的一部分特性採用商業">
 <meta property="og:type" content="article">
 <meta property="og:title" content="VSCode開發JAVA-環境建置">
 <meta property="og:url" content="https://justinchang.ddns.net/2021/04/14/VSCode%E9%96%8B%E7%99%BCJAVA-%E7%92%B0%E5%A2%83%E5%BB%BA%E7%BD%AE/index.html">
 <meta property="og:site_name" content="Justin&#39;s Blog">
-<meta property="og:description" content="MavenMaven類似NuGet，作套件管理，下載Maven Download，之後解完壓縮後，在「環境變數」PATH設定此路徑。 VSCode因為己經使用VSCode安裝版，也裝了不少套件，為了本次的案子，想要使用VSCode來開發，所以使用免安裝的方式，來建置JAVA開發環境。 VSCode 套件Java Extension Pack這是Microsoft所包裝的Pack，進面包含：  Vi">
+<meta property="og:description" content="MavenMaven類似NuGet，作套件管理，下載Maven Download，之後解完壓縮後，在「環境變數」PATH設定此路徑。 JDKJava Development Kit（JDK）是昇陽電腦針對Java開發人員發布的免費軟體開發套件（SDK，Software development kit）。自從Java推出以來，JDK已經成為使用最廣泛的Java SDK。由於JDK的一部分特性採用商業">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="https://i.imgur.com/F0vRh2D.png">
 <meta property="og:image" content="https://i.imgur.com/zbGE151.png">
 <meta property="og:image" content="https://i.imgur.com/nhL3gIO.png">
 <meta property="og:image" content="https://i.imgur.com/DSqrXY5.gif">
 <meta property="article:published_time" content="2021-04-14T02:11:24.000Z">
-<meta property="article:modified_time" content="2021-04-15T09:28:23.949Z">
+<meta property="article:modified_time" content="2021-04-15T09:33:03.510Z">
 <meta property="article:author" content="Justin Chang Blog">
 <meta property="article:tag" content="VSCode">
 <meta property="article:tag" content="JAVA">
@@ -163,11 +163,16 @@
 
 	</section>
 	
-		<section class="toc-wrapper"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Maven"><span class="toc-number">1.</span> <span class="toc-text">Maven</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#VSCode"><span class="toc-number">2.</span> <span class="toc-text">VSCode</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#VSCode-%E5%A5%97%E4%BB%B6"><span class="toc-number">3.</span> <span class="toc-text">VSCode 套件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Java-Extension-Pack"><span class="toc-number">3.1.</span> <span class="toc-text">Java Extension Pack</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Spring-Boot-Extension-Pack"><span class="toc-number">3.2.</span> <span class="toc-text">Spring Boot Extension Pack</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B0%A1%E5%96%AE%E6%93%8D%E4%BD%9C%E7%AF%84%E4%BE%8B"><span class="toc-number">4.</span> <span class="toc-text">簡單操作範例</span></a></li></ol></section>
+		<section class="toc-wrapper"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Maven"><span class="toc-number">1.</span> <span class="toc-text">Maven</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JDK"><span class="toc-number">2.</span> <span class="toc-text">JDK</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#VSCode"><span class="toc-number">3.</span> <span class="toc-text">VSCode</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#VSCode-%E5%A5%97%E4%BB%B6"><span class="toc-number">4.</span> <span class="toc-text">VSCode 套件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Java-Extension-Pack"><span class="toc-number">4.1.</span> <span class="toc-text">Java Extension Pack</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Spring-Boot-Extension-Pack"><span class="toc-number">4.2.</span> <span class="toc-text">Spring Boot Extension Pack</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B0%A1%E5%96%AE%E6%93%8D%E4%BD%9C%E7%AF%84%E4%BE%8B"><span class="toc-number">5.</span> <span class="toc-text">簡單操作範例</span></a></li></ol></section>
 	
 	<section class="article typo">
   	<div class="article-entry" itemprop="articleBody">
     	<h2 id="Maven"><a href="#Maven" class="headerlink" title="Maven"></a>Maven</h2><p>Maven類似NuGet，作套件管理，下載<a href="https://maven.apache.org/download.cgi?Preferred=https://downloads.apache.org/">Maven Download</a>，之後解完壓縮後，在「環境變數」PATH設定此路徑。</p>
+<h2 id="JDK"><a href="#JDK" class="headerlink" title="JDK"></a>JDK</h2><p>Java Development Kit（JDK）是昇陽電腦針對Java開發人員發布的免費軟體開發套件（SDK，Software development kit）。自從Java推出以來，JDK已經成為使用最廣泛的Java SDK。由於JDK的一部分特性採用商業許可證，而非開源[1]。因此，2006年昇陽電腦宣布將發布基於GPL的開源JDK，使JDK成為自由軟體。在去掉了少量閉源特性之後，昇陽電腦最終促成了GPL的OpenJDK的發布。</p>
+<p><a href="https://www.oracle.com/tw/java/technologies/javase/javase-jdk8-downloads.html">JDK 8</a><br><a href="https://www.oracle.com/tw/java/technologies/javase-jdk11-downloads.html">JDK 11</a></p>
+<blockquote>
+<p>參考維基百科 <a href="https://zh.wikipedia.org/wiki/JDK">JDK</a></p>
+</blockquote>
 <h2 id="VSCode"><a href="#VSCode" class="headerlink" title="VSCode"></a>VSCode</h2><p>因為己經使用VSCode安裝版，也裝了不少套件，為了本次的案子，想要使用VSCode來開發，所以使用免安裝的方式，來建置JAVA開發環境。<br><img src="https://i.imgur.com/F0vRh2D.png" alt="Image"></p>
 <h2 id="VSCode-套件"><a href="#VSCode-套件" class="headerlink" title="VSCode 套件"></a>VSCode 套件</h2><h3 id="Java-Extension-Pack"><a href="#Java-Extension-Pack" class="headerlink" title="Java Extension Pack"></a>Java Extension Pack</h3><p>這是Microsoft所包裝的Pack，進面包含：</p>
 <ul>
