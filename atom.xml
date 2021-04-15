@@ -52,17 +52,15 @@
     <link href="https://justinchang.ddns.net/2021/04/14/Eclipse%E9%96%8B%E7%99%BCJAVA-%E7%92%B0%E5%A2%83%E5%BB%BA%E7%BD%AE/"/>
     <id>https://justinchang.ddns.net/2021/04/14/Eclipse%E9%96%8B%E7%99%BCJAVA-%E7%92%B0%E5%A2%83%E5%BB%BA%E7%BD%AE/</id>
     <published>2021-04-14T07:28:48.000Z</published>
-    <updated>2021-04-15T09:34:56.427Z</updated>
+    <updated>2021-04-15T09:38:12.334Z</updated>
     
     
     <summary type="html">&lt;p&gt;最近被問到要不要把dotNet改版成java，所以先來建置一下開發環境看看java是怎麼開發Web，順便記錄一下&lt;/p&gt;
-&lt;h2 id=&quot;Eclipse-下載&quot;&gt;&lt;a href=&quot;#Eclipse-下載&quot; class=&quot;headerlink&quot; title=&quot;Eclipse 下載&quot;&gt;&lt;/a&gt;Eclipse 下載&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/oJi1VNM.png&quot; alt=&quot;Image&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Maven&quot;&gt;&lt;a href=&quot;#Maven&quot; class=&quot;headerlink&quot; title=&quot;Maven&quot;&gt;&lt;/a&gt;Maven&lt;/h2&gt;&lt;p&gt;Maven類似NuGet，作套件管理，下載&lt;a href=&quot;https://maven.apache.org/download.cgi?Preferred=https://downloads.apache.org/&quot;&gt;Maven Download&lt;/a&gt;，之後解完壓縮後，在「環境變數」PATH設定此路徑。&lt;/p&gt;
+&lt;h2 id=&quot;JDK&quot;&gt;&lt;a href=&quot;#JDK&quot; class=&quot;headerlink&quot; title=&quot;JDK&quot;&gt;&lt;/a&gt;JDK&lt;/h2&gt;&lt;p&gt;Java Development Kit（JDK）是昇陽電腦針對Java開發人員發布的免費軟體開發套件（SDK，Software development kit）。自從Java推出以來，JDK已經成為使用最廣泛的Java SDK。由於JDK的一部分特性採用商業許可證，而非開源[1]。因此，2006年昇陽電腦宣布將發布基於GPL的開源JDK，使JDK成為自由軟體。在去掉了少量閉源特性之後，昇陽電腦最終促成了GPL的OpenJDK的發布。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.oracle.com/tw/java/technologies/javase/javase-jdk8-downloads.html&quot;&gt;JDK 8&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://www.oracle.com/tw/java/technologies/javase-jdk11-downloads.html&quot;&gt;JDK 11&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;如果在不正常停止debug時，會遇到再次啟動時埠已被佔用而啟動失敗時，首先要先切換為debug視窗(在右上角)&lt;br&gt;&lt;img src=&quot;https://i.imgur.com/NkhTseY.png&quot; alt=&quot;Image&quot;&gt;&lt;/li&gt;
-&lt;li&gt;切換後在左邊窗列會有兩個Tab，將Tab切換為debug&lt;br&gt;&lt;img src=&quot;https://i.imgur.com/IuK4YPw.png&quot; alt=&quot;Image&quot;&gt;&lt;/li&gt;
-&lt;li&gt;如果發現有尚未停止的執行緒，先選擇要停止的程序再選擇停止&lt;br&gt;&lt;img src=&quot;https://i.imgur.com/IyKgv60.png&quot; alt=&quot;Image&quot;&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;參考維基百科 &lt;a href=&quot;https://zh.wikipedia.org/wiki/JDK&quot;&gt;JDK&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;</summary>
     
     
