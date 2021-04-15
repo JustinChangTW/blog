@@ -6,7 +6,7 @@
   <link href="https://justinchang.ddns.net/atom.xml" rel="self"/>
   
   <link href="https://justinchang.ddns.net/"/>
-  <updated>2021-04-13T03:29:59.845Z</updated>
+  <updated>2021-04-15T05:34:32.591Z</updated>
   <id>https://justinchang.ddns.net/</id>
   
   <author>
@@ -15,6 +15,51 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Eclipse開發JAVA-環境建置</title>
+    <link href="https://justinchang.ddns.net/2021/04/14/Eclipse%E9%96%8B%E7%99%BCJAVA-%E7%92%B0%E5%A2%83%E5%BB%BA%E7%BD%AE/"/>
+    <id>https://justinchang.ddns.net/2021/04/14/Eclipse%E9%96%8B%E7%99%BCJAVA-%E7%92%B0%E5%A2%83%E5%BB%BA%E7%BD%AE/</id>
+    <published>2021-04-14T07:28:48.000Z</published>
+    <updated>2021-04-15T05:34:32.591Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;最近被問到要不要把dotNet改版成java，所以先來建置一下開發環境看看java是怎麼開發Web，順便記錄一下&lt;/p&gt;
+&lt;h2 id=&quot;Eclipse-下載&quot;&gt;&lt;a href=&quot;#Eclipse-下載&quot; class=&quot;headerlink&quot; title=&quot;Eclipse </summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>VSCode開發JAVA-環境建置</title>
+    <link href="https://justinchang.ddns.net/2021/04/14/VSCode%E9%96%8B%E7%99%BCJAVA-%E7%92%B0%E5%A2%83%E5%BB%BA%E7%BD%AE/"/>
+    <id>https://justinchang.ddns.net/2021/04/14/VSCode%E9%96%8B%E7%99%BCJAVA-%E7%92%B0%E5%A2%83%E5%BB%BA%E7%BD%AE/</id>
+    <published>2021-04-14T02:11:24.000Z</published>
+    <updated>2021-04-14T02:54:15.378Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;Maven&quot;&gt;&lt;a href=&quot;#Maven&quot; class=&quot;headerlink&quot; title=&quot;Maven&quot;&gt;&lt;/a&gt;Maven&lt;/h2&gt;&lt;p&gt;Maven類似NuGet，作套件管理，下載&lt;a href=&quot;https://maven.apache.org/dow</summary>
+      
+    
+    
+    
+    <category term="JAVA" scheme="https://justinchang.ddns.net/categories/JAVA/"/>
+    
+    
+    <category term="VSCode" scheme="https://justinchang.ddns.net/tags/VSCode/"/>
+    
+    <category term="JAVA" scheme="https://justinchang.ddns.net/tags/JAVA/"/>
+    
+    <category term="Spring" scheme="https://justinchang.ddns.net/tags/Spring/"/>
+    
+  </entry>
   
   <entry>
     <title>使用Cordova開發App-開發環境</title>
