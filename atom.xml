@@ -6,7 +6,7 @@
   <link href="https://justinchang.ddns.net/atom.xml" rel="self"/>
   
   <link href="https://justinchang.ddns.net/"/>
-  <updated>2021-04-15T09:38:59.819Z</updated>
+  <updated>2021-04-16T09:08:11.554Z</updated>
   <id>https://justinchang.ddns.net/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>OracleXE18C建置byWin10</title>
+    <link href="https://justinchang.ddns.net/2021/04/16/OracleXE18C%E5%BB%BA%E7%BD%AEbyWin10/"/>
+    <id>https://justinchang.ddns.net/2021/04/16/OracleXE18C%E5%BB%BA%E7%BD%AEbyWin10/</id>
+    <published>2021-04-16T02:37:05.000Z</published>
+    <updated>2021-04-16T09:08:11.554Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;OracleXE是免費的版本的版，可以用來商用，雖然是免費但有一些限制，但用來作一些簡單的系統或開發測試已經是足夠了。&lt;br&gt;限制如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;只能使用3個資料庫&lt;/li&gt;
+&lt;li&gt;只能使用2顆cpu&lt;/li&gt;
+&lt;li&gt;只能使用2GRAM&lt;/li&gt;
+&lt;li&gt;每一個資料庫大小只能使用到12GB&lt;/li&gt;
+&lt;/ol&gt;</summary>
+    
+    
+    
+    <category term="Oracle" scheme="https://justinchang.ddns.net/categories/Oracle/"/>
+    
+    
+    <category term="Oracle" scheme="https://justinchang.ddns.net/tags/Oracle/"/>
+    
+    <category term="Win10" scheme="https://justinchang.ddns.net/tags/Win10/"/>
+    
+  </entry>
   
   <entry>
     <title>VSCode開發JAVA-環境建置</title>
@@ -52,7 +79,7 @@
     <link href="https://justinchang.ddns.net/2021/04/14/Eclipse%E9%96%8B%E7%99%BCJAVA-%E7%92%B0%E5%A2%83%E5%BB%BA%E7%BD%AE/"/>
     <id>https://justinchang.ddns.net/2021/04/14/Eclipse%E9%96%8B%E7%99%BCJAVA-%E7%92%B0%E5%A2%83%E5%BB%BA%E7%BD%AE/</id>
     <published>2021-04-14T07:28:48.000Z</published>
-    <updated>2021-04-15T09:39:10.902Z</updated>
+    <updated>2021-04-16T02:33:50.386Z</updated>
     
     
     <summary type="html">&lt;p&gt;最近被問到要不要把dotNet改版成java，所以先來建置一下開發環境看看java是怎麼開發Web，順便記錄一下&lt;/p&gt;
@@ -156,7 +183,7 @@
     <link href="https://justinchang.ddns.net/2021/04/01/%E4%BD%BF%E7%94%A8%20AJAX%20%E8%88%87%20Action%20%E6%8E%A5%E5%80%BC%E5%95%8F%E9%A1%8C/"/>
     <id>https://justinchang.ddns.net/2021/04/01/%E4%BD%BF%E7%94%A8%20AJAX%20%E8%88%87%20Action%20%E6%8E%A5%E5%80%BC%E5%95%8F%E9%A1%8C/</id>
     <published>2021-04-01T04:03:54.000Z</published>
-    <updated>2021-04-01T08:52:02.173Z</updated>
+    <updated>2021-04-16T02:38:12.425Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;使用-AJAX-與-Action-接值問題？&quot;&gt;&lt;a href=&quot;#使用-AJAX-與-Action-接值問題？&quot; class=&quot;headerlink&quot; title=&quot;使用 AJAX 與 Action 接值問題？&quot;&gt;&lt;/a&gt;使用 AJAX 與 Action 接值問題？&lt;/h2&gt;&lt;p&gt;在使用AJAX時，常常會發生後端接不到值等等問題，通常都是邊寫邊Try到通為止，但時間一久又忘記怎樣的組合才對的，於是來作一個比較表吧，首先把會影響的變數列一下：&lt;/p&gt;
@@ -184,6 +211,8 @@
     <category term="AJAX" scheme="https://justinchang.ddns.net/tags/AJAX/"/>
     
     <category term="ASP.NETCore" scheme="https://justinchang.ddns.net/tags/ASP-NETCore/"/>
+    
+    <category term="Web" scheme="https://justinchang.ddns.net/tags/Web/"/>
     
   </entry>
   
