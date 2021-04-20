@@ -48,13 +48,14 @@
     <link href="https://justinchang.ddns.net/2021/04/16/%E5%8E%9F%E7%A2%BC%E6%8E%83%E7%9E%84%E5%BC%B1%E9%BB%9E%E8%99%95%E7%90%86/"/>
     <id>https://justinchang.ddns.net/2021/04/16/%E5%8E%9F%E7%A2%BC%E6%8E%83%E7%9E%84%E5%BC%B1%E9%BB%9E%E8%99%95%E7%90%86/</id>
     <published>2021-04-16T09:22:24.000Z</published>
-    <updated>2021-04-19T07:43:15.697Z</updated>
+    <updated>2021-04-20T10:10:57.862Z</updated>
     
     
-      
-      
-    <summary type="html">&lt;h2 id=&quot;Client-DOM-XSS&quot;&gt;&lt;a href=&quot;#Client-DOM-XSS&quot; class=&quot;headerlink&quot; title=&quot;Client DOM XSS&quot;&gt;&lt;/a&gt;Client DOM XSS&lt;/h2&gt;&lt;p&gt;由前端取得的值，在程式的流程當中，沒有過濾(</summary>
-      
+    <summary type="html">&lt;h2 id=&quot;Client-DOM-XSS&quot;&gt;&lt;a href=&quot;#Client-DOM-XSS&quot; class=&quot;headerlink&quot; title=&quot;Client DOM XSS&quot;&gt;&lt;/a&gt;Client DOM XSS&lt;/h2&gt;&lt;p&gt;由前端取得的值，在程式的流程當中，沒有過濾(處理)直接拿來使用，會有機會被注入非法的字串。&lt;br&gt;例如：&lt;/p&gt;
+&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; source = &lt;span class=&quot;built_in&quot;&gt;window&lt;/span&gt;.location.origin &lt;span class=&quot;comment&quot;&gt;//直接取得來自於User可修改的的值&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;document&lt;/span&gt;.write(source)     &lt;span class=&quot;comment&quot;&gt;//並接直接使用&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;可以將取得的內容作encode，並包一層function，如此就可以回避「直接」使用「值」，同時也處理內藏程式碼的問題。&lt;/p&gt;
+&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; source = &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123; &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;encodeURI&lt;/span&gt;(&lt;span class=&quot;built_in&quot;&gt;window&lt;/span&gt;.location.origin)&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;document&lt;/span&gt;.write(source)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
     
     
     

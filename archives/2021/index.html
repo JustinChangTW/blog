@@ -214,24 +214,10 @@
 <p>可以將取得的內容作encode，並包一層function，如此就可以回避「直接」使用「值」，同時也處理內藏程式碼的問題。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> source = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="keyword">return</span> <span class="built_in">encodeURI</span>(<span class="built_in">window</span>.location.origin)&#125;</span><br><span class="line"><span class="built_in">document</span>.write(source)</span><br></pre></td></tr></table></figure>
 
-<h2 id="HttpOnlyCookies-In-Config"><a href="#HttpOnlyCookies-In-Config" class="headerlink" title="HttpOnlyCookies In Config"></a>HttpOnlyCookies In Config</h2><p>主要問題是要將Cookies設定為不可以被前端「語法」讀取，所以在後端設定Cookies時必需加上「限制」，或在Web.config加上全域的設定</p>
-<ul>
-<li>web.config 設定<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;system.web&gt;</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line">   &lt;httpCookies domain=<span class="string">&quot;MyDomain&quot;</span> httpOnlyCookies=<span class="string">&quot;true&quot;</span> requireSSL=<span class="string">&quot;true&quot;</span> /&gt;</span><br><span class="line">&lt;/system.web&gt;</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h2 id="Insufficient-Connection-String-Encryption"><a href="#Insufficient-Connection-String-Encryption" class="headerlink" title="Insufficient Connection String Encryption"></a>Insufficient Connection String Encryption</h2><p>這是指在Config檔中，使用名文儲存資料庫連線字串，這可能使非預期使用者也能夠訪問資料庫，所以要將資料庫連線字串加密，操作方式參考<a href="https://www.c-sharpcorner.com/article/encrypt-and-decrypt-connectionstring-in-web-config-file/">encrypt-and-decrypt-connectionstring-in-web-config-file</a></p>
-<ol>
-<li><code>cd C:\Windows\Microsoft.NET\Framework\v4.0.30319</code></li>
-<li>加密 <code>.\ASPNET_REGIIS -pef &quot;connectionStrings&quot; &quot;E:\Config&quot;</code></li>
-<li>解密 <code>.\ASPNET_REGIIS -pdf &quot;connectionStrings&quot; &quot;E:\Config&quot;</code></li>
-</ol>
-<p><img src="https://i.imgur.com/2F8QLiI.gif"></p>
-<blockquote>
-<p>ASPNET_REGIIS -{pef 加密 | pdf 解密} “{加密的部份}” “{路徑}”</p>
-</blockquote>
-<h2 id="Client-Potential-XSS"><a href="#Client-Potential-XSS" class="headerlink" title="Client Potential XSS"></a>Client Potential XSS</h2><p>主要是不可以信任使用的輸入的資料，可以會隱藏一些程式碼等等，所以也是一樣將使用者輸入的資料所Encode</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> Referer = Request.QueryString[<span class="string">&quot;Referer&quot;</span>];</span><br><span class="line">Response.BinaryWrite(encoder.HtmlEncode(Referer, <span class="literal">true</span>));</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
+    
+	  <div class="readmore">
+      <a href="/2021/04/16/%E5%8E%9F%E7%A2%BC%E6%8E%83%E7%9E%84%E5%BC%B1%E9%BB%9E%E8%99%95%E7%90%86/">Read More</a>
+    </div>
     
     
     
