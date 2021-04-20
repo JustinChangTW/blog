@@ -6,7 +6,7 @@
   <link href="https://justinchang.ddns.net/atom.xml" rel="self"/>
   
   <link href="https://justinchang.ddns.net/"/>
-  <updated>2021-04-20T10:08:30.676Z</updated>
+  <updated>2021-04-20T10:09:59.266Z</updated>
   <id>https://justinchang.ddns.net/</id>
   
   <author>
@@ -17,17 +17,16 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Eclipse開發JAVA-mybatis Getting Started</title>
+    <title>Eclipse開發JAVA-mybatis-GettingStarted</title>
     <link href="https://justinchang.ddns.net/2021/04/20/Eclipse%E9%96%8B%E7%99%BCJAVA-mybatis-GettingStarted/"/>
     <id>https://justinchang.ddns.net/2021/04/20/Eclipse%E9%96%8B%E7%99%BCJAVA-mybatis-GettingStarted/</id>
     <published>2021-04-20T06:55:05.000Z</published>
-    <updated>2021-04-20T10:08:30.676Z</updated>
+    <updated>2021-04-20T10:09:59.266Z</updated>
     
     
-      
-      
-    <summary type="html">&lt;h2 id=&quot;pox-xml-加入-mybatis-dependency&quot;&gt;&lt;a href=&quot;#pox-xml-加入-mybatis-dependency&quot; class=&quot;headerlink&quot; title=&quot;pox.xml 加入 mybatis dependency&quot;&gt;&lt;/a</summary>
-      
+    <summary type="html">&lt;h2 id=&quot;pox-xml-加入-mybatis-dependency&quot;&gt;&lt;a href=&quot;#pox-xml-加入-mybatis-dependency&quot; class=&quot;headerlink&quot; title=&quot;pox.xml 加入 mybatis dependency&quot;&gt;&lt;/a&gt;pox.xml 加入 mybatis dependency&lt;/h2&gt;&lt;p&gt;要dependency的套件版本可以到&lt;a href=&quot;https://github.com/mybatis/mybatis-3/releases&quot;&gt;mybatis&lt;/a&gt;查詢目前最新的版本號。&lt;/p&gt;
+&lt;figure class=&quot;highlight xml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;dependency&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;groupId&lt;/span&gt;&amp;gt;&lt;/span&gt;org.mybatis&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;groupId&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;artifactId&lt;/span&gt;&amp;gt;&lt;/span&gt;mybatis&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;artifactId&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;version&lt;/span&gt;&amp;gt;&lt;/span&gt;3.5.6&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;version&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;dependency&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;在-application-properties-設定連線資訊&quot;&gt;&lt;a href=&quot;#在-application-properties-設定連線資訊&quot; class=&quot;headerlink&quot; title=&quot;在 application.properties 設定連線資訊&quot;&gt;&lt;/a&gt;在 application.properties 設定連線資訊&lt;/h2&gt;&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;url=jdbc:oracle:thin:&lt;span class=&quot;meta&quot;&gt;@localhost&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;1521&lt;/span&gt;:xe&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;driver=oracle.jdbc.driver.OracleDriver&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;username=SYSTEM&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;password=1qaz&lt;span class=&quot;meta&quot;&gt;@WSX&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
     
     
     
