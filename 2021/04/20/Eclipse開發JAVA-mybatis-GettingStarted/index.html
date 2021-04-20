@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
-  <title>Tag: Eclipse | Justin&#39;s Blog</title>
+  <title>Eclipse開發JAVA-mybatis Getting Started | Justin&#39;s Blog</title>
   <meta name="description" content="" />
   <meta name="keywords" content="" />
   <meta name="HandheldFriendly" content="True" />
@@ -12,12 +12,20 @@
   <link rel="shortcut icon" href="/images/favicon.ico">
   <link rel="alternate" href="/atom.xml" title="Justin's Blog" type="application/atom+xml">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Justin&#39;s Blog">
-<meta property="og:url" content="https://justinchang.ddns.net/tags/Eclipse/index.html">
+  <meta name="description" content="pox.xml 加入 mybatis dependency要dependency的套件版本可以到mybatis查詢目前最新的版本號。 12345&lt;dependency&gt;    &lt;groupId&gt;org.mybatis&lt;&#x2F;groupId&gt;    &lt;artifactId&gt;mybatis&lt;&#x2F;artifactId&gt;    &lt;version&amp;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Eclipse開發JAVA-mybatis Getting Started">
+<meta property="og:url" content="https://justinchang.ddns.net/2021/04/20/Eclipse%E9%96%8B%E7%99%BCJAVA-mybatis-GettingStarted/index.html">
 <meta property="og:site_name" content="Justin&#39;s Blog">
+<meta property="og:description" content="pox.xml 加入 mybatis dependency要dependency的套件版本可以到mybatis查詢目前最新的版本號。 12345&lt;dependency&gt;    &lt;groupId&gt;org.mybatis&lt;&#x2F;groupId&gt;    &lt;artifactId&gt;mybatis&lt;&#x2F;artifactId&gt;    &lt;version&amp;">
 <meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2021-04-20T06:55:05.000Z">
+<meta property="article:modified_time" content="2021-04-20T10:08:30.676Z">
 <meta property="article:author" content="Justin Chang Blog">
+<meta property="article:tag" content="JAVA">
+<meta property="article:tag" content="Eclipse">
+<meta property="article:tag" content="Mybatis">
+<meta property="article:tag" content="ORM">
 <meta name="twitter:card" content="summary">
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
@@ -131,35 +139,31 @@
   <div class="l_body">
     <div class='container clearfix'>
       <div class='l_main'>
-        
-  <script>
-    window.subData= { title:'Tag : Eclipse'}
-  </script>
-
-<section class="post-list">
+        <article id="post-Eclipse開發JAVA-mybatis-GettingStarted"
+  class="post white-box article-type-post"
+  itemscope itemprop="blogPost">
+	<section class='meta'>
+	<h2 class="title">
+  	<a href="/2021/04/20/Eclipse%E9%96%8B%E7%99%BCJAVA-mybatis-GettingStarted/">
+    	Eclipse開發JAVA-mybatis Getting Started
+    </a>
+  </h2>
+	<time>
+	  4月 20, 2021
+	</time>
 	
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2021/04/20/Eclipse%E9%96%8B%E7%99%BCJAVA-mybatis-GettingStarted/">
-        Eclipse開發JAVA-mybatis Getting Started
-      </a>
-    </h2>
-    
-    <time>
-      4月 20, 2021
-    </time>
-		
     
     <div class='cats'>
         <a href="/categories/JAVA/">JAVA</a>
     </div>
 
-  </section>
-  <section class="article typo">
-	  <h2 id="pox-xml-加入-mybatis-dependency"><a href="#pox-xml-加入-mybatis-dependency" class="headerlink" title="pox.xml 加入 mybatis dependency"></a>pox.xml 加入 mybatis dependency</h2><p>要dependency的套件版本可以到<a href="https://github.com/mybatis/mybatis-3/releases">mybatis</a>查詢目前最新的版本號。</p>
+	</section>
+	
+		<section class="toc-wrapper"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#pox-xml-%E5%8A%A0%E5%85%A5-mybatis-dependency"><span class="toc-number">1.</span> <span class="toc-text">pox.xml 加入 mybatis dependency</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8-application-properties-%E8%A8%AD%E5%AE%9A%E9%80%A3%E7%B7%9A%E8%B3%87%E8%A8%8A"><span class="toc-number">2.</span> <span class="toc-text">在 application.properties 設定連線資訊</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B0%E5%A2%9E-mybatis-config-xml"><span class="toc-number">3.</span> <span class="toc-text">新增 mybatis-config.xml</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A8%AD%E5%AE%9A%E8%B3%87%E6%96%99%E6%A8%A1%E5%9E%8B"><span class="toc-number">4.</span> <span class="toc-text">設定資料模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A8%AD%E5%AE%9AMapper"><span class="toc-number">5.</span> <span class="toc-text">設定Mapper</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%A3%E7%B7%9A%E6%B8%AC%E8%A9%A6"><span class="toc-number">6.</span> <span class="toc-text">連線測試</span></a></li></ol></section>
+	
+	<section class="article typo">
+  	<div class="article-entry" itemprop="articleBody">
+    	<h2 id="pox-xml-加入-mybatis-dependency"><a href="#pox-xml-加入-mybatis-dependency" class="headerlink" title="pox.xml 加入 mybatis dependency"></a>pox.xml 加入 mybatis dependency</h2><p>要dependency的套件版本可以到<a href="https://github.com/mybatis/mybatis-3/releases">mybatis</a>查詢目前最新的版本號。</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.mybatis<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mybatis<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.5.6<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h2 id="在-application-properties-設定連線資訊"><a href="#在-application-properties-設定連線資訊" class="headerlink" title="在 application.properties 設定連線資訊"></a>在 application.properties 設定連線資訊</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">url=jdbc:oracle:thin:<span class="meta">@localhost</span>:<span class="number">1521</span>:xe</span><br><span class="line">driver=oracle.jdbc.driver.OracleDriver</span><br><span class="line">username=SYSTEM</span><br><span class="line">password=1qaz<span class="meta">@WSX</span></span><br></pre></td></tr></table></figure>
 
@@ -176,11 +180,9 @@
 
 
 <h2 id="連線測試"><a href="#連線測試" class="headerlink" title="連線測試"></a>連線測試</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">String resource = <span class="string">&quot;mybatis-config.xml&quot;</span>;</span><br><span class="line">InputStream inputStream = Resources.getResourceAsStream(resource);</span><br><span class="line">SqlSessionFactory  sqlSessionFactory = <span class="keyword">new</span> SqlSessionFactoryBuilder().build(inputStream);</span><br><span class="line"></span><br><span class="line">SqlSession sqlSession=<span class="keyword">null</span>;</span><br><span class="line"><span class="keyword">try</span>&#123;</span><br><span class="line">    sqlSession=sqlSessionFactory.openSession();</span><br><span class="line"></span><br><span class="line">    AccountMapper accountMapper=sqlSession.getMapper(AccountMapper.class);</span><br><span class="line">    Collection&lt;AccountPo&gt; account=accountMapper.SelectAll();</span><br><span class="line">    account.forEach(s -&gt; System.out.println(s.Name));</span><br><span class="line"></span><br><span class="line">    sqlSession.commit();</span><br><span class="line">&#125; <span class="keyword">catch</span>(Exception ex)&#123;</span><br><span class="line">    sqlSession.rollback();</span><br><span class="line">&#125; <span class="keyword">finally</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(sqlSession!=<span class="keyword">null</span>)&#123;</span><br><span class="line">        sqlSession.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-    
-    
-    
-	  <div class="full-width auto-padding tags">
+  	</div>
+	  
+	  <div class="article-tags tags">
       
         <a href="/tags/JAVA/">JAVA</a>
       
@@ -192,64 +194,26 @@
       
 	  </div>
     
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2021/04/14/Eclipse%E9%96%8B%E7%99%BCJAVA-%E7%92%B0%E5%A2%83%E5%BB%BA%E7%BD%AE/">
-        Eclipse開發JAVA-環境建置
-      </a>
-    </h2>
-    
-    <time>
-      4月 14, 2021
-    </time>
 		
-    
-    <div class='cats'>
-        <a href="/categories/JAVA/">JAVA</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <p>最近被問到要不要把dotNet改版成java，所以先來建置一下開發環境看看java是怎麼開發Web，順便記錄一下</p>
-<h2 id="Maven"><a href="#Maven" class="headerlink" title="Maven"></a>Maven</h2><p>Maven類似NuGet，作套件管理，下載<a href="https://maven.apache.org/download.cgi?Preferred=https://downloads.apache.org/">Maven Download</a>，之後解完壓縮後，在「環境變數」PATH設定此路徑。</p>
-<h2 id="JDK"><a href="#JDK" class="headerlink" title="JDK"></a>JDK</h2><p>Java Development Kit（JDK）是昇陽電腦針對Java開發人員發布的免費軟體開發套件（SDK，Software development kit）。</p>
-<p><a href="https://www.oracle.com/tw/java/technologies/javase/javase-jdk8-downloads.html">JDK 8</a><br><a href="https://www.oracle.com/tw/java/technologies/javase-jdk11-downloads.html">JDK 11</a></p>
-<blockquote>
-<p>參考維基百科 <a href="https://zh.wikipedia.org/wiki/JDK">JDK</a></p>
-</blockquote>
-
-    
-	  <div class="readmore">
-      <a href="/2021/04/14/Eclipse%E9%96%8B%E7%99%BCJAVA-%E7%92%B0%E5%A2%83%E5%BB%BA%E7%BD%AE/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/JAVA/">JAVA</a>
-      
-        <a href="/tags/Spring/">Spring</a>
-      
-        <a href="/tags/Web/">Web</a>
-      
-        <a href="/tags/Eclipse/">Eclipse</a>
-      
-	  </div>
-    
-  </section>
+	
+		<div class="art-item-footer">
+				
+				
+					<span class="art-item-right">next：<a href="/2021/04/16/%E5%8E%9F%E7%A2%BC%E6%8E%83%E7%9E%84%E5%BC%B1%E9%BB%9E%E8%99%95%E7%90%86/" rel="next"  title="原碼掃瞄弱點處理">
+						原碼掃瞄弱點處理
+					</a><i class="icon icon-chevron-thin-right"></i></span>
+				
+		</div>
+	
+	</section>
+	
 </article>
-    </div>
-  
-</section>
-
+<script>
+	window.subData = {
+		title: 'Eclipse開發JAVA-mybatis Getting Started',
+		tools: true
+	}
+</script>
 
       </div>
       <aside class='l_side'>

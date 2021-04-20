@@ -6,7 +6,7 @@
   <link href="https://justinchang.ddns.net/atom.xml" rel="self"/>
   
   <link href="https://justinchang.ddns.net/"/>
-  <updated>2021-04-19T07:43:15.697Z</updated>
+  <updated>2021-04-20T10:08:30.676Z</updated>
   <id>https://justinchang.ddns.net/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Eclipse開發JAVA-mybatis Getting Started</title>
+    <link href="https://justinchang.ddns.net/2021/04/20/Eclipse%E9%96%8B%E7%99%BCJAVA-mybatis-GettingStarted/"/>
+    <id>https://justinchang.ddns.net/2021/04/20/Eclipse%E9%96%8B%E7%99%BCJAVA-mybatis-GettingStarted/</id>
+    <published>2021-04-20T06:55:05.000Z</published>
+    <updated>2021-04-20T10:08:30.676Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;pox-xml-加入-mybatis-dependency&quot;&gt;&lt;a href=&quot;#pox-xml-加入-mybatis-dependency&quot; class=&quot;headerlink&quot; title=&quot;pox.xml 加入 mybatis dependency&quot;&gt;&lt;/a</summary>
+      
+    
+    
+    
+    <category term="JAVA" scheme="https://justinchang.ddns.net/categories/JAVA/"/>
+    
+    
+    <category term="JAVA" scheme="https://justinchang.ddns.net/tags/JAVA/"/>
+    
+    <category term="Eclipse" scheme="https://justinchang.ddns.net/tags/Eclipse/"/>
+    
+    <category term="Mybatis" scheme="https://justinchang.ddns.net/tags/Mybatis/"/>
+    
+    <category term="ORM" scheme="https://justinchang.ddns.net/tags/ORM/"/>
+    
+  </entry>
   
   <entry>
     <title>原碼掃瞄弱點處理</title>
