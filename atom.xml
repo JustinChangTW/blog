@@ -6,7 +6,7 @@
   <link href="https://justinchang.ddns.net/atom.xml" rel="self"/>
   
   <link href="https://justinchang.ddns.net/"/>
-  <updated>2021-04-16T09:08:11.554Z</updated>
+  <updated>2021-04-19T07:43:15.697Z</updated>
   <id>https://justinchang.ddns.net/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>原碼掃瞄弱點處理</title>
+    <link href="https://justinchang.ddns.net/2021/04/16/%E5%8E%9F%E7%A2%BC%E6%8E%83%E7%9E%84%E5%BC%B1%E9%BB%9E%E8%99%95%E7%90%86/"/>
+    <id>https://justinchang.ddns.net/2021/04/16/%E5%8E%9F%E7%A2%BC%E6%8E%83%E7%9E%84%E5%BC%B1%E9%BB%9E%E8%99%95%E7%90%86/</id>
+    <published>2021-04-16T09:22:24.000Z</published>
+    <updated>2021-04-19T07:43:15.697Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;Client-DOM-XSS&quot;&gt;&lt;a href=&quot;#Client-DOM-XSS&quot; class=&quot;headerlink&quot; title=&quot;Client DOM XSS&quot;&gt;&lt;/a&gt;Client DOM XSS&lt;/h2&gt;&lt;p&gt;由前端取得的值，在程式的流程當中，沒有過濾(</summary>
+      
+    
+    
+    
+    <category term="原碼掃描" scheme="https://justinchang.ddns.net/categories/%E5%8E%9F%E7%A2%BC%E6%8E%83%E6%8F%8F/"/>
+    
+    
+    <category term="弱點處理" scheme="https://justinchang.ddns.net/tags/%E5%BC%B1%E9%BB%9E%E8%99%95%E7%90%86/"/>
+    
+    <category term="CodeReview" scheme="https://justinchang.ddns.net/tags/CodeReview/"/>
+    
+    <category term="CheckMarx" scheme="https://justinchang.ddns.net/tags/CheckMarx/"/>
+    
+  </entry>
+  
+  <entry>
     <title>OracleXE18C建置byWin10</title>
     <link href="https://justinchang.ddns.net/2021/04/16/OracleXE18C%E5%BB%BA%E7%BD%AEbyWin10/"/>
     <id>https://justinchang.ddns.net/2021/04/16/OracleXE18C%E5%BB%BA%E7%BD%AEbyWin10/</id>
     <published>2021-04-16T02:37:05.000Z</published>
-    <updated>2021-04-16T09:08:11.554Z</updated>
+    <updated>2021-04-20T03:57:07.390Z</updated>
     
     
     <summary type="html">&lt;p&gt;OracleXE是免費的版本的版，可以用來商用，雖然是免費但有一些限制，但用來作一些簡單的系統或開發測試已經是足夠了。&lt;br&gt;限制如下：&lt;/p&gt;
