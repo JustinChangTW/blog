@@ -121,19 +121,6 @@
     
     <entry>
       <title>HttpOnlyCookies_In_Config</title>
-      <link href="2021/05/05/HttpOnlyCookies-In-Config-1/"/>
-      <url>2021/05/05/HttpOnlyCookies-In-Config-1/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>HttpOnlyCookies_In_Config</title>
       <link href="2021/05/05/HttpOnlyCookies-In-Config/"/>
       <url>2021/05/05/HttpOnlyCookies-In-Config/</url>
       
@@ -197,7 +184,7 @@
       <link href="2021/04/16/Client-DOM-XSS/"/>
       <url>2021/04/16/Client-DOM-XSS/</url>
       
-        <content type="html"><![CDATA[<h2 id="Client-DOM-XSS"><a href="#Client-DOM-XSS" class="headerlink" title="Client DOM XSS"></a>Client DOM XSS</h2><p>由前端取得的值，在程式的流程當中，沒有過濾(處理)直接拿來使用，會有機會被注入非法的字串。<br>例如：</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> source = <span class="built_in">window</span>.location.origin <span class="comment">//直接取得來自於User可修改的的值</span></span><br><span class="line"><span class="built_in">document</span>.write(source())     <span class="comment">//並接直接使用</span></span><br></pre></td></tr></table></figure><p>可以將取得的內容作encode，並包一層function，如此就可以回避「直接」使用「值」，同時也處理內藏程式碼的問題。</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> source = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="keyword">return</span> <span class="built_in">encodeURI</span>(<span class="built_in">window</span>.location.origin)&#125;</span><br><span class="line"><span class="built_in">document</span>.write(source())</span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<h2 id="Client-DOM-XSS"><a href="#Client-DOM-XSS" class="headerlink" title="Client DOM XSS"></a>Client DOM XSS</h2><p>由前端取得的值，在程式的流程當中，沒有過濾(處理)直接拿來使用，會有機會被注入非法的字串。<br>例如：</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> source = <span class="built_in">window</span>.location.origin <span class="comment">//直接取得來自於User可修改的的值</span></span><br><span class="line"><span class="built_in">document</span>.write(source())     <span class="comment">//並接直接使用</span></span><br></pre></td></tr></table></figure><span id="more"></span><p>可以將取得的內容作encode，並包一層function，如此就可以回避「直接」使用「值」，同時也處理內藏程式碼的問題。</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> source = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="keyword">return</span> <span class="built_in">encodeURI</span>(<span class="built_in">window</span>.location.origin)&#125;</span><br><span class="line"><span class="built_in">document</span>.write(source())</span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>

@@ -333,31 +333,6 @@
   <section class="meta">
     
     <h2 class="title">
-      <a href="/2021/05/05/HttpOnlyCookies-In-Config-1/">
-        HttpOnlyCookies_In_Config
-      </a>
-    </h2>
-    
-    <time>
-      5月 5, 2021
-    </time>
-		
-  </section>
-  <section class="article typo">
-	  
-
-    
-    
-    
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
       <a href="/2021/05/05/HttpOnlyCookies-In-Config/">
         HttpOnlyCookies_In_Config
       </a>
@@ -470,9 +445,10 @@
 	  <h2 id="Client-DOM-XSS"><a href="#Client-DOM-XSS" class="headerlink" title="Client DOM XSS"></a>Client DOM XSS</h2><p>由前端取得的值，在程式的流程當中，沒有過濾(處理)直接拿來使用，會有機會被注入非法的字串。<br>例如：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> source = <span class="built_in">window</span>.location.origin <span class="comment">//直接取得來自於User可修改的的值</span></span><br><span class="line"><span class="built_in">document</span>.write(source())     <span class="comment">//並接直接使用</span></span><br></pre></td></tr></table></figure>
 
-<p>可以將取得的內容作encode，並包一層function，如此就可以回避「直接」使用「值」，同時也處理內藏程式碼的問題。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> source = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="keyword">return</span> <span class="built_in">encodeURI</span>(<span class="built_in">window</span>.location.origin)&#125;</span><br><span class="line"><span class="built_in">document</span>.write(source())</span><br></pre></td></tr></table></figure>
-
+    
+	  <div class="readmore">
+      <a href="/2021/04/16/Client-DOM-XSS/">Read More</a>
+    </div>
     
     
     
@@ -583,6 +559,58 @@
         <a href="/tags/Oracle/">Oracle</a>
       
         <a href="/tags/Win10/">Win10</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2021/04/15/VSCode%E9%96%8B%E7%99%BCJAVA-%E7%92%B0%E5%A2%83%E5%BB%BA%E7%BD%AE/">
+        VSCode開發JAVA-環境建置
+      </a>
+    </h2>
+    
+    <time>
+      4月 15, 2021
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/JAVA/">JAVA</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <p>前陣子試過用Eclipse來建置JAVA開發環境，現在來試試地表上最強的開發工具VSCode</p>
+<h2 id="Maven"><a href="#Maven" class="headerlink" title="Maven"></a>Maven</h2><p>Maven類似NuGet，作套件管理，下載<a href="https://maven.apache.org/download.cgi?Preferred=https://downloads.apache.org/">Maven Download</a>，之後解完壓縮後，在「環境變數」PATH設定此路徑。</p>
+<h2 id="JDK"><a href="#JDK" class="headerlink" title="JDK"></a>JDK</h2><p>Java Development Kit（JDK）是昇陽電腦針對Java開發人員發布的免費軟體開發套件（SDK，Software development kit）。</p>
+<p><a href="https://www.oracle.com/tw/java/technologies/javase/javase-jdk8-downloads.html">JDK 8</a><br><a href="https://www.oracle.com/tw/java/technologies/javase-jdk11-downloads.html">JDK 11</a></p>
+<blockquote>
+<p>參考維基百科 <a href="https://zh.wikipedia.org/wiki/JDK">JDK</a></p>
+</blockquote>
+
+    
+	  <div class="readmore">
+      <a href="/2021/04/15/VSCode%E9%96%8B%E7%99%BCJAVA-%E7%92%B0%E5%A2%83%E5%BB%BA%E7%BD%AE/">Read More</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/JAVA/">JAVA</a>
+      
+        <a href="/tags/VSCode/">VSCode</a>
+      
+        <a href="/tags/Spring/">Spring</a>
+      
+        <a href="/tags/Web/">Web</a>
       
 	  </div>
     
