@@ -6,7 +6,7 @@
   <link href="https://justinchang.ddns.net/atom.xml" rel="self"/>
   
   <link href="https://justinchang.ddns.net/"/>
-  <updated>2021-05-05T02:26:48.186Z</updated>
+  <updated>2021-05-05T02:47:34.684Z</updated>
   <id>https://justinchang.ddns.net/</id>
   
   <author>
@@ -21,13 +21,15 @@
     <link href="https://justinchang.ddns.net/2021/05/05/Client-Use-Of-Iframe-Without-Sandbox/"/>
     <id>https://justinchang.ddns.net/2021/05/05/Client-Use-Of-Iframe-Without-Sandbox/</id>
     <published>2021-05-05T02:26:23.000Z</published>
-    <updated>2021-05-05T02:26:48.186Z</updated>
+    <updated>2021-05-05T02:47:34.684Z</updated>
     
     
-      
-      
-    <summary type="html">&lt;h2 id=&quot;Client-Use-Of-Iframe-Without-Sandbox&quot;&gt;&lt;a href=&quot;#Client-Use-Of-Iframe-Without-Sandbox&quot; class=&quot;headerlink&quot; title=&quot;Client Use Of Iframe</summary>
-      
+    <summary type="html">&lt;h2 id=&quot;Client-Use-Of-Iframe-Without-Sandbox&quot;&gt;&lt;a href=&quot;#Client-Use-Of-Iframe-Without-Sandbox&quot; class=&quot;headerlink&quot; title=&quot;Client Use Of Iframe Without Sandbox&quot;&gt;&lt;/a&gt;Client Use Of Iframe Without Sandbox&lt;/h2&gt;&lt;p&gt;使用 Sandbox 屬性來限制 Iframe 的行為，單獨使用時代表全部的行為都禁止，也可以加入一至多個屬性，&lt;br&gt;常用的屬性如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;allow-same-origin : 將 Iframe 當作同源&lt;/li&gt;
+&lt;li&gt;allow-scripts : 允許可以執行Script，但不包含可以開新視窗&lt;/li&gt;
+&lt;li&gt;allow-popups : 允許可以開新視窗 &lt;/li&gt;
+&lt;li&gt;allow-forms : 允許可以提交表單</summary>
     
     
     
