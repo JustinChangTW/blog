@@ -12,15 +12,15 @@
   <link rel="shortcut icon" href="/images/favicon.ico">
   <link rel="alternate" href="/atom.xml" title="Justin's Blog" type="application/atom+xml">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Client Use Of Iframe Without Sandbox使用 Sandbox 屬性來限制 Iframe 的行為，單獨使用時代表全部的行為都禁止，也可以加入一至多個屬性，常用的屬性如下：  allow-same-origin : 將 Iframe 當作同源 allow-scripts : 允許可以執行Script，但不包含可以開新視窗 allow-popups : 允許可以開新視窗">
+  <meta name="description" content="Client Use Of Iframe Without Sandbox使用 Sandbox 屬性來限制 Iframe 的行為，單獨使用時代表全部的行為都禁止，也可以加入一至多個屬性，">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Client_Use_Of_Iframe_Without_Sandbox">
 <meta property="og:url" content="https://justinchang.ddns.net/2021/05/05/Client-Use-Of-Iframe-Without-Sandbox/index.html">
 <meta property="og:site_name" content="Justin&#39;s Blog">
-<meta property="og:description" content="Client Use Of Iframe Without Sandbox使用 Sandbox 屬性來限制 Iframe 的行為，單獨使用時代表全部的行為都禁止，也可以加入一至多個屬性，常用的屬性如下：  allow-same-origin : 將 Iframe 當作同源 allow-scripts : 允許可以執行Script，但不包含可以開新視窗 allow-popups : 允許可以開新視窗">
+<meta property="og:description" content="Client Use Of Iframe Without Sandbox使用 Sandbox 屬性來限制 Iframe 的行為，單獨使用時代表全部的行為都禁止，也可以加入一至多個屬性，">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2021-05-05T02:26:23.000Z">
-<meta property="article:modified_time" content="2021-05-05T02:47:34.684Z">
+<meta property="article:modified_time" content="2021-05-05T02:53:31.694Z">
 <meta property="article:author" content="Justin Chang Blog">
 <meta property="article:tag" content="弱點處理">
 <meta property="article:tag" content="CodeReview">
@@ -162,14 +162,16 @@
 	
 	<section class="article typo">
   	<div class="article-entry" itemprop="articleBody">
-    	<h2 id="Client-Use-Of-Iframe-Without-Sandbox"><a href="#Client-Use-Of-Iframe-Without-Sandbox" class="headerlink" title="Client Use Of Iframe Without Sandbox"></a>Client Use Of Iframe Without Sandbox</h2><p>使用 Sandbox 屬性來限制 Iframe 的行為，單獨使用時代表全部的行為都禁止，也可以加入一至多個屬性，<br>常用的屬性如下：</p>
+    	<h2 id="Client-Use-Of-Iframe-Without-Sandbox"><a href="#Client-Use-Of-Iframe-Without-Sandbox" class="headerlink" title="Client Use Of Iframe Without Sandbox"></a>Client Use Of Iframe Without Sandbox</h2><p>使用 Sandbox 屬性來限制 Iframe 的行為，單獨使用時代表全部的行為都禁止，也可以加入一至多個屬性，</p>
+<span id="more"></span>
 <ol>
 <li>allow-same-origin : 將 Iframe 當作同源</li>
 <li>allow-scripts : 允許可以執行Script，但不包含可以開新視窗</li>
 <li>allow-popups : 允許可以開新視窗 </li>
-<li>allow-forms : 允許可以提交表單<span id="more"></span>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">id</span>=<span class="string">&quot;iframeId&quot;</span> <span class="attr">src</span>=<span class="string">&quot;oooooo.html&quot;</span> <span class="attr">sandbox</span>=<span class="string">&quot;allow-same-origin allow-scripts allow-popups allow-forms&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>allow-forms : 允許可以提交表單</li>
 </ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">id</span>=<span class="string">&quot;iframeId&quot;</span> <span class="attr">src</span>=<span class="string">&quot;oooooo.html&quot;</span> <span class="attr">sandbox</span>=<span class="string">&quot;allow-same-origin allow-scripts allow-popups allow-forms&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
 <blockquote>
 <p>參考<br><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/iframe">MDN</a><br><a href="https://developer.salesforce.com/forums/?id=9062I000000g53OQAQ">Client Use Of Iframe Without Sandbox error - Checkmarx</a></p>
 </blockquote>
