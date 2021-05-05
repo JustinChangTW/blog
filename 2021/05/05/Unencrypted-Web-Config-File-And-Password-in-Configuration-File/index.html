@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
-  <title>Unencrypted_Web_Config_File_And_Password_in_Configuration_File | Justin&#39;s Blog</title>
+  <title>Unencrypted_Config_File | Justin&#39;s Blog</title>
   <meta name="description" content="" />
   <meta name="keywords" content="" />
   <meta name="HandheldFriendly" content="True" />
@@ -12,15 +12,15 @@
   <link rel="shortcut icon" href="/images/favicon.ico">
   <link rel="alternate" href="/atom.xml" title="Justin's Blog" type="application/atom+xml">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Unencrypted Web Config FilePassword in Configuration File   這是指在Config檔中，使用名文儲存資料庫連線字串，這可能使非預期使用者也能夠訪問資料庫，所以要將資料庫連線字串加密，操作方式參考encrypt-and-decrypt-connectionstring-in-web-config-file">
+  <meta name="description" content="Unencrypted_Config_FileUnencrypted Web Config FilePassword in Configuration File   這是指在Config檔中，使用名文儲存資料庫連線字串，這可能使非預期使用者也能夠訪問資料庫，所以要將資料庫連線字串加密，操作方式參考encrypt-and-decrypt-connectionstring-in-web-config-">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Unencrypted_Web_Config_File_And_Password_in_Configuration_File">
+<meta property="og:title" content="Unencrypted_Config_File">
 <meta property="og:url" content="https://justinchang.ddns.net/2021/05/05/Unencrypted-Web-Config-File-And-Password-in-Configuration-File/index.html">
 <meta property="og:site_name" content="Justin&#39;s Blog">
-<meta property="og:description" content="Unencrypted Web Config FilePassword in Configuration File   這是指在Config檔中，使用名文儲存資料庫連線字串，這可能使非預期使用者也能夠訪問資料庫，所以要將資料庫連線字串加密，操作方式參考encrypt-and-decrypt-connectionstring-in-web-config-file">
+<meta property="og:description" content="Unencrypted_Config_FileUnencrypted Web Config FilePassword in Configuration File   這是指在Config檔中，使用名文儲存資料庫連線字串，這可能使非預期使用者也能夠訪問資料庫，所以要將資料庫連線字串加密，操作方式參考encrypt-and-decrypt-connectionstring-in-web-config-">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2021-05-05T02:17:51.000Z">
-<meta property="article:modified_time" content="2021-05-05T02:49:42.673Z">
+<meta property="article:modified_time" content="2021-05-05T02:51:01.584Z">
 <meta property="article:author" content="Justin Chang Blog">
 <meta property="article:tag" content="弱點處理">
 <meta property="article:tag" content="CodeReview">
@@ -144,7 +144,7 @@
 	<section class='meta'>
 	<h2 class="title">
   	<a href="/2021/05/05/Unencrypted-Web-Config-File-And-Password-in-Configuration-File/">
-    	Unencrypted_Web_Config_File_And_Password_in_Configuration_File
+    	Unencrypted_Config_File
     </a>
   </h2>
 	<time>
@@ -158,11 +158,11 @@
 
 	</section>
 	
-		<section class="toc-wrapper"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Unencrypted-Web-Config-File"><span class="toc-number">1.</span> <span class="toc-text">Unencrypted Web Config File</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Password-in-Configuration-File"><span class="toc-number">2.</span> <span class="toc-text">Password in Configuration File</span></a></li></ol></section>
+		<section class="toc-wrapper"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Unencrypted-Config-File"><span class="toc-number">1.</span> <span class="toc-text">Unencrypted_Config_File</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Unencrypted-Web-Config-File"><span class="toc-number">1.1.</span> <span class="toc-text">Unencrypted Web Config File</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Password-in-Configuration-File"><span class="toc-number">1.2.</span> <span class="toc-text">Password in Configuration File</span></a></li></ol></li></ol></section>
 	
 	<section class="article typo">
   	<div class="article-entry" itemprop="articleBody">
-    	<h2 id="Unencrypted-Web-Config-File"><a href="#Unencrypted-Web-Config-File" class="headerlink" title="Unencrypted Web Config File"></a>Unencrypted Web Config File</h2><h2 id="Password-in-Configuration-File"><a href="#Password-in-Configuration-File" class="headerlink" title="Password in Configuration File"></a>Password in Configuration File</h2><blockquote>
+    	<h2 id="Unencrypted-Config-File"><a href="#Unencrypted-Config-File" class="headerlink" title="Unencrypted_Config_File"></a>Unencrypted_Config_File</h2><h3 id="Unencrypted-Web-Config-File"><a href="#Unencrypted-Web-Config-File" class="headerlink" title="Unencrypted Web Config File"></a>Unencrypted Web Config File</h3><h3 id="Password-in-Configuration-File"><a href="#Password-in-Configuration-File" class="headerlink" title="Password in Configuration File"></a>Password in Configuration File</h3><blockquote>
 <p><a href="https://docs.microsoft.com/zh-tw/sql/connect/jdbc/connecting-with-ssl-encryption?view=sql-server-ver15"></a></p>
 </blockquote>
 <p>這是指在Config檔中，使用名文儲存資料庫連線字串，這可能使非預期使用者也能夠訪問資料庫，所以要將資料庫連線字串加密，操作方式參考<a href="https://www.c-sharpcorner.com/article/encrypt-and-decrypt-connectionstring-in-web-config-file/">encrypt-and-decrypt-connectionstring-in-web-config-file</a></p>
@@ -208,7 +208,7 @@
 </article>
 <script>
 	window.subData = {
-		title: 'Unencrypted_Web_Config_File_And_Password_in_Configuration_File',
+		title: 'Unencrypted_Config_File',
 		tools: true
 	}
 </script>
