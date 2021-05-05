@@ -75,10 +75,10 @@
     <link href="https://justinchang.ddns.net/2021/05/05/Unencrypted-Web-Config-File-And-Password-in-Configuration-File/"/>
     <id>https://justinchang.ddns.net/2021/05/05/Unencrypted-Web-Config-File-And-Password-in-Configuration-File/</id>
     <published>2021-05-05T02:17:51.000Z</published>
-    <updated>2021-05-05T02:48:46.378Z</updated>
+    <updated>2021-05-05T02:49:42.673Z</updated>
     
     
-    <summary type="html">&lt;h2 id=&quot;Unencrypted-Web-Config-File-amp-amp-Password-in-Configuration-File&quot;&gt;&lt;a href=&quot;#Unencrypted-Web-Config-File-amp-amp-Password-in-Configuration-File&quot; class=&quot;headerlink&quot; title=&quot;Unencrypted Web Config File &amp;amp;&amp;amp; Password in Configuration File&quot;&gt;&lt;/a&gt;Unencrypted Web Config File &amp;amp;&amp;amp; Password in Configuration File&lt;/h2&gt;&lt;blockquote&gt;
+    <summary type="html">&lt;h2 id=&quot;Unencrypted-Web-Config-File&quot;&gt;&lt;a href=&quot;#Unencrypted-Web-Config-File&quot; class=&quot;headerlink&quot; title=&quot;Unencrypted Web Config File&quot;&gt;&lt;/a&gt;Unencrypted Web Config File&lt;/h2&gt;&lt;h2 id=&quot;Password-in-Configuration-File&quot;&gt;&lt;a href=&quot;#Password-in-Configuration-File&quot; class=&quot;headerlink&quot; title=&quot;Password in Configuration File&quot;&gt;&lt;/a&gt;Password in Configuration File&lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;&lt;a href=&quot;https://docs.microsoft.com/zh-tw/sql/connect/jdbc/connecting-with-ssl-encryption?view=sql-server-ver15&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;這是指在Config檔中，使用名文儲存資料庫連線字串，這可能使非預期使用者也能夠訪問資料庫，所以要將資料庫連線字串加密，操作方式參考&lt;a href=&quot;https://www.c-sharpcorner.com/article/encrypt-and-decrypt-connectionstring-in-web-config-file/&quot;&gt;encrypt-and-decrypt-connectionstring-in-web-config-file&lt;/a&gt;&lt;/p&gt;</summary>
