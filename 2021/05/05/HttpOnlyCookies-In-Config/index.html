@@ -12,15 +12,15 @@
   <link rel="shortcut icon" href="/images/favicon.ico">
   <link rel="alternate" href="/atom.xml" title="Justin's Blog" type="application/atom+xml">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="HttpOnlyCookies In Config主要問題是要將Cookies設定為不可以被前端「語法」讀取，所以在後端設定Cookies時必需加上「限制」，或在Web.config加上全域的設定  web.config 設定 httpOnlyCookies : 只能透過http存取Cookies，也就是不能透過js存取 requireSSL：限制只能透過SSL存取123456&lt;system">
+  <meta name="description" content="HttpOnlyCookies In Config主要問題是要將Cookies設定為不可以被前端「語法」讀取，所以在後端設定Cookies時必需加上「限制」，或在Web.config加上全域的設定  web.config 設定 httpOnlyCookies : 只能透過http存取Cookies，也就是不能透過js存取 requireSSL：限制只能透過SSL存取">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HttpOnlyCookies_In_Config">
 <meta property="og:url" content="https://justinchang.ddns.net/2021/05/05/HttpOnlyCookies-In-Config/index.html">
 <meta property="og:site_name" content="Justin&#39;s Blog">
-<meta property="og:description" content="HttpOnlyCookies In Config主要問題是要將Cookies設定為不可以被前端「語法」讀取，所以在後端設定Cookies時必需加上「限制」，或在Web.config加上全域的設定  web.config 設定 httpOnlyCookies : 只能透過http存取Cookies，也就是不能透過js存取 requireSSL：限制只能透過SSL存取123456&lt;system">
+<meta property="og:description" content="HttpOnlyCookies In Config主要問題是要將Cookies設定為不可以被前端「語法」讀取，所以在後端設定Cookies時必需加上「限制」，或在Web.config加上全域的設定  web.config 設定 httpOnlyCookies : 只能透過http存取Cookies，也就是不能透過js存取 requireSSL：限制只能透過SSL存取">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2021-05-05T02:10:46.000Z">
-<meta property="article:modified_time" content="2021-05-05T02:13:13.941Z">
+<meta property="article:modified_time" content="2021-05-05T02:44:26.567Z">
 <meta property="article:author" content="Justin Chang Blog">
 <meta property="article:tag" content="弱點處理">
 <meta property="article:tag" content="CodeReview">
@@ -166,7 +166,8 @@
 <ul>
 <li>web.config 設定</li>
 <li>httpOnlyCookies : 只能透過http存取Cookies，也就是不能透過js存取</li>
-<li>requireSSL：限制只能透過SSL存取<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;system.web&gt;</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line">   &lt;httpCookies httpOnlyCookies=<span class="string">&quot;true&quot;</span> requireSSL=<span class="string">&quot;true&quot;</span> /&gt;</span><br><span class="line">&lt;/system.web&gt;</span><br></pre></td></tr></table></figure></li>
+<li>requireSSL：限制只能透過SSL存取<span id="more"></span>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;system.web&gt;</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line">   &lt;httpCookies httpOnlyCookies=<span class="string">&quot;true&quot;</span> requireSSL=<span class="string">&quot;true&quot;</span> /&gt;</span><br><span class="line">&lt;/system.web&gt;</span><br></pre></td></tr></table></figure></li>
 </ul>
 
   	</div>
