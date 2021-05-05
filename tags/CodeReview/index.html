@@ -253,16 +253,11 @@
 <p><a href="https://docs.microsoft.com/zh-tw/sql/connect/jdbc/connecting-with-ssl-encryption?view=sql-server-ver15"></a></p>
 </blockquote>
 <p>這是指在Config檔中，使用名文儲存資料庫連線字串，這可能使非預期使用者也能夠訪問資料庫，所以要將資料庫連線字串加密，操作方式參考<a href="https://www.c-sharpcorner.com/article/encrypt-and-decrypt-connectionstring-in-web-config-file/">encrypt-and-decrypt-connectionstring-in-web-config-file</a></p>
-<ol>
-<li><code>cd C:\Windows\Microsoft.NET\Framework\v4.0.30319</code></li>
-<li>加密 <code>.\ASPNET_REGIIS -pef &quot;connectionStrings&quot; &quot;E:\Config&quot;</code></li>
-<li>解密 <code>.\ASPNET_REGIIS -pdf &quot;connectionStrings&quot; &quot;E:\Config&quot;</code></li>
-</ol>
-<blockquote>
-<p>ASPNET_REGIIS -{pef 加密 | pdf 解密} “{加密的部份}” “{路徑}”</p>
-</blockquote>
 
-
+    
+	  <div class="readmore">
+      <a href="/2021/05/05/Unencrypted-Web-Config-File-And-Password-in-Configuration-File/">Read More</a>
+    </div>
     
     
     
