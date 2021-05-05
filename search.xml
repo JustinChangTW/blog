@@ -4,6 +4,164 @@
   
     
     <entry>
+      <title>Client_Use_Of_Iframe_Without_Sandbox</title>
+      <link href="2021/05/05/Client-Use-Of-Iframe-Without-Sandbox/"/>
+      <url>2021/05/05/Client-Use-Of-Iframe-Without-Sandbox/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Client-Use-Of-Iframe-Without-Sandbox"><a href="#Client-Use-Of-Iframe-Without-Sandbox" class="headerlink" title="Client Use Of Iframe Without Sandbox"></a>Client Use Of Iframe Without Sandbox</h2><p>使用 Sandbox 屬性來限制 Iframe 的行為，單獨使用時代表全部的行為都禁止，也可以加入一至多個屬性，<br>常用的屬性如下：</p><ol><li>allow-same-origin : 將 Iframe 當作同源</li><li>allow-scripts : 允許可以執行Script，但不包含可以開新視窗</li><li>allow-popups : 允許可以開新視窗 </li><li>allow-forms : 允許可以提交表單</li></ol><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">id</span>=<span class="string">&quot;iframeId&quot;</span> <span class="attr">src</span>=<span class="string">&quot;oooooo.html&quot;</span> <span class="attr">sandbox</span>=<span class="string">&quot;allow-same-origin allow-scripts allow-popups allow-forms&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure><blockquote><p>參考<br><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/iframe">MDN</a><br><a href="https://developer.salesforce.com/forums/?id=9062I000000g53OQAQ">Client Use Of Iframe Without Sandbox error - Checkmarx</a></p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 原碼掃描 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 弱點處理 </tag>
+            
+            <tag> CodeReview </tag>
+            
+            <tag> CheckMarx </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Client_Potential_XSS</title>
+      <link href="2021/05/05/Client-Potential-XSS/"/>
+      <url>2021/05/05/Client-Potential-XSS/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Client-Potential-XSS"><a href="#Client-Potential-XSS" class="headerlink" title="Client Potential XSS"></a>Client Potential XSS</h2><p>主要是不可以信任使用的輸入的資料，可以會隱藏一些程式碼等等，所以也是一樣將使用者輸入的資料所Encode</p><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> Referer = Request.QueryString[<span class="string">&quot;Referer&quot;</span>];</span><br><span class="line">Response.BinaryWrite(encoder.HtmlEncode(Referer, <span class="literal">true</span>));</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 原碼掃描 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 弱點處理 </tag>
+            
+            <tag> CodeReview </tag>
+            
+            <tag> CheckMarx </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Unencrypted_Web_Config_File_And_Password_in_Configuration_File</title>
+      <link href="2021/05/05/Unencrypted-Web-Config-File-And-Password-in-Configuration-File/"/>
+      <url>2021/05/05/Unencrypted-Web-Config-File-And-Password-in-Configuration-File/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Unencrypted-Web-Config-File-amp-amp-Password-in-Configuration-File"><a href="#Unencrypted-Web-Config-File-amp-amp-Password-in-Configuration-File" class="headerlink" title="Unencrypted Web Config File &amp;&amp; Password in Configuration File"></a>Unencrypted Web Config File &amp;&amp; Password in Configuration File</h2><blockquote><p><a href="https://docs.microsoft.com/zh-tw/sql/connect/jdbc/connecting-with-ssl-encryption?view=sql-server-ver15"></a></p></blockquote><p>這是指在Config檔中，使用名文儲存資料庫連線字串，這可能使非預期使用者也能夠訪問資料庫，所以要將資料庫連線字串加密，操作方式參考<a href="https://www.c-sharpcorner.com/article/encrypt-and-decrypt-connectionstring-in-web-config-file/">encrypt-and-decrypt-connectionstring-in-web-config-file</a></p><ol><li><code>cd C:\Windows\Microsoft.NET\Framework\v4.0.30319</code></li><li>加密 <code>.\ASPNET_REGIIS -pef &quot;connectionStrings&quot; &quot;E:\Config&quot;</code></li><li>解密 <code>.\ASPNET_REGIIS -pdf &quot;connectionStrings&quot; &quot;E:\Config&quot;</code></li></ol><blockquote><p>ASPNET_REGIIS -{pef 加密 | pdf 解密} “{加密的部份}” “{路徑}”</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 原碼掃描 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 弱點處理 </tag>
+            
+            <tag> CodeReview </tag>
+            
+            <tag> CheckMarx </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Insufficient_Connection_String_Encryption</title>
+      <link href="2021/05/05/Insufficient-Connection-String-Encryption/"/>
+      <url>2021/05/05/Insufficient-Connection-String-Encryption/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Insufficient-Connection-String-Encryption"><a href="#Insufficient-Connection-String-Encryption" class="headerlink" title="Insufficient Connection String Encryption"></a>Insufficient Connection String Encryption</h2><p>在連線字串加上「TrustServerCertificate=true」，使得連線過程是使用加密的過程</p><blockquote><p><img src="https://i.imgur.com/2F8QLiI.gif" alt="使用加密連線"></p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 原碼掃描 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 弱點處理 </tag>
+            
+            <tag> CodeReview </tag>
+            
+            <tag> CheckMarx </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>HttpOnlyCookies_In_Config</title>
+      <link href="2021/05/05/HttpOnlyCookies-In-Config-1/"/>
+      <url>2021/05/05/HttpOnlyCookies-In-Config-1/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>HttpOnlyCookies_In_Config</title>
+      <link href="2021/05/05/HttpOnlyCookies-In-Config/"/>
+      <url>2021/05/05/HttpOnlyCookies-In-Config/</url>
+      
+        <content type="html"><![CDATA[<h2 id="HttpOnlyCookies-In-Config"><a href="#HttpOnlyCookies-In-Config" class="headerlink" title="HttpOnlyCookies In Config"></a>HttpOnlyCookies In Config</h2><p>主要問題是要將Cookies設定為不可以被前端「語法」讀取，所以在後端設定Cookies時必需加上「限制」，或在Web.config加上全域的設定</p><ul><li>web.config 設定</li><li>httpOnlyCookies : 只能透過http存取Cookies，也就是不能透過js存取</li><li>requireSSL：限制只能透過SSL存取<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;system.web&gt;</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line">   &lt;httpCookies httpOnlyCookies=<span class="string">&quot;true&quot;</span> requireSSL=<span class="string">&quot;true&quot;</span> /&gt;</span><br><span class="line">&lt;/system.web&gt;</span><br></pre></td></tr></table></figure></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 原碼掃描 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 弱點處理 </tag>
+            
+            <tag> CodeReview </tag>
+            
+            <tag> CheckMarx </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Eclipse開發JAVA-mybatis-GettingStarted</title>
       <link href="2021/04/20/Eclipse%E9%96%8B%E7%99%BCJAVA-mybatis-GettingStarted/"/>
       <url>2021/04/20/Eclipse%E9%96%8B%E7%99%BCJAVA-mybatis-GettingStarted/</url>
@@ -20,9 +178,9 @@
       
         <tags>
             
-            <tag> JAVA </tag>
-            
             <tag> Eclipse </tag>
+            
+            <tag> JAVA </tag>
             
             <tag> Mybatis </tag>
             
@@ -35,11 +193,40 @@
     
     
     <entry>
+      <title>Client_DOM_XSS</title>
+      <link href="2021/04/16/Client-DOM-XSS/"/>
+      <url>2021/04/16/Client-DOM-XSS/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Client-DOM-XSS"><a href="#Client-DOM-XSS" class="headerlink" title="Client DOM XSS"></a>Client DOM XSS</h2><p>由前端取得的值，在程式的流程當中，沒有過濾(處理)直接拿來使用，會有機會被注入非法的字串。<br>例如：</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> source = <span class="built_in">window</span>.location.origin <span class="comment">//直接取得來自於User可修改的的值</span></span><br><span class="line"><span class="built_in">document</span>.write(source())     <span class="comment">//並接直接使用</span></span><br></pre></td></tr></table></figure><p>可以將取得的內容作encode，並包一層function，如此就可以回避「直接」使用「值」，同時也處理內藏程式碼的問題。</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> source = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="keyword">return</span> <span class="built_in">encodeURI</span>(<span class="built_in">window</span>.location.origin)&#125;</span><br><span class="line"><span class="built_in">document</span>.write(source())</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 原碼掃描 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 弱點處理 </tag>
+            
+            <tag> CodeReview </tag>
+            
+            <tag> CheckMarx </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>原碼掃瞄弱點處理</title>
       <link href="2021/04/16/%E5%8E%9F%E7%A2%BC%E6%8E%83%E7%9E%84%E5%BC%B1%E9%BB%9E%E8%99%95%E7%90%86/"/>
       <url>2021/04/16/%E5%8E%9F%E7%A2%BC%E6%8E%83%E7%9E%84%E5%BC%B1%E9%BB%9E%E8%99%95%E7%90%86/</url>
       
-        <content type="html"><![CDATA[<h2 id="Client-DOM-XSS"><a href="#Client-DOM-XSS" class="headerlink" title="Client DOM XSS"></a>Client DOM XSS</h2><p>由前端取得的值，在程式的流程當中，沒有過濾(處理)直接拿來使用，會有機會被注入非法的字串。<br>例如：</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> source = <span class="built_in">window</span>.location.origin <span class="comment">//直接取得來自於User可修改的的值</span></span><br><span class="line"><span class="built_in">document</span>.write(source)     <span class="comment">//並接直接使用</span></span><br></pre></td></tr></table></figure><p>可以將取得的內容作encode，並包一層function，如此就可以回避「直接」使用「值」，同時也處理內藏程式碼的問題。</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> source = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="keyword">return</span> <span class="built_in">encodeURI</span>(<span class="built_in">window</span>.location.origin)&#125;</span><br><span class="line"><span class="built_in">document</span>.write(source)</span><br></pre></td></tr></table></figure><span id="more"></span><h2 id="HttpOnlyCookies-In-Config"><a href="#HttpOnlyCookies-In-Config" class="headerlink" title="HttpOnlyCookies In Config"></a>HttpOnlyCookies In Config</h2><p>主要問題是要將Cookies設定為不可以被前端「語法」讀取，所以在後端設定Cookies時必需加上「限制」，或在Web.config加上全域的設定</p><ul><li>web.config 設定<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;system.web&gt;</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line">   &lt;httpCookies domain=<span class="string">&quot;MyDomain&quot;</span> httpOnlyCookies=<span class="string">&quot;true&quot;</span> requireSSL=<span class="string">&quot;true&quot;</span> /&gt;</span><br><span class="line">&lt;/system.web&gt;</span><br></pre></td></tr></table></figure></li></ul><h2 id="Insufficient-Connection-String-Encryption"><a href="#Insufficient-Connection-String-Encryption" class="headerlink" title="Insufficient Connection String Encryption"></a>Insufficient Connection String Encryption</h2><p>這是指在Config檔中，使用名文儲存資料庫連線字串，這可能使非預期使用者也能夠訪問資料庫，所以要將資料庫連線字串加密，操作方式參考<a href="https://www.c-sharpcorner.com/article/encrypt-and-decrypt-connectionstring-in-web-config-file/">encrypt-and-decrypt-connectionstring-in-web-config-file</a></p><ol><li><code>cd C:\Windows\Microsoft.NET\Framework\v4.0.30319</code></li><li>加密 <code>.\ASPNET_REGIIS -pef &quot;connectionStrings&quot; &quot;E:\Config&quot;</code></li><li>解密 <code>.\ASPNET_REGIIS -pdf &quot;connectionStrings&quot; &quot;E:\Config&quot;</code></li></ol><p><img src="https://i.imgur.com/2F8QLiI.gif"></p><blockquote><p>ASPNET_REGIIS -{pef 加密 | pdf 解密} “{加密的部份}” “{路徑}”</p></blockquote><h2 id="Client-Potential-XSS"><a href="#Client-Potential-XSS" class="headerlink" title="Client Potential XSS"></a>Client Potential XSS</h2><p>主要是不可以信任使用的輸入的資料，可以會隱藏一些程式碼等等，所以也是一樣將使用者輸入的資料所Encode</p><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> Referer = Request.QueryString[<span class="string">&quot;Referer&quot;</span>];</span><br><span class="line">Response.BinaryWrite(encoder.HtmlEncode(Referer, <span class="literal">true</span>));</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<h2 id="Client-Use-Of-Iframe-Without-Sandbox"><a href="#Client-Use-Of-Iframe-Without-Sandbox" class="headerlink" title="Client Use Of Iframe Without Sandbox"></a>Client Use Of Iframe Without Sandbox</h2><p>使用 Sandbox 屬性來限制 Iframe 的行為，單獨使用時代表全部的行為都禁止，也可以加入一至多個屬性，<br>常用的屬性如下：</p><ol><li>allow-same-origin : 將 Iframe 當作同源</li><li>allow-scripts : 允許可以執行Script，但不包含可以開新視窗</li><li>allow-popups : 允許可以開新視窗 </li><li>allow-forms : 允許可以提交表單</li></ol><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">id</span>=<span class="string">&quot;iframeId&quot;</span> <span class="attr">src</span>=<span class="string">&quot;oooooo.html&quot;</span> <span class="attr">sandbox</span>=<span class="string">&quot;allow-same-origin allow-scripts allow-popups allow-forms&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure><blockquote><p>參考<br><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/iframe">MDN</a><br><a href="https://developer.salesforce.com/forums/?id=9062I000000g53OQAQ">Client Use Of Iframe Without Sandbox error - Checkmarx</a></p></blockquote>]]></content>
       
       
       <categories>
@@ -107,9 +294,9 @@
       
         <tags>
             
-            <tag> VSCode </tag>
-            
             <tag> JAVA </tag>
+            
+            <tag> VSCode </tag>
             
             <tag> Spring </tag>
             
@@ -138,13 +325,13 @@
       
         <tags>
             
+            <tag> Eclipse </tag>
+            
             <tag> JAVA </tag>
             
             <tag> Spring </tag>
             
             <tag> Web </tag>
-            
-            <tag> Eclipse </tag>
             
         </tags>
       
@@ -257,11 +444,11 @@
       
         <tags>
             
+            <tag> Web </tag>
+            
             <tag> AJAX </tag>
             
             <tag> ASP.NETCore </tag>
-            
-            <tag> Web </tag>
             
         </tags>
       

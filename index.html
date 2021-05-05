@@ -139,6 +139,266 @@
   <section class="meta">
     
     <h2 class="title">
+      <a href="/2021/05/05/Client-Use-Of-Iframe-Without-Sandbox/">
+        Client_Use_Of_Iframe_Without_Sandbox
+      </a>
+    </h2>
+    
+    <time>
+      5月 5, 2021
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/%E5%8E%9F%E7%A2%BC%E6%8E%83%E6%8F%8F/">原碼掃描</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h2 id="Client-Use-Of-Iframe-Without-Sandbox"><a href="#Client-Use-Of-Iframe-Without-Sandbox" class="headerlink" title="Client Use Of Iframe Without Sandbox"></a>Client Use Of Iframe Without Sandbox</h2><p>使用 Sandbox 屬性來限制 Iframe 的行為，單獨使用時代表全部的行為都禁止，也可以加入一至多個屬性，<br>常用的屬性如下：</p>
+<ol>
+<li>allow-same-origin : 將 Iframe 當作同源</li>
+<li>allow-scripts : 允許可以執行Script，但不包含可以開新視窗</li>
+<li>allow-popups : 允許可以開新視窗 </li>
+<li>allow-forms : 允許可以提交表單</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">id</span>=<span class="string">&quot;iframeId&quot;</span> <span class="attr">src</span>=<span class="string">&quot;oooooo.html&quot;</span> <span class="attr">sandbox</span>=<span class="string">&quot;allow-same-origin allow-scripts allow-popups allow-forms&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>參考<br><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/iframe">MDN</a><br><a href="https://developer.salesforce.com/forums/?id=9062I000000g53OQAQ">Client Use Of Iframe Without Sandbox error - Checkmarx</a></p>
+</blockquote>
+
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/%E5%BC%B1%E9%BB%9E%E8%99%95%E7%90%86/">弱點處理</a>
+      
+        <a href="/tags/CodeReview/">CodeReview</a>
+      
+        <a href="/tags/CheckMarx/">CheckMarx</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2021/05/05/Client-Potential-XSS/">
+        Client_Potential_XSS
+      </a>
+    </h2>
+    
+    <time>
+      5月 5, 2021
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/%E5%8E%9F%E7%A2%BC%E6%8E%83%E6%8F%8F/">原碼掃描</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h2 id="Client-Potential-XSS"><a href="#Client-Potential-XSS" class="headerlink" title="Client Potential XSS"></a>Client Potential XSS</h2><p>主要是不可以信任使用的輸入的資料，可以會隱藏一些程式碼等等，所以也是一樣將使用者輸入的資料所Encode</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> Referer = Request.QueryString[<span class="string">&quot;Referer&quot;</span>];</span><br><span class="line">Response.BinaryWrite(encoder.HtmlEncode(Referer, <span class="literal">true</span>));</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/%E5%BC%B1%E9%BB%9E%E8%99%95%E7%90%86/">弱點處理</a>
+      
+        <a href="/tags/CodeReview/">CodeReview</a>
+      
+        <a href="/tags/CheckMarx/">CheckMarx</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2021/05/05/Unencrypted-Web-Config-File-And-Password-in-Configuration-File/">
+        Unencrypted_Web_Config_File_And_Password_in_Configuration_File
+      </a>
+    </h2>
+    
+    <time>
+      5月 5, 2021
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/%E5%8E%9F%E7%A2%BC%E6%8E%83%E6%8F%8F/">原碼掃描</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h2 id="Unencrypted-Web-Config-File-amp-amp-Password-in-Configuration-File"><a href="#Unencrypted-Web-Config-File-amp-amp-Password-in-Configuration-File" class="headerlink" title="Unencrypted Web Config File &amp;&amp; Password in Configuration File"></a>Unencrypted Web Config File &amp;&amp; Password in Configuration File</h2><blockquote>
+<p><a href="https://docs.microsoft.com/zh-tw/sql/connect/jdbc/connecting-with-ssl-encryption?view=sql-server-ver15"></a></p>
+</blockquote>
+<p>這是指在Config檔中，使用名文儲存資料庫連線字串，這可能使非預期使用者也能夠訪問資料庫，所以要將資料庫連線字串加密，操作方式參考<a href="https://www.c-sharpcorner.com/article/encrypt-and-decrypt-connectionstring-in-web-config-file/">encrypt-and-decrypt-connectionstring-in-web-config-file</a></p>
+<ol>
+<li><code>cd C:\Windows\Microsoft.NET\Framework\v4.0.30319</code></li>
+<li>加密 <code>.\ASPNET_REGIIS -pef &quot;connectionStrings&quot; &quot;E:\Config&quot;</code></li>
+<li>解密 <code>.\ASPNET_REGIIS -pdf &quot;connectionStrings&quot; &quot;E:\Config&quot;</code></li>
+</ol>
+<blockquote>
+<p>ASPNET_REGIIS -{pef 加密 | pdf 解密} “{加密的部份}” “{路徑}”</p>
+</blockquote>
+
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/%E5%BC%B1%E9%BB%9E%E8%99%95%E7%90%86/">弱點處理</a>
+      
+        <a href="/tags/CodeReview/">CodeReview</a>
+      
+        <a href="/tags/CheckMarx/">CheckMarx</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2021/05/05/Insufficient-Connection-String-Encryption/">
+        Insufficient_Connection_String_Encryption
+      </a>
+    </h2>
+    
+    <time>
+      5月 5, 2021
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/%E5%8E%9F%E7%A2%BC%E6%8E%83%E6%8F%8F/">原碼掃描</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h2 id="Insufficient-Connection-String-Encryption"><a href="#Insufficient-Connection-String-Encryption" class="headerlink" title="Insufficient Connection String Encryption"></a>Insufficient Connection String Encryption</h2><p>在連線字串加上「TrustServerCertificate=true」，使得連線過程是使用加密的過程</p>
+<blockquote>
+<p><img src="https://i.imgur.com/2F8QLiI.gif" alt="使用加密連線"></p>
+</blockquote>
+
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/%E5%BC%B1%E9%BB%9E%E8%99%95%E7%90%86/">弱點處理</a>
+      
+        <a href="/tags/CodeReview/">CodeReview</a>
+      
+        <a href="/tags/CheckMarx/">CheckMarx</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2021/05/05/HttpOnlyCookies-In-Config-1/">
+        HttpOnlyCookies_In_Config
+      </a>
+    </h2>
+    
+    <time>
+      5月 5, 2021
+    </time>
+		
+  </section>
+  <section class="article typo">
+	  
+
+    
+    
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2021/05/05/HttpOnlyCookies-In-Config/">
+        HttpOnlyCookies_In_Config
+      </a>
+    </h2>
+    
+    <time>
+      5月 5, 2021
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/%E5%8E%9F%E7%A2%BC%E6%8E%83%E6%8F%8F/">原碼掃描</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h2 id="HttpOnlyCookies-In-Config"><a href="#HttpOnlyCookies-In-Config" class="headerlink" title="HttpOnlyCookies In Config"></a>HttpOnlyCookies In Config</h2><p>主要問題是要將Cookies設定為不可以被前端「語法」讀取，所以在後端設定Cookies時必需加上「限制」，或在Web.config加上全域的設定</p>
+<ul>
+<li>web.config 設定</li>
+<li>httpOnlyCookies : 只能透過http存取Cookies，也就是不能透過js存取</li>
+<li>requireSSL：限制只能透過SSL存取<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;system.web&gt;</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line">   &lt;httpCookies httpOnlyCookies=<span class="string">&quot;true&quot;</span> requireSSL=<span class="string">&quot;true&quot;</span> /&gt;</span><br><span class="line">&lt;/system.web&gt;</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/%E5%BC%B1%E9%BB%9E%E8%99%95%E7%90%86/">弱點處理</a>
+      
+        <a href="/tags/CodeReview/">CodeReview</a>
+      
+        <a href="/tags/CheckMarx/">CheckMarx</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/2021/04/20/Eclipse%E9%96%8B%E7%99%BCJAVA-mybatis-GettingStarted/">
         Eclipse開發JAVA-mybatis-GettingStarted
       </a>
@@ -167,13 +427,57 @@
     
 	  <div class="full-width auto-padding tags">
       
-        <a href="/tags/JAVA/">JAVA</a>
-      
         <a href="/tags/Eclipse/">Eclipse</a>
+      
+        <a href="/tags/JAVA/">JAVA</a>
       
         <a href="/tags/Mybatis/">Mybatis</a>
       
         <a href="/tags/ORM/">ORM</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2021/04/16/Client-DOM-XSS/">
+        Client_DOM_XSS
+      </a>
+    </h2>
+    
+    <time>
+      4月 16, 2021
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/%E5%8E%9F%E7%A2%BC%E6%8E%83%E6%8F%8F/">原碼掃描</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h2 id="Client-DOM-XSS"><a href="#Client-DOM-XSS" class="headerlink" title="Client DOM XSS"></a>Client DOM XSS</h2><p>由前端取得的值，在程式的流程當中，沒有過濾(處理)直接拿來使用，會有機會被注入非法的字串。<br>例如：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> source = <span class="built_in">window</span>.location.origin <span class="comment">//直接取得來自於User可修改的的值</span></span><br><span class="line"><span class="built_in">document</span>.write(source())     <span class="comment">//並接直接使用</span></span><br></pre></td></tr></table></figure>
+
+<p>可以將取得的內容作encode，並包一層function，如此就可以回避「直接」使用「值」，同時也處理內藏程式碼的問題。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> source = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="keyword">return</span> <span class="built_in">encodeURI</span>(<span class="built_in">window</span>.location.origin)&#125;</span><br><span class="line"><span class="built_in">document</span>.write(source())</span><br></pre></td></tr></table></figure>
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/%E5%BC%B1%E9%BB%9E%E8%99%95%E7%90%86/">弱點處理</a>
+      
+        <a href="/tags/CodeReview/">CodeReview</a>
+      
+        <a href="/tags/CheckMarx/">CheckMarx</a>
       
 	  </div>
     
@@ -202,16 +506,20 @@
 
   </section>
   <section class="article typo">
-	  <h2 id="Client-DOM-XSS"><a href="#Client-DOM-XSS" class="headerlink" title="Client DOM XSS"></a>Client DOM XSS</h2><p>由前端取得的值，在程式的流程當中，沒有過濾(處理)直接拿來使用，會有機會被注入非法的字串。<br>例如：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> source = <span class="built_in">window</span>.location.origin <span class="comment">//直接取得來自於User可修改的的值</span></span><br><span class="line"><span class="built_in">document</span>.write(source)     <span class="comment">//並接直接使用</span></span><br></pre></td></tr></table></figure>
+	  <h2 id="Client-Use-Of-Iframe-Without-Sandbox"><a href="#Client-Use-Of-Iframe-Without-Sandbox" class="headerlink" title="Client Use Of Iframe Without Sandbox"></a>Client Use Of Iframe Without Sandbox</h2><p>使用 Sandbox 屬性來限制 Iframe 的行為，單獨使用時代表全部的行為都禁止，也可以加入一至多個屬性，<br>常用的屬性如下：</p>
+<ol>
+<li>allow-same-origin : 將 Iframe 當作同源</li>
+<li>allow-scripts : 允許可以執行Script，但不包含可以開新視窗</li>
+<li>allow-popups : 允許可以開新視窗 </li>
+<li>allow-forms : 允許可以提交表單</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">id</span>=<span class="string">&quot;iframeId&quot;</span> <span class="attr">src</span>=<span class="string">&quot;oooooo.html&quot;</span> <span class="attr">sandbox</span>=<span class="string">&quot;allow-same-origin allow-scripts allow-popups allow-forms&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p>可以將取得的內容作encode，並包一層function，如此就可以回避「直接」使用「值」，同時也處理內藏程式碼的問題。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> source = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="keyword">return</span> <span class="built_in">encodeURI</span>(<span class="built_in">window</span>.location.origin)&#125;</span><br><span class="line"><span class="built_in">document</span>.write(source)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>參考<br><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/iframe">MDN</a><br><a href="https://developer.salesforce.com/forums/?id=9062I000000g53OQAQ">Client Use Of Iframe Without Sandbox error - Checkmarx</a></p>
+</blockquote>
 
-    
-	  <div class="readmore">
-      <a href="/2021/04/16/%E5%8E%9F%E7%A2%BC%E6%8E%83%E7%9E%84%E5%BC%B1%E9%BB%9E%E8%99%95%E7%90%86/">Read More</a>
-    </div>
+
     
     
     
@@ -277,319 +585,6 @@
 </article>
     </div>
   
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2021/04/15/VSCode%E9%96%8B%E7%99%BCJAVA-%E7%92%B0%E5%A2%83%E5%BB%BA%E7%BD%AE/">
-        VSCode開發JAVA-環境建置
-      </a>
-    </h2>
-    
-    <time>
-      4月 15, 2021
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/JAVA/">JAVA</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <p>前陣子試過用Eclipse來建置JAVA開發環境，現在來試試地表上最強的開發工具VSCode</p>
-<h2 id="Maven"><a href="#Maven" class="headerlink" title="Maven"></a>Maven</h2><p>Maven類似NuGet，作套件管理，下載<a href="https://maven.apache.org/download.cgi?Preferred=https://downloads.apache.org/">Maven Download</a>，之後解完壓縮後，在「環境變數」PATH設定此路徑。</p>
-<h2 id="JDK"><a href="#JDK" class="headerlink" title="JDK"></a>JDK</h2><p>Java Development Kit（JDK）是昇陽電腦針對Java開發人員發布的免費軟體開發套件（SDK，Software development kit）。</p>
-<p><a href="https://www.oracle.com/tw/java/technologies/javase/javase-jdk8-downloads.html">JDK 8</a><br><a href="https://www.oracle.com/tw/java/technologies/javase-jdk11-downloads.html">JDK 11</a></p>
-<blockquote>
-<p>參考維基百科 <a href="https://zh.wikipedia.org/wiki/JDK">JDK</a></p>
-</blockquote>
-
-    
-	  <div class="readmore">
-      <a href="/2021/04/15/VSCode%E9%96%8B%E7%99%BCJAVA-%E7%92%B0%E5%A2%83%E5%BB%BA%E7%BD%AE/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/VSCode/">VSCode</a>
-      
-        <a href="/tags/JAVA/">JAVA</a>
-      
-        <a href="/tags/Spring/">Spring</a>
-      
-        <a href="/tags/Web/">Web</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2021/04/14/Eclipse%E9%96%8B%E7%99%BCJAVA-%E7%92%B0%E5%A2%83%E5%BB%BA%E7%BD%AE/">
-        Eclipse開發JAVA-環境建置
-      </a>
-    </h2>
-    
-    <time>
-      4月 14, 2021
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/JAVA/">JAVA</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <p>最近被問到要不要把dotNet改版成java，所以先來建置一下開發環境看看java是怎麼開發Web，順便記錄一下</p>
-<h2 id="Maven"><a href="#Maven" class="headerlink" title="Maven"></a>Maven</h2><p>Maven類似NuGet，作套件管理，下載<a href="https://maven.apache.org/download.cgi?Preferred=https://downloads.apache.org/">Maven Download</a>，之後解完壓縮後，在「環境變數」PATH設定此路徑。</p>
-<h2 id="JDK"><a href="#JDK" class="headerlink" title="JDK"></a>JDK</h2><p>Java Development Kit（JDK）是昇陽電腦針對Java開發人員發布的免費軟體開發套件（SDK，Software development kit）。</p>
-<p><a href="https://www.oracle.com/tw/java/technologies/javase/javase-jdk8-downloads.html">JDK 8</a><br><a href="https://www.oracle.com/tw/java/technologies/javase-jdk11-downloads.html">JDK 11</a></p>
-<blockquote>
-<p>參考維基百科 <a href="https://zh.wikipedia.org/wiki/JDK">JDK</a></p>
-</blockquote>
-
-    
-	  <div class="readmore">
-      <a href="/2021/04/14/Eclipse%E9%96%8B%E7%99%BCJAVA-%E7%92%B0%E5%A2%83%E5%BB%BA%E7%BD%AE/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/JAVA/">JAVA</a>
-      
-        <a href="/tags/Spring/">Spring</a>
-      
-        <a href="/tags/Web/">Web</a>
-      
-        <a href="/tags/Eclipse/">Eclipse</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2021/04/12/%E4%BD%BF%E7%94%A8Cordova%E9%96%8B%E7%99%BCApp-%E9%96%8B%E7%99%BC%E7%92%B0%E5%A2%83/">
-        使用Cordova開發App-開發環境
-      </a>
-    </h2>
-    
-    <time>
-      4月 12, 2021
-    </time>
-		
-  </section>
-  <section class="article typo">
-	  <h2 id="開發環境建置"><a href="#開發環境建置" class="headerlink" title="開發環境建置"></a>開發環境建置</h2><h3 id="Node"><a href="#Node" class="headerlink" title="Node"></a>Node</h3><p><a href="https://nodejs.org/en/download/">Node Download &amp;&amp; Install</a></p>
-<h3 id="JDK-1-8-XX"><a href="#JDK-1-8-XX" class="headerlink" title="JDK 1.8.XX"></a>JDK 1.8.XX</h3><p><a href="https://www.oracle.com/tw/java/technologies/javase/javase-jdk8-downloads.html">JDK Downlo<br>ad &amp;&amp; Install</a></p>
-
-    
-	  <div class="readmore">
-      <a href="/2021/04/12/%E4%BD%BF%E7%94%A8Cordova%E9%96%8B%E7%99%BCApp-%E9%96%8B%E7%99%BC%E7%92%B0%E5%A2%83/">Read More</a>
-    </div>
-    
-    
-    
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2021/04/09/%E4%BD%BF%E7%94%A8Cookie%E5%AF%A6%E4%BD%9CLogin-%E4%BD%BF%E7%94%A8Authentication/">
-        使用Cookie實作Login-使用Authentication
-      </a>
-    </h2>
-    
-    <time>
-      4月 9, 2021
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/ASP-NET-Core/">ASP.NET Core</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <p>雖然可以完全可以自行完成Login的功能，但在Asp.net Core中有提供Authentication的Service與Middleware，可以更完整及快速開發。</p>
-
-    
-	  <div class="readmore">
-      <a href="/2021/04/09/%E4%BD%BF%E7%94%A8Cookie%E5%AF%A6%E4%BD%9CLogin-%E4%BD%BF%E7%94%A8Authentication/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Without-Identity-Login-ASP-NETCore-Cookie/">Without Identity, Login,ASP.NETCore,Cookie</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2021/04/06/%E4%BD%BF%E7%94%A8Cookie%E5%AF%A6%E4%BD%9CLogin-%E7%B0%A1%E6%98%93%E7%99%BB%E5%85%A5/">
-        使用Cookie實作Login-簡易登入
-      </a>
-    </h2>
-    
-    <time>
-      4月 6, 2021
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/ASP-NET-Core/">ASP.NET Core</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <h2 id="實作登入與登出"><a href="#實作登入與登出" class="headerlink" title="實作登入與登出"></a>實作登入與登出</h2><p>實作流程大致上與<a href="/2021/03/25/%E4%BD%BF%E7%94%A8Session%E5%AF%A6%E4%BD%9CLogin/" title="使用Session實作Login">使用Session實作Login</a>的流程相同，只有儲存的方式改變為使用Cookie，剩下Controller在處理登入與登出的部份，先暫時空者。</p>
-
-    
-	  <div class="readmore">
-      <a href="/2021/04/06/%E4%BD%BF%E7%94%A8Cookie%E5%AF%A6%E4%BD%9CLogin-%E7%B0%A1%E6%98%93%E7%99%BB%E5%85%A5/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Without-Identity-Login-ASP-NETCore-Cookie/">Without Identity, Login,ASP.NETCore,Cookie</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2021/04/06/%E4%BD%BF%E7%94%A8Cookie%E5%AF%A6%E4%BD%9CLogind%20-%20Cookie%20%E7%9A%84%E4%BD%BF%E7%94%A8/">
-        使用Cookie實作Login-Cookie 的使用
-      </a>
-    </h2>
-    
-    <time>
-      4月 6, 2021
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/ASP-NET-Core/">ASP.NET Core</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <h2 id="什麼是Cookie"><a href="#什麼是Cookie" class="headerlink" title="什麼是Cookie"></a>什麼是Cookie</h2><p>Cookie可以當作瀏覽器與伺服器的共用筆記本，在每一次的Request時，都會自動的把Cookie向伺服器傳遞，在伺服器每一次的Response時，也都會將Cookie自動傳遞回去。<br>那瀏覽器怎判斷要把Cookie傳遞回去？這就要看Cookie的所記載的屬性來決定，後續的文章會再討論這部份。</p>
-
-    
-	  <div class="readmore">
-      <a href="/2021/04/06/%E4%BD%BF%E7%94%A8Cookie%E5%AF%A6%E4%BD%9CLogind%20-%20Cookie%20%E7%9A%84%E4%BD%BF%E7%94%A8/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Without-Identity-Login-ASP-NETCore-Cookie/">Without Identity, Login,ASP.NETCore,Cookie</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2021/04/01/%E4%BD%BF%E7%94%A8%20AJAX%20%E8%88%87%20Action%20%E6%8E%A5%E5%80%BC%E5%95%8F%E9%A1%8C/">
-        使用 AJAX 與 Action 接值問題
-      </a>
-    </h2>
-    
-    <time>
-      4月 1, 2021
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/AJAX/">AJAX</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <h2 id="使用-AJAX-與-Action-接值問題？"><a href="#使用-AJAX-與-Action-接值問題？" class="headerlink" title="使用 AJAX 與 Action 接值問題？"></a>使用 AJAX 與 Action 接值問題？</h2><p>在使用AJAX時，常常會發生後端接不到值等等問題，通常都是邊寫邊Try到通為止，但時間一久又忘記怎樣的組合才對的，於是來作一個比較表吧，首先把會影響的變數列一下：</p>
-<ul>
-<li>前端：<ul>
-<li>content-type的設定</li>
-<li>資料是否要序例化為字串</li>
-</ul>
-</li>
-<li>後端：<ul>
-<li>FromBody是否要使用</li>
-<li>在不同域的情境</li>
-</ul>
-</li>
-</ul>
-<blockquote>
-<p>415:Unsupported Media Type<br>cors error:Cross-Origin Resource Sharing (CORS) is a standard that allows a server to relax the same-origin policy.</p>
-</blockquote>
-
-    
-	  <div class="readmore">
-      <a href="/2021/04/01/%E4%BD%BF%E7%94%A8%20AJAX%20%E8%88%87%20Action%20%E6%8E%A5%E5%80%BC%E5%95%8F%E9%A1%8C/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/AJAX/">AJAX</a>
-      
-        <a href="/tags/ASP-NETCore/">ASP.NETCore</a>
-      
-        <a href="/tags/Web/">Web</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
 </section>
 
 
@@ -631,7 +626,7 @@
     
         <li><a class="flat-box" href="/categories/Oracle/"><div class='name'>Oracle</div><div class='badget'>1</div></a></li>
     
-        <li><a class="flat-box" href="/categories/%E5%8E%9F%E7%A2%BC%E6%8E%83%E6%8F%8F/"><div class='name'>原碼掃描</div><div class='badget'>1</div></a></li>
+        <li><a class="flat-box" href="/categories/%E5%8E%9F%E7%A2%BC%E6%8E%83%E6%8F%8F/"><div class='name'>原碼掃描</div><div class='badget'>7</div></a></li>
     
         <li><a class="flat-box" href="/categories/%E5%B7%A5%E5%85%B7/"><div class='name'>工具</div><div class='badget'>1</div></a></li>
     
@@ -648,7 +643,7 @@
 <div class="m_widget tagcloud">
     <div class="header">Tags</div>
     <div class='content'>
-        <a href="/tags/AJAX/" style="font-size: 14px; color: #808080">AJAX</a> <a href="/tags/ASP-NETCore/" style="font-size: 17px; color: #404040">ASP.NETCore</a> <a href="/tags/CheckMarx/" style="font-size: 14px; color: #808080">CheckMarx</a> <a href="/tags/CodeReview/" style="font-size: 14px; color: #808080">CodeReview</a> <a href="/tags/Eclipse/" style="font-size: 17px; color: #404040">Eclipse</a> <a href="/tags/English-Study/" style="font-size: 14px; color: #808080">English Study</a> <a href="/tags/JAVA/" style="font-size: 20px; color: #000">JAVA</a> <a href="/tags/Login/" style="font-size: 14px; color: #808080">Login</a> <a href="/tags/Mybatis/" style="font-size: 14px; color: #808080">Mybatis</a> <a href="/tags/ORM/" style="font-size: 14px; color: #808080">ORM</a> <a href="/tags/Oracle/" style="font-size: 14px; color: #808080">Oracle</a> <a href="/tags/Session/" style="font-size: 14px; color: #808080">Session</a> <a href="/tags/Spring/" style="font-size: 17px; color: #404040">Spring</a> <a href="/tags/VSCode/" style="font-size: 14px; color: #808080">VSCode</a> <a href="/tags/Web/" style="font-size: 20px; color: #000">Web</a> <a href="/tags/Win10/" style="font-size: 14px; color: #808080">Win10</a> <a href="/tags/Without-Identity-Login-ASP-NETCore-Cookie/" style="font-size: 20px; color: #000">Without Identity, Login,ASP.NETCore,Cookie</a> <a href="/tags/WithoutIdentityLogin/" style="font-size: 14px; color: #808080">WithoutIdentityLogin</a> <a href="/tags/%E4%BA%BA%E7%94%9F%E6%B8%85%E5%96%AE/" style="font-size: 14px; color: #808080">人生清單</a> <a href="/tags/%E5%B0%8F%E5%B7%A5%E5%85%B7/" style="font-size: 14px; color: #808080">小工具</a> <a href="/tags/%E5%BC%B1%E9%BB%9E%E8%99%95%E7%90%86/" style="font-size: 14px; color: #808080">弱點處理</a> <a href="/tags/%E5%BE%AE%E7%B2%BE%E9%80%9A/" style="font-size: 14px; color: #808080">微精通</a> <a href="/tags/%E6%89%8B%E4%BD%9C%E9%A4%85%E4%B9%BE/" style="font-size: 14px; color: #808080">手作餅乾</a> <a href="/tags/%E7%83%98%E5%9F%B9/" style="font-size: 14px; color: #808080">烘培</a> <a href="/tags/%E7%B7%9A%E4%B8%8A/" style="font-size: 14px; color: #808080">線上</a> <a href="/tags/%E8%81%BD%E5%8A%9B/" style="font-size: 14px; color: #808080">聽力</a> <a href="/tags/%E8%87%AA%E5%AD%B8/" style="font-size: 14px; color: #808080">自學</a> <a href="/tags/%E8%8B%B1%E6%96%87/" style="font-size: 14px; color: #808080">英文</a> <a href="/tags/%E8%A6%AA%E5%AD%90/" style="font-size: 14px; color: #808080">親子</a> <a href="/tags/%E9%96%8B%E7%99%BC/" style="font-size: 14px; color: #808080">開發</a>
+        <a href="/tags/AJAX/" style="font-size: 14px; color: #808080">AJAX</a> <a href="/tags/ASP-NETCore/" style="font-size: 16px; color: #555">ASP.NETCore</a> <a href="/tags/CheckMarx/" style="font-size: 20px; color: #000">CheckMarx</a> <a href="/tags/CodeReview/" style="font-size: 20px; color: #000">CodeReview</a> <a href="/tags/Eclipse/" style="font-size: 16px; color: #555">Eclipse</a> <a href="/tags/English-Study/" style="font-size: 14px; color: #808080">English Study</a> <a href="/tags/JAVA/" style="font-size: 18px; color: #2b2b2b">JAVA</a> <a href="/tags/Login/" style="font-size: 14px; color: #808080">Login</a> <a href="/tags/Mybatis/" style="font-size: 14px; color: #808080">Mybatis</a> <a href="/tags/ORM/" style="font-size: 14px; color: #808080">ORM</a> <a href="/tags/Oracle/" style="font-size: 14px; color: #808080">Oracle</a> <a href="/tags/Session/" style="font-size: 14px; color: #808080">Session</a> <a href="/tags/Spring/" style="font-size: 16px; color: #555">Spring</a> <a href="/tags/VSCode/" style="font-size: 14px; color: #808080">VSCode</a> <a href="/tags/Web/" style="font-size: 18px; color: #2b2b2b">Web</a> <a href="/tags/Win10/" style="font-size: 14px; color: #808080">Win10</a> <a href="/tags/Without-Identity-Login-ASP-NETCore-Cookie/" style="font-size: 18px; color: #2b2b2b">Without Identity, Login,ASP.NETCore,Cookie</a> <a href="/tags/WithoutIdentityLogin/" style="font-size: 14px; color: #808080">WithoutIdentityLogin</a> <a href="/tags/%E4%BA%BA%E7%94%9F%E6%B8%85%E5%96%AE/" style="font-size: 14px; color: #808080">人生清單</a> <a href="/tags/%E5%B0%8F%E5%B7%A5%E5%85%B7/" style="font-size: 14px; color: #808080">小工具</a> <a href="/tags/%E5%BC%B1%E9%BB%9E%E8%99%95%E7%90%86/" style="font-size: 20px; color: #000">弱點處理</a> <a href="/tags/%E5%BE%AE%E7%B2%BE%E9%80%9A/" style="font-size: 14px; color: #808080">微精通</a> <a href="/tags/%E6%89%8B%E4%BD%9C%E9%A4%85%E4%B9%BE/" style="font-size: 14px; color: #808080">手作餅乾</a> <a href="/tags/%E7%83%98%E5%9F%B9/" style="font-size: 14px; color: #808080">烘培</a> <a href="/tags/%E7%B7%9A%E4%B8%8A/" style="font-size: 14px; color: #808080">線上</a> <a href="/tags/%E8%81%BD%E5%8A%9B/" style="font-size: 14px; color: #808080">聽力</a> <a href="/tags/%E8%87%AA%E5%AD%B8/" style="font-size: 14px; color: #808080">自學</a> <a href="/tags/%E8%8B%B1%E6%96%87/" style="font-size: 14px; color: #808080">英文</a> <a href="/tags/%E8%A6%AA%E5%AD%90/" style="font-size: 14px; color: #808080">親子</a> <a href="/tags/%E9%96%8B%E7%99%BC/" style="font-size: 14px; color: #808080">開發</a>
     </div>
 </div>
 
