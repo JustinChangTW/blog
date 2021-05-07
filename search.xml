@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>ASP.NET的config檔安全處理</title>
+      <link href="2021/05/05/ASP-NET%E7%9A%84config%E5%8A%A0%E5%AF%86/"/>
+      <url>2021/05/05/ASP-NET%E7%9A%84config%E5%8A%A0%E5%AF%86/</url>
+      
+        <content type="html"><![CDATA[<p>在應用系統中，連結資料庫幾乎是必備的，而連結資料庫總是需要帳號與密碼，但只有公司(客戶)對資安有一些要求的情況之下，是不允許將帳號與密碼明文放在設定檔中，而接下來就是演練一下如何將設定檔加密。</p><span id="more"></span><h2 id="ASP-NET"><a href="#ASP-NET" class="headerlink" title="ASP.NET"></a>ASP.NET</h2><p>在ASP.NET中要將Web.config檔加密可以透過 Framework v4.0.30319 裡的工具來進行，</p><h2 id="ASP-NET-Core"><a href="#ASP-NET-Core" class="headerlink" title="ASP.NET Core"></a>ASP.NET Core</h2><p>在ASP.NET Core中 Framework 可能已經不存在，所以加解密必須自己實作，可以參考 <a href="https://stackoverflow.com/questions/36062670/encrypted-configuration-in-asp-net-core">Encrypted configuration in ASP.NET Core</a><br>不過在ASP.NET Core 有提供一個方法將敏感性資料與程式碼分離的方法，參考<a href="https://docs.microsoft.com/en-us/aspnet/core/security/app-secrets?view=aspnetcore-5.0&tabs=windows">Safe storage of app secrets in development in ASP.NET Core</a>，接下來來演練操作法式<br>…待續</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> ASP.NET </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ASP.NETCore </tag>
+            
+            <tag> ASP.NET </tag>
+            
+            <tag> Config </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Client_Use_Of_Iframe_Without_Sandbox</title>
       <link href="2021/05/05/Client-Use-Of-Iframe-Without-Sandbox/"/>
       <url>2021/05/05/Client-Use-Of-Iframe-Without-Sandbox/</url>
@@ -66,7 +95,7 @@
       <link href="2021/05/05/Unencrypted-Web-Config-File-And-Password-in-Configuration-File/"/>
       <url>2021/05/05/Unencrypted-Web-Config-File-And-Password-in-Configuration-File/</url>
       
-        <content type="html"><![CDATA[<h2 id="Unencrypted-Config-File"><a href="#Unencrypted-Config-File" class="headerlink" title="Unencrypted_Config_File"></a>Unencrypted_Config_File</h2><h3 id="Unencrypted-Web-Config-File"><a href="#Unencrypted-Web-Config-File" class="headerlink" title="Unencrypted Web Config File"></a>Unencrypted Web Config File</h3><h3 id="Password-in-Configuration-File"><a href="#Password-in-Configuration-File" class="headerlink" title="Password in Configuration File"></a>Password in Configuration File</h3><blockquote><p><a href="https://docs.microsoft.com/zh-tw/sql/connect/jdbc/connecting-with-ssl-encryption?view=sql-server-ver15"></a></p></blockquote><p>這是指在Config檔中，使用名文儲存資料庫連線字串，這可能使非預期使用者也能夠訪問資料庫，所以要將資料庫連線字串加密，操作方式參考<a href="https://www.c-sharpcorner.com/article/encrypt-and-decrypt-connectionstring-in-web-config-file/">encrypt-and-decrypt-connectionstring-in-web-config-file</a></p><span id="more"></span><ol><li><code>cd C:\Windows\Microsoft.NET\Framework\v4.0.30319</code></li><li>加密 <code>.\ASPNET_REGIIS -pef &quot;connectionStrings&quot; &quot;E:\Config&quot;</code></li><li>解密 <code>.\ASPNET_REGIIS -pdf &quot;connectionStrings&quot; &quot;E:\Config&quot;</code></li></ol><blockquote><p>ASPNET_REGIIS -{pef 加密 | pdf 解密} “{加密的部份}” “{路徑}”</p></blockquote>]]></content>
+        <content type="html"><![CDATA[<h2 id="Unencrypted-Config-File"><a href="#Unencrypted-Config-File" class="headerlink" title="Unencrypted_Config_File"></a>Unencrypted_Config_File</h2><h3 id="Unencrypted-Web-Config-File"><a href="#Unencrypted-Web-Config-File" class="headerlink" title="Unencrypted Web Config File"></a>Unencrypted Web Config File</h3><h3 id="Password-in-Configuration-File"><a href="#Password-in-Configuration-File" class="headerlink" title="Password in Configuration File"></a>Password in Configuration File</h3><blockquote><p><a href="https://docs.microsoft.com/zh-tw/sql/connect/jdbc/connecting-with-ssl-encryption?view=sql-server-ver15"></a></p></blockquote><p>這是指在Config檔中，使用名文儲存資料庫連線字串，這可能使非預期使用者也能夠訪問資料庫，所以要將資料庫連線字串加密，操作方式參考<a href="https://www.c-sharpcorner.com/article/encrypt-and-decrypt-connectionstring-in-web-config-file/">encrypt-and-decrypt-connectionstring-in-web-config-file</a></p><span id="more"></span><ol><li><code>cd C:\Windows\Microsoft.NET\Framework\v4.0.30319</code></li><li>加密 <code>.\ASPNET_REGIIS -pef &quot;connectionStrings&quot; &quot;E:\Config&quot;</code></li><li>解密 <code>.\ASPNET_REGIIS -pdf &quot;connectionStrings&quot; &quot;E:\Config&quot;</code></li></ol><blockquote><p>ASPNET_REGIIS -{pef 加密 | pdf 解密} “{加密的部份}” “{路徑}”</p></blockquote><ol><li>加入 RSA 金鑰容器存取權限的 <code>aspnet_regiis -pa &quot;NetFrameworkConfigurationKey&quot; &quot;&#123;&#123;name&#125;&#125;&quot;</code><ol><li>name 可以使用 <code>System.Security.Principal.WindowsIdentity.GetCurrent().Name</code> 取得與確認本機的帳號</li></ol></li></ol><blockquote><p>如果沒有執行儲存Key的指令會報錯<br><img src="https://i.imgur.com/Ss2g7jC.png" alt="Image"></p></blockquote>]]></content>
       
       
       <categories>
