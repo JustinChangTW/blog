@@ -6,7 +6,7 @@
   <link href="https://justinchang.ddns.net/atom.xml" rel="self"/>
   
   <link href="https://justinchang.ddns.net/"/>
-  <updated>2021-05-05T10:06:46.737Z</updated>
+  <updated>2021-05-10T07:50:35.532Z</updated>
   <id>https://justinchang.ddns.net/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>客制化ValidationAttribute</title>
+    <link href="https://justinchang.ddns.net/2021/05/10/%E5%AE%A2%E5%88%B6%E5%8C%96ValidationAttribute/"/>
+    <id>https://justinchang.ddns.net/2021/05/10/%E5%AE%A2%E5%88%B6%E5%8C%96ValidationAttribute/</id>
+    <published>2021-05-10T06:24:59.000Z</published>
+    <updated>2021-05-10T07:50:35.532Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;單一值驗證&quot;&gt;&lt;a href=&quot;#單一值驗證&quot; class=&quot;headerlink&quot; title=&quot;單一值驗證&quot;&gt;&lt;/a&gt;單一值驗證&lt;/h2&gt;&lt;figure class=&quot;highlight csharp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter</summary>
+      
+    
+    
+    
+    <category term="ASP.NET" scheme="https://justinchang.ddns.net/categories/ASP-NET/"/>
+    
+    
+    <category term="ASP.NET" scheme="https://justinchang.ddns.net/tags/ASP-NET/"/>
+    
+    <category term="ValidationAttribute" scheme="https://justinchang.ddns.net/tags/ValidationAttribute/"/>
+    
+  </entry>
   
   <entry>
     <title>ASP.NET的config檔安全處理</title>
@@ -488,31 +512,6 @@
     <category term="線上" scheme="https://justinchang.ddns.net/tags/%E7%B7%9A%E4%B8%8A/"/>
     
     <category term="小工具" scheme="https://justinchang.ddns.net/tags/%E5%B0%8F%E5%B7%A5%E5%85%B7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用Session實作Login</title>
-    <link href="https://justinchang.ddns.net/2021/03/25/%E4%BD%BF%E7%94%A8Session%E5%AF%A6%E4%BD%9CLogin/"/>
-    <id>https://justinchang.ddns.net/2021/03/25/%E4%BD%BF%E7%94%A8Session%E5%AF%A6%E4%BD%9CLogin/</id>
-    <published>2021-03-25T06:17:04.162Z</published>
-    <updated>2021-04-06T07:29:30.452Z</updated>
-    
-    
-    <summary type="html">不使用Identity實作Login系統</summary>
-    
-    
-    
-    <category term="ASP.NET Core" scheme="https://justinchang.ddns.net/categories/ASP-NET-Core/"/>
-    
-    
-    <category term="ASP.NETCore" scheme="https://justinchang.ddns.net/tags/ASP-NETCore/"/>
-    
-    <category term="WithoutIdentityLogin" scheme="https://justinchang.ddns.net/tags/WithoutIdentityLogin/"/>
-    
-    <category term="Login" scheme="https://justinchang.ddns.net/tags/Login/"/>
-    
-    <category term="Session" scheme="https://justinchang.ddns.net/tags/Session/"/>
     
   </entry>
   
