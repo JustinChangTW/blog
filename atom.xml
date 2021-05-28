@@ -6,7 +6,7 @@
   <link href="https://justinchang.ddns.net/atom.xml" rel="self"/>
   
   <link href="https://justinchang.ddns.net/"/>
-  <updated>2021-05-10T07:50:35.532Z</updated>
+  <updated>2021-05-28T03:11:51.954Z</updated>
   <id>https://justinchang.ddns.net/</id>
   
   <author>
@@ -17,11 +17,35 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>如何在AndroidTV安裝ZOOM</title>
+    <link href="https://justinchang.ddns.net/2021/05/28/%E5%A6%82%E4%BD%95%E5%9C%A8AndroidTV%E5%AE%89%E8%A3%9DZOOM/"/>
+    <id>https://justinchang.ddns.net/2021/05/28/%E5%A6%82%E4%BD%95%E5%9C%A8AndroidTV%E5%AE%89%E8%A3%9DZOOM/</id>
+    <published>2021-05-28T03:08:10.000Z</published>
+    <updated>2021-05-28T03:11:51.954Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;如何在Android-TV-安裝-ZOOM&quot;&gt;&lt;a href=&quot;#如何在Android-TV-安裝-ZOOM&quot; class=&quot;headerlink&quot; title=&quot;如何在Android TV 安裝 ZOOM&quot;&gt;&lt;/a&gt;如何在Android TV 安裝 ZOOM&lt;/</summary>
+      
+    
+    
+    
+    <category term="Andorid TV" scheme="https://justinchang.ddns.net/categories/Andorid-TV/"/>
+    
+    
+    <category term="AndroidTV" scheme="https://justinchang.ddns.net/tags/AndroidTV/"/>
+    
+    <category term="ZOOM" scheme="https://justinchang.ddns.net/tags/ZOOM/"/>
+    
+  </entry>
+  
+  <entry>
     <title>客制化ValidationAttribute</title>
     <link href="https://justinchang.ddns.net/2021/05/10/%E5%AE%A2%E5%88%B6%E5%8C%96ValidationAttribute/"/>
     <id>https://justinchang.ddns.net/2021/05/10/%E5%AE%A2%E5%88%B6%E5%8C%96ValidationAttribute/</id>
     <published>2021-05-10T06:24:59.000Z</published>
-    <updated>2021-05-10T07:50:35.532Z</updated>
+    <updated>2021-05-12T03:50:08.773Z</updated>
     
     
       
@@ -481,37 +505,6 @@
     <category term="微精通" scheme="https://justinchang.ddns.net/tags/%E5%BE%AE%E7%B2%BE%E9%80%9A/"/>
     
     <category term="人生清單" scheme="https://justinchang.ddns.net/tags/%E4%BA%BA%E7%94%9F%E6%B8%85%E5%96%AE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>開發/線上小工具</title>
-    <link href="https://justinchang.ddns.net/2021/03/25/%E9%96%8B%E7%99%BC_%E7%B7%9A%E4%B8%8A%E5%B0%8F%E5%B7%A5%E5%85%B7/"/>
-    <id>https://justinchang.ddns.net/2021/03/25/%E9%96%8B%E7%99%BC_%E7%B7%9A%E4%B8%8A%E5%B0%8F%E5%B7%A5%E5%85%B7/</id>
-    <published>2021-03-25T06:20:31.608Z</published>
-    <updated>2021-03-26T01:44:42.445Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;開發-線上小工具&quot;&gt;&lt;a href=&quot;#開發-線上小工具&quot; class=&quot;headerlink&quot; title=&quot;開發/線上小工具&quot;&gt;&lt;/a&gt;開發/線上小工具&lt;/h1&gt;&lt;h2 id=&quot;產生Html表格&quot;&gt;&lt;a href=&quot;#產生Html表格&quot; class=&quot;headerlink&quot; title=&quot;產生Html表格&quot;&gt;&lt;/a&gt;產生Html表格&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.tablesgenerator.com/html_tables&quot;&gt;https://www.tablesgenerator.com/html_tables&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://divtable.com/table-styler/&quot;&gt;https://divtable.com/table-styler/&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;cron-表達&quot;&gt;&lt;a href=&quot;#cron-表達&quot; class=&quot;headerlink&quot; title=&quot;cron 表達&quot;&gt;&lt;/a&gt;cron 表達&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https://crontab.guru/&quot;&gt;https://crontab.guru/&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;UML產生語&quot;&gt;&lt;a href=&quot;#UML產生語&quot; class=&quot;headerlink&quot; title=&quot;UML產生語&quot;&gt;&lt;/a&gt;UML產生語&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https://plantuml.com/zh/sequence-diagram&quot;&gt;https://plantuml.com/zh/sequence-diagram&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="工具" scheme="https://justinchang.ddns.net/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-    
-    <category term="開發" scheme="https://justinchang.ddns.net/tags/%E9%96%8B%E7%99%BC/"/>
-    
-    <category term="線上" scheme="https://justinchang.ddns.net/tags/%E7%B7%9A%E4%B8%8A/"/>
-    
-    <category term="小工具" scheme="https://justinchang.ddns.net/tags/%E5%B0%8F%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
