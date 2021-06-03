@@ -4,6 +4,62 @@
   
     
     <entry>
+      <title>python爬蟲入門-抓取每日股價</title>
+      <link href="2021/06/03/python%E7%88%AC%E8%9F%B2%E5%85%A5%E9%96%80-%E6%8A%93%E5%8F%96%E6%AF%8F%E6%97%A5%E8%82%A1%E5%83%B9/"/>
+      <url>2021/06/03/python%E7%88%AC%E8%9F%B2%E5%85%A5%E9%96%80-%E6%8A%93%E5%8F%96%E6%AF%8F%E6%97%A5%E8%82%A1%E5%83%B9/</url>
+      
+        <content type="html"><![CDATA[<h2 id="首先連到TWSE台灣證券交易所"><a href="#首先連到TWSE台灣證券交易所" class="headerlink" title="首先連到TWSE台灣證券交易所"></a>首先連到<a href="https://www.twse.com.tw/">TWSE台灣證券交易所</a></h2><h3 id="在功能列中選擇到-網頁的交易資訊-盤後資訊-每日收盤行情"><a href="#在功能列中選擇到-網頁的交易資訊-盤後資訊-每日收盤行情" class="headerlink" title="在功能列中選擇到 網頁的交易資訊/盤後資訊/每日收盤行情"></a>在功能列中選擇到 網頁的交易資訊/盤後資訊/每日收盤行情</h3><p><img src="https://i.imgur.com/xYFPtyB.png" alt="Image"></p><h3 id="在分類中選擇「全部-不含權證、牛熊證、可展延牛熊證-」"><a href="#在分類中選擇「全部-不含權證、牛熊證、可展延牛熊證-」" class="headerlink" title="在分類中選擇「全部(不含權證、牛熊證、可展延牛熊證)」"></a>在分類中選擇「全部(不含權證、牛熊證、可展延牛熊證)」</h3><ul><li>在查詢之先開啟「開發者工具」(F12)，在「開發者工具」切換到「Network」，先來觀察request與response<br>可以看到是response是json的格式</li></ul><p><img src="https://i.imgur.com/chlLT7v.png" alt="Image"></p><ul><li>將「開發者工具」切換到「Headers」，可以看到如何下request，這邊有個特別的是在網址後有一個response的參數是json，這邊可以改為csv就會下載csv的資料</li></ul><p><img src="https://i.imgur.com/xuAmZkt.png" alt="Image"></p><h2 id="爬蟲程式碼"><a href="#爬蟲程式碼" class="headerlink" title="爬蟲程式碼"></a>爬蟲程式碼</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1.將股價資訊抓取下來</span></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">import</span> csv</span><br><span class="line"></span><br><span class="line">response = requests.post(<span class="string">&quot;https://www.twse.com.tw/exchangeReport/MI_INDEX?response=json&amp;date=20210601&amp;type=ALLBUT0999&amp;_=1622599383643&quot;</span>)</span><br><span class="line">j = json.loads(response.text)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2.取得資料與欄位</span></span><br><span class="line"><span class="comment"># 從json中取得，欄位名稱放在「fields9」，資料放在「data9」</span></span><br><span class="line">fields9 = j[<span class="string">&#x27;fields9&#x27;</span>].copy()</span><br><span class="line">data9 = j[<span class="string">&#x27;data9&#x27;</span>].copy()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 3.將Json轉存為csv</span></span><br><span class="line">csv_file = <span class="built_in">open</span>(<span class="string">&#x27;csv_file.csv&#x27;</span>,<span class="string">&#x27;w&#x27;</span>,newline=<span class="string">&#x27;&#x27;</span>,encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">csv_write = csv.writer(csv_file)</span><br><span class="line"></span><br><span class="line">csv_write.writerow(fields9)</span><br><span class="line"><span class="keyword">for</span> data <span class="keyword">in</span> data9:</span><br><span class="line">    csv_write.writerow(data)</span><br><span class="line">csv_file.close()</span><br><span class="line"></span><br><span class="line"><span class="comment">## 將csvc轉存入</span></span><br><span class="line">df = pd.read_csv(<span class="string">&#x27;csv_file.csv&#x27;</span>) </span><br><span class="line"> </span><br><span class="line"><span class="comment">## 指定index為特定欄位</span></span><br><span class="line">df = df.set_index(<span class="string">&#x27;證券代號&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 4.調整資料</span></span><br><span class="line"><span class="comment">## 將html語法改去除</span></span><br><span class="line">s = df[<span class="string">&#x27;漲跌(+/-)&#x27;</span>]</span><br><span class="line">df.loc[s==<span class="string">&#x27;&lt;p style= color:red&gt;+&lt;/p&gt;&#x27;</span>,[<span class="string">&#x27;漲跌(+/-)&#x27;</span>]]=<span class="string">&#x27;+&#x27;</span></span><br><span class="line">df.loc[s==<span class="string">&#x27;&lt;p style= color:green&gt;-&lt;/p&gt;&#x27;</span>,[<span class="string">&#x27;漲跌(+/-)&#x27;</span>]]=<span class="string">&#x27;-&#x27;</span></span><br><span class="line">df.loc[s==<span class="string">&#x27;&lt;p&gt; &lt;/p&gt;&#x27;</span>,[<span class="string">&#x27;漲跌(+/-)&#x27;</span>]]=<span class="string">&#x27; &#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## 將文字改為數值</span></span><br><span class="line">df[<span class="string">&#x27;開盤價&#x27;</span>]=df[<span class="string">&#x27;開盤價&#x27;</span>].apply(<span class="keyword">lambda</span> s: pd.to_numeric(s, errors=<span class="string">&#x27;coerce&#x27;</span>))</span><br><span class="line">df[<span class="string">&#x27;收盤價&#x27;</span>]=df[<span class="string">&#x27;收盤價&#x27;</span>].apply(<span class="keyword">lambda</span> s: pd.to_numeric(s, errors=<span class="string">&#x27;coerce&#x27;</span>))</span><br><span class="line">df[<span class="string">&#x27;成交股數&#x27;</span>]=df[<span class="string">&#x27;成交股數&#x27;</span>].apply(<span class="keyword">lambda</span> s: pd.to_numeric(s.replace(<span class="string">&#x27;,&#x27;</span>,<span class="string">&#x27;&#x27;</span>), errors=<span class="string">&#x27;coerce&#x27;</span>))</span><br><span class="line">df[<span class="string">&#x27;成交筆數&#x27;</span>]=df[<span class="string">&#x27;成交筆數&#x27;</span>].apply(<span class="keyword">lambda</span> s: pd.to_numeric(s.replace(<span class="string">&#x27;,&#x27;</span>,<span class="string">&#x27;&#x27;</span>), errors=<span class="string">&#x27;coerce&#x27;</span>))</span><br><span class="line">df[<span class="string">&#x27;成交金額&#x27;</span>]=df[<span class="string">&#x27;成交金額&#x27;</span>].apply(<span class="keyword">lambda</span> s: pd.to_numeric(s.replace(<span class="string">&#x27;,&#x27;</span>,<span class="string">&#x27;&#x27;</span>), errors=<span class="string">&#x27;coerce&#x27;</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 顯示前五個</span></span><br><span class="line">df.head()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 查詢0050股票</span></span><br><span class="line">df.loc[<span class="string">&#x27;0050&#x27;</span>]</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> python爬蟲入門 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+            <tag> 爬蟲入門 </tag>
+            
+            <tag> 抓取每日股價 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Python爬蟲入門</title>
+      <link href="2021/06/01/Python%E7%88%AC%E8%9F%B2%E5%85%A5%E9%96%80/"/>
+      <url>2021/06/01/Python%E7%88%AC%E8%9F%B2%E5%85%A5%E9%96%80/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Import-Requests"><a href="#Import-Requests" class="headerlink" title="Import Requests"></a>Import Requests</h2><p>直接用Request使用get指令取得Response(從Server回傳的內容)，而大多數有經驗的人都知道令除了get，另一個最常用的就post，這邊簡單先介紹get</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Import Requests</span><br><span class="line">res = requests.get(<span class="string">&#x27;&#123;&#123;Url&#125;&#125;&#x27;</span>)</span><br></pre></td></tr></table></figure><blockquote><p>參考：<a href="https://docs.python-requests.org/en/latest/user/quickstart/">https://docs.python-requests.org/en/latest/user/quickstart/</a></p></blockquote><h2 id="指定語系"><a href="#指定語系" class="headerlink" title="指定語系"></a>指定語系</h2><p>取回來的資料如果是亂碼，大多數都是編碼的問題，而台灣編碼可以用utf-8或big5，</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">res.encoding = <span class="string">&#x27;utf-8&#x27;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure><h2 id="諸存為檔案"><a href="#諸存為檔案" class="headerlink" title="諸存為檔案"></a>諸存為檔案</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">file = <span class="built_in">open</span>(<span class="string">&#x27;file.html&#x27;</span>,<span class="string">&#x27;w&#x27;</span>,encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">file.write(res.text)</span><br><span class="line">file.close</span><br></pre></td></tr></table></figure><h2 id="轉入DataFrame"><a href="#轉入DataFrame" class="headerlink" title="轉入DataFrame"></a>轉入DataFrame</h2><p>轉入DataFrame會自動將所有「表格」，也就是說將有<Table>標籤的資料直接拉進DataFrame</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#從檔案讀取</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">df = pd.read_html(&#123;&#123;檔案&#125;&#125;&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 或直接從記憶體讀取</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">from</span> io <span class="keyword">import</span> StringIO</span><br><span class="line">df = pd.read_html(StringIO(res.text))</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python爬蟲入門 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> 爬蟲 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>如何在AndroidTV安裝ZOOM</title>
       <link href="2021/05/28/%E5%A6%82%E4%BD%95%E5%9C%A8AndroidTV%E5%AE%89%E8%A3%9DZOOM/"/>
       <url>2021/05/28/%E5%A6%82%E4%BD%95%E5%9C%A8AndroidTV%E5%AE%89%E8%A3%9DZOOM/</url>

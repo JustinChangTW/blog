@@ -6,7 +6,7 @@
   <link href="https://justinchang.ddns.net/atom.xml" rel="self"/>
   
   <link href="https://justinchang.ddns.net/"/>
-  <updated>2021-05-28T03:11:51.954Z</updated>
+  <updated>2021-06-03T01:43:53.065Z</updated>
   <id>https://justinchang.ddns.net/</id>
   
   <author>
@@ -15,6 +15,56 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>python爬蟲入門-抓取每日股價</title>
+    <link href="https://justinchang.ddns.net/2021/06/03/python%E7%88%AC%E8%9F%B2%E5%85%A5%E9%96%80-%E6%8A%93%E5%8F%96%E6%AF%8F%E6%97%A5%E8%82%A1%E5%83%B9/"/>
+    <id>https://justinchang.ddns.net/2021/06/03/python%E7%88%AC%E8%9F%B2%E5%85%A5%E9%96%80-%E6%8A%93%E5%8F%96%E6%AF%8F%E6%97%A5%E8%82%A1%E5%83%B9/</id>
+    <published>2021-06-03T00:57:54.000Z</published>
+    <updated>2021-06-03T01:43:53.065Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;首先連到TWSE台灣證券交易所&quot;&gt;&lt;a href=&quot;#首先連到TWSE台灣證券交易所&quot; class=&quot;headerlink&quot; title=&quot;首先連到TWSE台灣證券交易所&quot;&gt;&lt;/a&gt;首先連到&lt;a href=&quot;https://www.twse.com.tw/&quot;&gt;TW</summary>
+      
+    
+    
+    
+    <category term="python爬蟲入門" scheme="https://justinchang.ddns.net/categories/python%E7%88%AC%E8%9F%B2%E5%85%A5%E9%96%80/"/>
+    
+    
+    <category term="python" scheme="https://justinchang.ddns.net/tags/python/"/>
+    
+    <category term="爬蟲入門" scheme="https://justinchang.ddns.net/tags/%E7%88%AC%E8%9F%B2%E5%85%A5%E9%96%80/"/>
+    
+    <category term="抓取每日股價" scheme="https://justinchang.ddns.net/tags/%E6%8A%93%E5%8F%96%E6%AF%8F%E6%97%A5%E8%82%A1%E5%83%B9/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python爬蟲入門</title>
+    <link href="https://justinchang.ddns.net/2021/06/01/Python%E7%88%AC%E8%9F%B2%E5%85%A5%E9%96%80/"/>
+    <id>https://justinchang.ddns.net/2021/06/01/Python%E7%88%AC%E8%9F%B2%E5%85%A5%E9%96%80/</id>
+    <published>2021-06-01T08:34:40.000Z</published>
+    <updated>2021-06-03T00:56:01.431Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;Import-Requests&quot;&gt;&lt;a href=&quot;#Import-Requests&quot; class=&quot;headerlink&quot; title=&quot;Import Requests&quot;&gt;&lt;/a&gt;Import Requests&lt;/h2&gt;&lt;p&gt;直接用Request使用get指令取</summary>
+      
+    
+    
+    
+    <category term="Python爬蟲入門" scheme="https://justinchang.ddns.net/categories/Python%E7%88%AC%E8%9F%B2%E5%85%A5%E9%96%80/"/>
+    
+    
+    <category term="Python" scheme="https://justinchang.ddns.net/tags/Python/"/>
+    
+    <category term="爬蟲" scheme="https://justinchang.ddns.net/tags/%E7%88%AC%E8%9F%B2/"/>
+    
+  </entry>
   
   <entry>
     <title>如何在AndroidTV安裝ZOOM</title>
@@ -440,71 +490,6 @@
     
     
     <category term="Without Identity, Login,ASP.NETCore,Cookie" scheme="https://justinchang.ddns.net/tags/Without-Identity-Login-ASP-NETCore-Cookie/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用 AJAX 與 Action 接值問題</title>
-    <link href="https://justinchang.ddns.net/2021/04/01/%E4%BD%BF%E7%94%A8%20AJAX%20%E8%88%87%20Action%20%E6%8E%A5%E5%80%BC%E5%95%8F%E9%A1%8C/"/>
-    <id>https://justinchang.ddns.net/2021/04/01/%E4%BD%BF%E7%94%A8%20AJAX%20%E8%88%87%20Action%20%E6%8E%A5%E5%80%BC%E5%95%8F%E9%A1%8C/</id>
-    <published>2021-04-01T04:03:54.000Z</published>
-    <updated>2021-04-16T02:38:12.425Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;使用-AJAX-與-Action-接值問題？&quot;&gt;&lt;a href=&quot;#使用-AJAX-與-Action-接值問題？&quot; class=&quot;headerlink&quot; title=&quot;使用 AJAX 與 Action 接值問題？&quot;&gt;&lt;/a&gt;使用 AJAX 與 Action 接值問題？&lt;/h2&gt;&lt;p&gt;在使用AJAX時，常常會發生後端接不到值等等問題，通常都是邊寫邊Try到通為止，但時間一久又忘記怎樣的組合才對的，於是來作一個比較表吧，首先把會影響的變數列一下：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;前端：&lt;ul&gt;
-&lt;li&gt;content-type的設定&lt;/li&gt;
-&lt;li&gt;資料是否要序例化為字串&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;後端：&lt;ul&gt;
-&lt;li&gt;FromBody是否要使用&lt;/li&gt;
-&lt;li&gt;在不同域的情境&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;415:Unsupported Media Type&lt;br&gt;cors error:Cross-Origin Resource Sharing (CORS) is a standard that allows a server to relax the same-origin policy.&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="AJAX" scheme="https://justinchang.ddns.net/categories/AJAX/"/>
-    
-    
-    <category term="Web" scheme="https://justinchang.ddns.net/tags/Web/"/>
-    
-    <category term="AJAX" scheme="https://justinchang.ddns.net/tags/AJAX/"/>
-    
-    <category term="ASP.NETCore" scheme="https://justinchang.ddns.net/tags/ASP-NETCore/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>親子簡易手作餅乾</title>
-    <link href="https://justinchang.ddns.net/2021/03/29/%E8%A6%AA%E5%AD%90%E7%B0%A1%E6%98%93%E6%89%8B%E4%BD%9C%E9%A4%85%E4%B9%BE/"/>
-    <id>https://justinchang.ddns.net/2021/03/29/%E8%A6%AA%E5%AD%90%E7%B0%A1%E6%98%93%E6%89%8B%E4%BD%9C%E9%A4%85%E4%B9%BE/</id>
-    <published>2021-03-29T01:37:18.000Z</published>
-    <updated>2021-04-09T04:00:23.405Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;最近燃起烘培魂，以前一直覺得會烘培的對我來說是一種遙不可及的事，受到&lt;a href=&quot;https://www.books.com.tw/products/0010776629&quot;&gt;微精通&lt;/a&gt;啟發，凡事作就對了，要前進的第一步就是Google，而第一篇就是 &lt;a href=&quot;https://mamibuy.com.tw/talk/article/158490&quot;&gt;初學者必學～超簡易手工烤餅乾&lt;/a&gt;，覺得困難度不高，就開始動手Go Go&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="烘培" scheme="https://justinchang.ddns.net/categories/%E7%83%98%E5%9F%B9/"/>
-    
-    
-    <category term="親子" scheme="https://justinchang.ddns.net/tags/%E8%A6%AA%E5%AD%90/"/>
-    
-    <category term="烘培" scheme="https://justinchang.ddns.net/tags/%E7%83%98%E5%9F%B9/"/>
-    
-    <category term="手作餅乾" scheme="https://justinchang.ddns.net/tags/%E6%89%8B%E4%BD%9C%E9%A4%85%E4%B9%BE/"/>
-    
-    <category term="微精通" scheme="https://justinchang.ddns.net/tags/%E5%BE%AE%E7%B2%BE%E9%80%9A/"/>
-    
-    <category term="人生清單" scheme="https://justinchang.ddns.net/tags/%E4%BA%BA%E7%94%9F%E6%B8%85%E5%96%AE/"/>
     
   </entry>
   

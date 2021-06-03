@@ -139,6 +139,98 @@
   <section class="meta">
     
     <h2 class="title">
+      <a href="/2021/04/20/Eclipse%E9%96%8B%E7%99%BCJAVA-mybatis-GettingStarted/">
+        Eclipse開發JAVA-mybatis-GettingStarted
+      </a>
+    </h2>
+    
+    <time>
+      4月 20, 2021
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/JAVA/">JAVA</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h2 id="pox-xml-加入-mybatis-dependency"><a href="#pox-xml-加入-mybatis-dependency" class="headerlink" title="pox.xml 加入 mybatis dependency"></a>pox.xml 加入 mybatis dependency</h2><p>要dependency的套件版本可以到<a href="https://github.com/mybatis/mybatis-3/releases">mybatis</a>查詢目前最新的版本號。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.mybatis<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mybatis<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.5.6<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+    
+	  <div class="readmore">
+      <a href="/2021/04/20/Eclipse%E9%96%8B%E7%99%BCJAVA-mybatis-GettingStarted/">Read More</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Eclipse/">Eclipse</a>
+      
+        <a href="/tags/JAVA/">JAVA</a>
+      
+        <a href="/tags/Mybatis/">Mybatis</a>
+      
+        <a href="/tags/ORM/">ORM</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2021/04/16/Client-DOM-XSS/">
+        Client_DOM_XSS
+      </a>
+    </h2>
+    
+    <time>
+      4月 16, 2021
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/%E5%8E%9F%E7%A2%BC%E6%8E%83%E6%8F%8F/">原碼掃描</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h2 id="Client-DOM-XSS"><a href="#Client-DOM-XSS" class="headerlink" title="Client DOM XSS"></a>Client DOM XSS</h2><p>由前端取得的值，在程式的流程當中，沒有過濾(處理)直接拿來使用，會有機會被注入非法的字串。<br>例如：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> source = <span class="built_in">window</span>.location.origin <span class="comment">//直接取得來自於User可修改的的值</span></span><br><span class="line"><span class="built_in">document</span>.write(source())     <span class="comment">//並接直接使用</span></span><br></pre></td></tr></table></figure>
+
+    
+	  <div class="readmore">
+      <a href="/2021/04/16/Client-DOM-XSS/">Read More</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/%E5%BC%B1%E9%BB%9E%E8%99%95%E7%90%86/">弱點處理</a>
+      
+        <a href="/tags/CodeReview/">CodeReview</a>
+      
+        <a href="/tags/CheckMarx/">CheckMarx</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/2021/04/16/%E5%8E%9F%E7%A2%BC%E6%8E%83%E7%9E%84%E5%BC%B1%E9%BB%9E%E8%99%95%E7%90%86/">
         原碼掃瞄弱點處理
       </a>
@@ -478,113 +570,6 @@
 </article>
     </div>
   
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2021/04/01/%E4%BD%BF%E7%94%A8%20AJAX%20%E8%88%87%20Action%20%E6%8E%A5%E5%80%BC%E5%95%8F%E9%A1%8C/">
-        使用 AJAX 與 Action 接值問題
-      </a>
-    </h2>
-    
-    <time>
-      4月 1, 2021
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/AJAX/">AJAX</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <h2 id="使用-AJAX-與-Action-接值問題？"><a href="#使用-AJAX-與-Action-接值問題？" class="headerlink" title="使用 AJAX 與 Action 接值問題？"></a>使用 AJAX 與 Action 接值問題？</h2><p>在使用AJAX時，常常會發生後端接不到值等等問題，通常都是邊寫邊Try到通為止，但時間一久又忘記怎樣的組合才對的，於是來作一個比較表吧，首先把會影響的變數列一下：</p>
-<ul>
-<li>前端：<ul>
-<li>content-type的設定</li>
-<li>資料是否要序例化為字串</li>
-</ul>
-</li>
-<li>後端：<ul>
-<li>FromBody是否要使用</li>
-<li>在不同域的情境</li>
-</ul>
-</li>
-</ul>
-<blockquote>
-<p>415:Unsupported Media Type<br>cors error:Cross-Origin Resource Sharing (CORS) is a standard that allows a server to relax the same-origin policy.</p>
-</blockquote>
-
-    
-	  <div class="readmore">
-      <a href="/2021/04/01/%E4%BD%BF%E7%94%A8%20AJAX%20%E8%88%87%20Action%20%E6%8E%A5%E5%80%BC%E5%95%8F%E9%A1%8C/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Web/">Web</a>
-      
-        <a href="/tags/AJAX/">AJAX</a>
-      
-        <a href="/tags/ASP-NETCore/">ASP.NETCore</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2021/03/29/%E8%A6%AA%E5%AD%90%E7%B0%A1%E6%98%93%E6%89%8B%E4%BD%9C%E9%A4%85%E4%B9%BE/">
-        親子簡易手作餅乾
-      </a>
-    </h2>
-    
-    <time>
-      3月 29, 2021
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/%E7%83%98%E5%9F%B9/">烘培</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <p>最近燃起烘培魂，以前一直覺得會烘培的對我來說是一種遙不可及的事，受到<a href="https://www.books.com.tw/products/0010776629">微精通</a>啟發，凡事作就對了，要前進的第一步就是Google，而第一篇就是 <a href="https://mamibuy.com.tw/talk/article/158490">初學者必學～超簡易手工烤餅乾</a>，覺得困難度不高，就開始動手Go Go</p>
-
-    
-	  <div class="readmore">
-      <a href="/2021/03/29/%E8%A6%AA%E5%AD%90%E7%B0%A1%E6%98%93%E6%89%8B%E4%BD%9C%E9%A4%85%E4%B9%BE/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/%E8%A6%AA%E5%AD%90/">親子</a>
-      
-        <a href="/tags/%E7%83%98%E5%9F%B9/">烘培</a>
-      
-        <a href="/tags/%E6%89%8B%E4%BD%9C%E9%A4%85%E4%B9%BE/">手作餅乾</a>
-      
-        <a href="/tags/%E5%BE%AE%E7%B2%BE%E9%80%9A/">微精通</a>
-      
-        <a href="/tags/%E4%BA%BA%E7%94%9F%E6%B8%85%E5%96%AE/">人生清單</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
 </section>
 
 
@@ -635,6 +620,10 @@
     
         <li><a class="flat-box" href="/categories/Oracle/"><div class='name'>Oracle</div><div class='badget'>1</div></a></li>
     
+        <li><a class="flat-box" href="/categories/Python%E7%88%AC%E8%9F%B2%E5%85%A5%E9%96%80/"><div class='name'>Python爬蟲入門</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/python%E7%88%AC%E8%9F%B2%E5%85%A5%E9%96%80/"><div class='name'>python爬蟲入門</div><div class='badget'>1</div></a></li>
+    
         <li><a class="flat-box" href="/categories/%E5%8E%9F%E7%A2%BC%E6%8E%83%E6%8F%8F/"><div class='name'>原碼掃描</div><div class='badget'>7</div></a></li>
     
         <li><a class="flat-box" href="/categories/%E5%B7%A5%E5%85%B7/"><div class='name'>工具</div><div class='badget'>1</div></a></li>
@@ -652,7 +641,7 @@
 <div class="m_widget tagcloud">
     <div class="header">Tags</div>
     <div class='content'>
-        <a href="/tags/AJAX/" style="font-size: 14px; color: #808080">AJAX</a> <a href="/tags/ASP-NET/" style="font-size: 16px; color: #555">ASP.NET</a> <a href="/tags/ASP-NETCore/" style="font-size: 18px; color: #2b2b2b">ASP.NETCore</a> <a href="/tags/AndroidTV/" style="font-size: 14px; color: #808080">AndroidTV</a> <a href="/tags/CheckMarx/" style="font-size: 20px; color: #000">CheckMarx</a> <a href="/tags/CodeReview/" style="font-size: 20px; color: #000">CodeReview</a> <a href="/tags/Config/" style="font-size: 14px; color: #808080">Config</a> <a href="/tags/Eclipse/" style="font-size: 16px; color: #555">Eclipse</a> <a href="/tags/English-Study/" style="font-size: 14px; color: #808080">English Study</a> <a href="/tags/JAVA/" style="font-size: 18px; color: #2b2b2b">JAVA</a> <a href="/tags/Login/" style="font-size: 14px; color: #808080">Login</a> <a href="/tags/Mybatis/" style="font-size: 14px; color: #808080">Mybatis</a> <a href="/tags/ORM/" style="font-size: 14px; color: #808080">ORM</a> <a href="/tags/Oracle/" style="font-size: 14px; color: #808080">Oracle</a> <a href="/tags/Session/" style="font-size: 14px; color: #808080">Session</a> <a href="/tags/Spring/" style="font-size: 16px; color: #555">Spring</a> <a href="/tags/VSCode/" style="font-size: 14px; color: #808080">VSCode</a> <a href="/tags/ValidationAttribute/" style="font-size: 14px; color: #808080">ValidationAttribute</a> <a href="/tags/Web/" style="font-size: 18px; color: #2b2b2b">Web</a> <a href="/tags/Win10/" style="font-size: 14px; color: #808080">Win10</a> <a href="/tags/Without-Identity-Login-ASP-NETCore-Cookie/" style="font-size: 18px; color: #2b2b2b">Without Identity, Login,ASP.NETCore,Cookie</a> <a href="/tags/WithoutIdentityLogin/" style="font-size: 14px; color: #808080">WithoutIdentityLogin</a> <a href="/tags/ZOOM/" style="font-size: 14px; color: #808080">ZOOM</a> <a href="/tags/%E4%BA%BA%E7%94%9F%E6%B8%85%E5%96%AE/" style="font-size: 14px; color: #808080">人生清單</a> <a href="/tags/%E5%B0%8F%E5%B7%A5%E5%85%B7/" style="font-size: 14px; color: #808080">小工具</a> <a href="/tags/%E5%BC%B1%E9%BB%9E%E8%99%95%E7%90%86/" style="font-size: 20px; color: #000">弱點處理</a> <a href="/tags/%E5%BE%AE%E7%B2%BE%E9%80%9A/" style="font-size: 14px; color: #808080">微精通</a> <a href="/tags/%E6%89%8B%E4%BD%9C%E9%A4%85%E4%B9%BE/" style="font-size: 14px; color: #808080">手作餅乾</a> <a href="/tags/%E7%83%98%E5%9F%B9/" style="font-size: 14px; color: #808080">烘培</a> <a href="/tags/%E7%B7%9A%E4%B8%8A/" style="font-size: 14px; color: #808080">線上</a> <a href="/tags/%E8%81%BD%E5%8A%9B/" style="font-size: 14px; color: #808080">聽力</a> <a href="/tags/%E8%87%AA%E5%AD%B8/" style="font-size: 14px; color: #808080">自學</a> <a href="/tags/%E8%8B%B1%E6%96%87/" style="font-size: 14px; color: #808080">英文</a> <a href="/tags/%E8%A6%AA%E5%AD%90/" style="font-size: 14px; color: #808080">親子</a> <a href="/tags/%E9%96%8B%E7%99%BC/" style="font-size: 14px; color: #808080">開發</a>
+        <a href="/tags/AJAX/" style="font-size: 14px; color: #808080">AJAX</a> <a href="/tags/ASP-NET/" style="font-size: 16px; color: #555">ASP.NET</a> <a href="/tags/ASP-NETCore/" style="font-size: 18px; color: #2b2b2b">ASP.NETCore</a> <a href="/tags/AndroidTV/" style="font-size: 14px; color: #808080">AndroidTV</a> <a href="/tags/CheckMarx/" style="font-size: 20px; color: #000">CheckMarx</a> <a href="/tags/CodeReview/" style="font-size: 20px; color: #000">CodeReview</a> <a href="/tags/Config/" style="font-size: 14px; color: #808080">Config</a> <a href="/tags/Eclipse/" style="font-size: 16px; color: #555">Eclipse</a> <a href="/tags/English-Study/" style="font-size: 14px; color: #808080">English Study</a> <a href="/tags/JAVA/" style="font-size: 18px; color: #2b2b2b">JAVA</a> <a href="/tags/Login/" style="font-size: 14px; color: #808080">Login</a> <a href="/tags/Mybatis/" style="font-size: 14px; color: #808080">Mybatis</a> <a href="/tags/ORM/" style="font-size: 14px; color: #808080">ORM</a> <a href="/tags/Oracle/" style="font-size: 14px; color: #808080">Oracle</a> <a href="/tags/Python/" style="font-size: 14px; color: #808080">Python</a> <a href="/tags/Session/" style="font-size: 14px; color: #808080">Session</a> <a href="/tags/Spring/" style="font-size: 16px; color: #555">Spring</a> <a href="/tags/VSCode/" style="font-size: 14px; color: #808080">VSCode</a> <a href="/tags/ValidationAttribute/" style="font-size: 14px; color: #808080">ValidationAttribute</a> <a href="/tags/Web/" style="font-size: 18px; color: #2b2b2b">Web</a> <a href="/tags/Win10/" style="font-size: 14px; color: #808080">Win10</a> <a href="/tags/Without-Identity-Login-ASP-NETCore-Cookie/" style="font-size: 18px; color: #2b2b2b">Without Identity, Login,ASP.NETCore,Cookie</a> <a href="/tags/WithoutIdentityLogin/" style="font-size: 14px; color: #808080">WithoutIdentityLogin</a> <a href="/tags/ZOOM/" style="font-size: 14px; color: #808080">ZOOM</a> <a href="/tags/python/" style="font-size: 14px; color: #808080">python</a> <a href="/tags/%E4%BA%BA%E7%94%9F%E6%B8%85%E5%96%AE/" style="font-size: 14px; color: #808080">人生清單</a> <a href="/tags/%E5%B0%8F%E5%B7%A5%E5%85%B7/" style="font-size: 14px; color: #808080">小工具</a> <a href="/tags/%E5%BC%B1%E9%BB%9E%E8%99%95%E7%90%86/" style="font-size: 20px; color: #000">弱點處理</a> <a href="/tags/%E5%BE%AE%E7%B2%BE%E9%80%9A/" style="font-size: 14px; color: #808080">微精通</a> <a href="/tags/%E6%89%8B%E4%BD%9C%E9%A4%85%E4%B9%BE/" style="font-size: 14px; color: #808080">手作餅乾</a> <a href="/tags/%E6%8A%93%E5%8F%96%E6%AF%8F%E6%97%A5%E8%82%A1%E5%83%B9/" style="font-size: 14px; color: #808080">抓取每日股價</a> <a href="/tags/%E7%83%98%E5%9F%B9/" style="font-size: 14px; color: #808080">烘培</a> <a href="/tags/%E7%88%AC%E8%9F%B2/" style="font-size: 14px; color: #808080">爬蟲</a> <a href="/tags/%E7%88%AC%E8%9F%B2%E5%85%A5%E9%96%80/" style="font-size: 14px; color: #808080">爬蟲入門</a> <a href="/tags/%E7%B7%9A%E4%B8%8A/" style="font-size: 14px; color: #808080">線上</a> <a href="/tags/%E8%81%BD%E5%8A%9B/" style="font-size: 14px; color: #808080">聽力</a> <a href="/tags/%E8%87%AA%E5%AD%B8/" style="font-size: 14px; color: #808080">自學</a> <a href="/tags/%E8%8B%B1%E6%96%87/" style="font-size: 14px; color: #808080">英文</a> <a href="/tags/%E8%A6%AA%E5%AD%90/" style="font-size: 14px; color: #808080">親子</a> <a href="/tags/%E9%96%8B%E7%99%BC/" style="font-size: 14px; color: #808080">開發</a>
     </div>
 </div>
 
